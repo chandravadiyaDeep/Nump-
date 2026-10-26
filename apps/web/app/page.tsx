@@ -53,6 +53,8 @@ export default function HomePage() {
   const [overview, setOverview] = useState<ApiObject | null>(null);
   const [readiness, setReadiness] = useState<ApiObject | null>(null);
   const [cleaning, setCleaning] = useState<ApiObject | null>(null);
+  const [comparison, setComparison] = useState<{ before: ApiObject; after: ApiObject } | null>(null);
+  const [cleanedCsv, setCleanedCsv] = useState<{ blob: Blob; filename: string } | null>(null);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState("");
@@ -75,6 +77,8 @@ export default function HomePage() {
     setOverview(null);
     setReadiness(null);
     setCleaning(null);
+    setComparison(null);
+    setCleanedCsv(null);
     setError("");
     setNotice("");
   }
@@ -131,6 +135,7 @@ export default function HomePage() {
         }),
       );
       setReadiness(result);
+      setComparison(null);
       setNotice("Readiness assessment completed. The score is a heuristic, not a guarantee of model performance.");
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Unable to assess readiness.");
@@ -160,6 +165,8 @@ export default function HomePage() {
         }),
       );
       setCleaning(result);
+      setComparison(null);
+      setCleanedCsv(null);
       setNotice("Cleaning preview is ready. Your original upload has not been overwritten.");
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Unable to preview cleaning.");
@@ -168,8 +175,68 @@ export default function HomePage() {
     }
   }
 
+  async function applyCleaningAndCompare() {
+    if (!file) {
+      setError("Choose a dataset file before applying cleaning.");
+      return;
+    }
+    if (task !== "clustering" && !target.trim()) {
+      setError("Enter the target column before comparing readiness.");
+      return;
+    }
+    setBusy("compare");
+    setError("");
+    setNotice("");
+    try {
+      // Execute the exact options the user selected, keeping the source file untouched.
+      const cleanForm = new FormData();
+      cleanForm.append("file", file);
+      cleanForm.append("fill_missing", String(fillMissing));
+      cleanForm.append("drop_exact_duplicates", String(dropDuplicates));
+      cleanForm.append("normalize_text", String(normalizeText));
+      const cleanResponse = await fetch(`${API_BASE}/api/v1/cleaning/execute`, {
+        method: "POST",
+        body: cleanForm,
+      });
+      if (!cleanResponse.ok) {
+        const payload = await cleanResponse.json().catch(() => ({}));
+        throw new Error(typeof payload.detail === "string" ? payload.detail : "Could not apply cleaning.");
+      }
+      const blob = await cleanResponse.blob();
+      const stem = file.name.replace(/\.[^.]+$/, "") || "dataset";
+      const cleanedFilename = `${stem}-cleaned.csv`;
+      const cleanedFile = new File([blob], cleanedFilename, { type: "text/csv" });
+
+      // Score both versions using the same task and target for a fair comparison.
+      const scoreFile = async (candidate: File): Promise<ApiObject> => {
+        const form = new FormData();
+        form.append("file", candidate);
+        form.append("task", task);
+        if (target.trim()) form.append("target", target.trim());
+        return readApiResponse(await fetch(`${API_BASE}/api/v1/ml-readiness/score`, {
+          method: "POST",
+          body: form,
+        }));
+      };
+      const [before, after] = await Promise.all([scoreFile(file), scoreFile(cleanedFile)]);
+      setComparison({ before, after });
+      setReadiness(after);
+      setCleanedCsv({ blob, filename: cleanedFilename });
+      setNotice("Cleaning applied to a temporary copy. Before/after readiness scores are ready; your original file was not overwritten.");
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Unable to compare readiness before and after cleaning.");
+    } finally {
+      setBusy("");
+    }
+  }
+
   async function downloadCleanedCsv() {
     if (!file) return;
+    if (cleanedCsv) {
+      downloadBlob(cleanedCsv.blob, cleanedCsv.filename);
+      setNotice("Cleaned CSV downloaded to your device.");
+      return;
+    }
     setBusy("download");
     setError("");
     try {
@@ -376,6 +443,17 @@ export default function HomePage() {
                   <div className="score-ring">{typeof score === "number" ? Math.round(score) : "—"}</div>
                   <div className="score-copy"><strong>{scoreLabel}</strong><p>Out of 100 · deterministic heuristic. This is not a model-performance guarantee.</p></div>
                 </div>
+                {comparison && (
+                  <div>
+                    <div className="result-title"><h3>Before vs after cleaning</h3><span className="mini-label">Same task and target</span></div>
+                    <div className="metric-grid" style={{ marginTop: 10 }}>
+                      <div className="metric"><span>Before</span><strong>{displayNumber(comparison.before.score)}<small>/100</small></strong></div>
+                      <div className="metric"><span>After</span><strong>{displayNumber(comparison.after.score)}<small>/100</small></strong></div>
+                      <div className="metric"><span>Score change</span><strong>{typeof comparison.before.score === "number" && typeof comparison.after.score === "number" ? `${comparison.after.score - comparison.before.score > 0 ? "+" : ""}${comparison.after.score - comparison.before.score}` : "—"}</strong></div>
+                    </div>
+                    <p className="hint">A higher score is not a guarantee of better model performance. Review the cleaning report and preserve domain meaning.</p>
+                  </div>
+                )}
                 {scoreDimensions.length > 0 ? (
                   <div className="detail-list">
                     {scoreDimensions.map((item, index) => {
@@ -412,7 +490,8 @@ export default function HomePage() {
                 ) : <p className="hint">No preview rows were returned. Review the report below for details.</p>}
                 <div className="result-title"><h3>Cleaning report</h3><span className="mini-label">Preview only</span></div>
                 <pre className="json-box">{JSON.stringify(cleaning.report ?? cleaning, null, 2)}</pre>
-                <button className="primary" onClick={downloadCleanedCsv} disabled={!!busy}>{busy === "download" ? "Preparing download…" : "Download cleaned CSV ↓"}</button>
+                <button className="primary" onClick={applyCleaningAndCompare} disabled={!file || !!busy}>{busy === "compare" ? <span className="loading-line"><span className="spinner" /> Applying & comparing…</span> : "Apply cleaning & compare readiness"}</button>
+                <button className="secondary" style={{ width: "100%", marginTop: 9 }} onClick={downloadCleanedCsv} disabled={!file || !!busy}>{busy === "download" ? "Preparing download…" : "↓ Download cleaned CSV"}</button>
               </div>
             ) : (
               <div className="empty-state"><div className="empty-graphic">✳</div><h3>Nothing changes without review</h3><p>Select your cleaning options and preview the report. The original upload is never overwritten by this workflow.</p></div>
