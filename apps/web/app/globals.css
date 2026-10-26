@@ -124,3 +124,19 @@ tr:last-child td { border-bottom: 0; }
   .score-wrap { align-items: flex-start; }
   .score-ring { flex-basis: 64px; width: 64px; height: 64px; }
 }
+
+
+/* Keep exported reports readable when the browser's print dialog saves them as PDF. */
+@media print {
+  body { background: white; color: #17231f; }
+  .shell { width: 100%; }
+  .topbar { padding-top: 0; }
+  .workflow, .dropzone, .file-chip, .primary, .secondary, .footer, .file-input, .check-row, .field, .alert { display: none !important; }
+  .hero { padding: 20px 0; }
+  .layout { display: block; }
+  .stack { display: block; }
+  .panel { box-shadow: none; margin-bottom: 16px; break-inside: avoid; }
+  .empty-state { display: none; }
+  .json-box { max-height: none; overflow: visible; white-space: pre-wrap; }
+  .table-wrap { overflow: visible; }
+}
