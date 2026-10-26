@@ -3,7 +3,7 @@
 ## Implemented in this slice
 
 - Health check
-- In-memory inspection of CSV, JSON, Parquet, Arrow IPC and Feather uploads
+- In-memory inspection of CSV, XLSX, JSON, Parquet, Arrow IPC and Feather uploads
 - Dataset overview, column profiles, preview and chart-ready summaries
 - Conservative cleaning recommendations
 - Cleaning preview and downloadable cleaned CSV
