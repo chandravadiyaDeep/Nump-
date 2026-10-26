@@ -199,7 +199,6 @@ export default function HomePage() {
     }
   }
 
-  const quality = asObject(overviewData.quality);
   const previewRows = Array.isArray(cleaning?.preview)
     ? (cleaning.preview as ApiObject[])
     : [];
@@ -305,7 +304,7 @@ export default function HomePage() {
               <button className="primary" style={{ marginTop: 17 }} onClick={calculateReadiness} disabled={!file || !!busy}>
                 {busy === "readiness" ? <span className="loading-line"><span className="spinner" /> Calculating score…</span> : "Calculate readiness score →"}
               </button>
-              {task === "forecasting" && <p className="hint">Forecasting is selectable here, but the current scoring engine may reject unsupported task types. Chronological validation is required before any forecasting model comparison is added.</p>}
+              {task === "forecasting" && <p className="hint">Forecasting is supported by the current readiness heuristic; time-aware model validation is not yet part of model comparison.</p>}
             </div>
           </section>
 
@@ -351,7 +350,7 @@ export default function HomePage() {
                   <div className="metric"><span>Missing cells</span><strong>{displayNumber(overviewData.total_missing_cells)}</strong></div>
                 </div>
                 <div className="detail-list">
-                  <div className="detail-row"><span>Exact duplicate rows</span><strong>{displayNumber(overviewData.duplicate_rows)}</strong></div>
+                  <div className="detail-row"><span>Exact duplicate rows</span><strong>{displayNumber(overviewData.duplicate_row_count)}</strong></div>
                   <div className="detail-row"><span>Source file</span><strong>{String(asObject(overview.dataset).filename ?? file?.name ?? "—")}</strong></div>
                   <div className="detail-row"><span>Processing mode</span><strong>In-memory</strong></div>
                 </div>
