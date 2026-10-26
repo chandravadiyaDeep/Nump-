@@ -355,7 +355,7 @@ export default function HomePage() {
             <div className="panel-body">
               <div className="field">
                 <label htmlFor="task">Intended ML task</label>
-                <select id="task" value={task} onChange={(event) => setTask(event.target.value)}>
+                <select id="task" value={task} onChange={(event) => { setTask(event.target.value); setComparison(null); }}>
                   <option value="classification">Classification</option>
                   <option value="regression">Regression</option>
                   <option value="forecasting">Time-series forecasting</option>
@@ -365,7 +365,7 @@ export default function HomePage() {
               {task !== "clustering" && (
                 <div className="field">
                   <label htmlFor="target">Target column name</label>
-                  <input id="target" value={target} onChange={(event) => setTarget(event.target.value)} placeholder="e.g. churn, price, outcome" />
+                  <input id="target" value={target} onChange={(event) => { setTarget(event.target.value); setComparison(null); }} placeholder="e.g. churn, price, outcome" />
                 </div>
               )}
               <button className="primary" style={{ marginTop: 17 }} onClick={calculateReadiness} disabled={!file || !!busy}>
@@ -384,9 +384,9 @@ export default function HomePage() {
               </div>
             </div>
             <div className="panel-body">
-              <label className="check-row"><input type="checkbox" checked={fillMissing} onChange={(event) => setFillMissing(event.target.checked)} /><span><strong>Fill missing values</strong><br />Use safe column-based defaults from the cleaning engine.</span></label>
-              <label className="check-row"><input type="checkbox" checked={dropDuplicates} onChange={(event) => setDropDuplicates(event.target.checked)} /><span><strong>Remove exact duplicate rows</strong><br />Keep this off if duplicate records may be meaningful.</span></label>
-              <label className="check-row"><input type="checkbox" checked={normalizeText} onChange={(event) => setNormalizeText(event.target.checked)} /><span><strong>Normalize text whitespace</strong><br />Trim leading and trailing spaces in text values.</span></label>
+              <label className="check-row"><input type="checkbox" checked={fillMissing} onChange={(event) => { setFillMissing(event.target.checked); setComparison(null); setCleanedCsv(null); }} /><span><strong>Fill missing values</strong><br />Use safe column-based defaults from the cleaning engine.</span></label>
+              <label className="check-row"><input type="checkbox" checked={dropDuplicates} onChange={(event) => { setDropDuplicates(event.target.checked); setComparison(null); setCleanedCsv(null); }} /><span><strong>Remove exact duplicate rows</strong><br />Keep this off if duplicate records may be meaningful.</span></label>
+              <label className="check-row"><input type="checkbox" checked={normalizeText} onChange={(event) => { setNormalizeText(event.target.checked); setComparison(null); setCleanedCsv(null); }} /><span><strong>Normalize text whitespace</strong><br />Trim leading and trailing spaces in text values.</span></label>
               <div className="button-row">
                 <button className="primary" onClick={previewCleaning} disabled={!file || !!busy}>
                   {busy === "cleaning" ? <span className="loading-line"><span className="spinner" /> Preparing…</span> : "Preview cleaning"}
@@ -423,6 +423,7 @@ export default function HomePage() {
                 </div>
                 <div className="result-title"><h3>Inspection response</h3><span className="mini-label">API report</span></div>
                 <pre className="json-box">{JSON.stringify(overview, null, 2)}</pre>
+                <button className="secondary" style={{ width: "100%" }} onClick={() => window.print()}>Print / Save report as PDF</button>
               </div>
             ) : (
               <div className="empty-state"><div className="empty-graphic">▤</div><h3>Your data story starts here</h3><p>Upload a dataset and select “Inspect dataset” to see its size, missing values, duplicate signals, and profile.</p></div>
@@ -463,6 +464,7 @@ export default function HomePage() {
                   </div>
                 ) : null}
                 <pre className="json-box">{JSON.stringify(readiness, null, 2)}</pre>
+                <button className="secondary" style={{ width: "100%" }} onClick={() => window.print()}>Print / Save report as PDF</button>
               </div>
             ) : (
               <div className="empty-state"><div className="empty-graphic">◉</div><h3>Know before you train</h3><p>Choose a task and target column, then calculate the readiness score to see the factors affecting your dataset.</p></div>
