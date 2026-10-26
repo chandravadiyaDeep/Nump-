@@ -47,3 +47,24 @@ def test_readiness_score_is_bounded_and_explained():
     assert 0 <= result["score"] <= 100
     assert result["dimensions"]
     assert "caveat" in result
+
+
+def test_xlsx_inspection_reports_shape():
+    # Build a tiny Excel workbook in memory so the test does not depend on fixture files.
+    workbook = io.BytesIO()
+    pd.DataFrame({"age": [21, 32], "city": ["Ahmedabad", "Surat"]}).to_excel(
+        workbook, index=False, engine="openpyxl"
+    )
+    response = client.post(
+        "/api/v1/datasets/inspect",
+        files={
+            "file": (
+                "people.xlsx",
+                workbook.getvalue(),
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            )
+        },
+    )
+    assert response.status_code == 200
+    assert response.json()["overview"]["row_count"] == 2
+    assert response.json()["overview"]["column_count"] == 2
