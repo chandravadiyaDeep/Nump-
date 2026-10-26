@@ -1,6 +1,6 @@
 # NUMPA — Automated Data Workflow (MVP)
 
-NUMPA is an MVP for an end-to-end dataset preparation workflow: dataset overview → preprocessing insights → smart cleaning → visualization → ML readiness → comparison of suitable ML algorithms.
+NUMPA's customer-facing MVP focuses on two features: Smart Data Cleaning and an explainable ML Readiness Assessment, connected by an upload → inspect → score → review cleaning → compare → export workflow.
 
 ## MVP now in the repository
 
@@ -34,7 +34,7 @@ See apps/api/README.md. Install apps/api/requirements.txt, run tests with pytest
 2. Review quality profile and proposed cleaning actions.
 3. Preview cleaning and download a cleaned CSV.
 4. Calculate readiness for a selected ML task and target.
-5. Compare three baseline algorithms for classification or regression.
+5. Optional internal endpoint: compare baseline classification/regression algorithms. This is not a primary customer-facing MVP feature.
 
 ## Safety and validity
 
