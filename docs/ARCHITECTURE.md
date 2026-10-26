@@ -4,58 +4,45 @@
 
 - Modular, testable, deterministic core logic.
 - Clear API contracts between UI and backend.
-- Local-first file processing for the MVP where practical; explain any server upload/retention behaviour before users submit data.
-- Uploaded files are untrusted input: enforce size limits, extension and content checks, safe archive extraction, timeouts, and resource limits.
-- Never commit credentials. Provide `.env.example` placeholders only.
-- Separate ingestion, profiling, cleaning, visualization summaries, readiness scoring, and model evaluation.
-- Preserve a reproducible workflow record with input fingerprint, chosen parameters, operations, dependency versions and output diagnostics where appropriate.
+- Treat uploads as untrusted: enforce size limits, file checks, safe extraction, timeouts and compute limits.
+- Never commit credentials; use example environment placeholders.
+- Separate ingestion, profiling, cleaning, visualization summaries, readiness scoring and model evaluation.
+- Record chosen options and cleaning operations so results can be audited and reproduced.
 
-## Initial target structure
+## Repository structure
 
-```text
-Nump-/
-├── apps/
-│   ├── api/                 # Python API (planned)
-│   └── web/                 # UI (planned)
-├── packages/                # Shared contracts (as needed)
-├── docs/
-│   ├── PRODUCT_SPEC.md
-│   ├── ARCHITECTURE.md
-│   └── DEVELOPMENT.md
-├── .gitignore
-├── README.md
-└── .env.example
-```
+    apps/api/app/        Python API and workflow modules
+    apps/api/tests/      API and engine tests
+    apps/api/            requirements and local instructions
+    docs/                product requirements and architecture
+    .github/workflows/   API test workflow
 
-## Backend modules (planned)
+A web application will be added after the backend API shape stabilizes.
 
-- `ingestion`: validate and load supported formats.
-- `profiling`: overview, schema, missingness, duplicates and distributions.
-- `preprocessing`: type parsing and feature diagnostics.
-- `cleaning`: recommendation plan, preview, execute, validate and report.
-- `visualization`: chart-ready aggregates (avoid sending huge raw data to browser).
-- `readiness`: deterministic, task-aware, explainable score.
-- `ml_labs`: train/test strategy, leakage-safe pipelines and metric calculation.
-- `api`: request/response validation, limits, error handling and health endpoint.
+## Backend modules
 
-## API design (initial proposal)
+- ingestion: supported-format validation and dataframe loading
+- profiling: overview, schema, missingness, duplicates and summaries
+- cleaning: recommendations, preview, execute, validation and audit report
+- readiness: deterministic and explainable readiness heuristic
+- ml_labs: leakage-aware baseline training and metrics
+- main: HTTP routes, request limits and error normalization
 
-- `GET /api/v1/health`
-- `POST /api/v1/datasets/inspect`
-- `POST /api/v1/cleaning/preview`
-- `POST /api/v1/cleaning/execute`
-- `POST /api/v1/ml-readiness/score`
-- `POST /api/v1/ml-labs/compare`
+## Current API routes
 
-Final route details should be aligned with the actual implementation before clients depend on them.
+- GET /api/v1/health
+- POST /api/v1/datasets/inspect
+- POST /api/v1/cleaning/preview
+- POST /api/v1/cleaning/execute
+- POST /api/v1/ml-readiness/score
+- POST /api/v1/ml-labs/compare
 
-## Implementation order
+## Development order
 
-1. Establish backend package, dependency pinning and tests.
-2. Build secure upload/ingestion and tabular profiling.
-3. Build cleaning recommendations and preview/apply/report.
-4. Build visualization summaries.
-5. Add readiness scoring and explainability.
-6. Add leakage-safe baseline model comparison.
-7. Connect UI and run end-to-end acceptance tests.
-8. Expand dataset formats with format-specific fixtures and tests.
+1. Build and test secure ingestion/profiling.
+2. Test cleaning recommendations, options and audit report.
+3. Build visual UI and workflow state.
+4. Improve readiness scoring and task selection.
+5. Harden model comparison, validation and resource limits.
+6. Add additional dataset formats with fixtures.
+7. Deploy only after CI and end-to-end acceptance tests pass.
