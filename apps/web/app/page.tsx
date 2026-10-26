@@ -492,7 +492,8 @@ export default function HomePage() {
                 ) : <p className="hint">No preview rows were returned. Review the report below for details.</p>}
                 <div className="result-title"><h3>Cleaning report</h3><span className="mini-label">Preview only</span></div>
                 <pre className="json-box">{JSON.stringify(cleaning.report ?? cleaning, null, 2)}</pre>
-                <button className="primary" onClick={applyCleaningAndCompare} disabled={!file || !!busy}>{busy === "compare" ? <span className="loading-line"><span className="spinner" /> Applying & comparing…</span> : "Apply cleaning & compare readiness"}</button>
+                <button className="secondary" style={{ width: "100%" }} onClick={() => window.print()}>Print / Save cleaning report as PDF</button>
+                <button className="primary" style={{ marginTop: 9 }} onClick={applyCleaningAndCompare} disabled={!file || !!busy}>{busy === "compare" ? <span className="loading-line"><span className="spinner" /> Applying & comparing…</span> : "Apply cleaning & compare readiness"}</button>
                 <button className="secondary" style={{ width: "100%", marginTop: 9 }} onClick={downloadCleanedCsv} disabled={!file || !!busy}>{busy === "download" ? "Preparing download…" : "↓ Download cleaned CSV"}</button>
               </div>
             ) : (
