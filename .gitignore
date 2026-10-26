@@ -1,0 +1,40 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# JavaScript / frontend
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Data and generated artifacts
+data/
+uploads/
+outputs/
+*.parquet
+*.arrow
+*.csv
+*.xlsx
+*.zip
