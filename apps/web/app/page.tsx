@@ -255,11 +255,11 @@ export default function HomePage() {
               <div className="dropzone">
                 <div className="upload-symbol">▤</div>
                 <strong>Upload your data file</strong>
-                <small>CSV, JSON, Parquet, Arrow IPC or Feather · up to 50 MB</small>
+                <small>CSV, XLSX, JSON, Parquet, Arrow IPC or Feather · up to 50 MB</small>
                 <input
                   className="file-input"
                   type="file"
-                  accept=".csv,.json,.parquet,.arrow,.feather,.ipc"
+                  accept=".csv,.xlsx,.json,.parquet,.arrow,.feather,.ipc"
                   onChange={handleFileChange}
                   aria-label="Choose dataset file"
                 />
