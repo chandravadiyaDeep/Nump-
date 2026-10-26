@@ -46,7 +46,7 @@ Implemented in the initial backend and web branch: supported-file inspection, cl
 Remaining work before calling the MVP complete:
 - Build an integrated before/after readiness comparison using the same cleaning options and target/task.
 - Add explicit per-action approval controls and richer explanations in the UI.
-- Add downloadable cleaning/readiness reports (PDF export is not in the first UI slice).
+- Add dedicated downloadable cleaning/readiness report PDFs beyond the browser print-to-PDF action currently available for visible results.
 - Add end-to-end browser/API tests and verify CI.
 - Improve error handling, upload/resource limits, and deployment configuration.
 
