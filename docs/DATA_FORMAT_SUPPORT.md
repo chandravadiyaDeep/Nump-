@@ -6,6 +6,7 @@ A format is supported only after its loader, validation, error handling, limits 
 | Format | Current status | Notes |
 |---|---|---|
 | CSV | Initial loader implemented | Encoding and delimiter edge cases need tests. |
+| XLSX (.xlsx) | Initial loader implemented | Uses pandas with openpyxl; add fixtures for multiple sheets and unusual cell types before expanding support. |
 | JSON | Initial loader implemented | Nested structures can normalize differently. |
 | Parquet | Initial loader implemented | Requires compatible PyArrow. |
 | Arrow IPC (.arrow) | Initial loader implemented | File and stream paths are attempted. |
