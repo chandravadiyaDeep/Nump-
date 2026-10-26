@@ -40,3 +40,23 @@ See apps/api/README.md. Install apps/api/requirements.txt, run tests with pytest
 ## Status
 
 Backend starter files are committed. GitHub Actions should execute the API test suite on the next workflow run; check the Actions tab for its actual pass/fail result. The web UI and deployment are not implemented yet.
+
+
+## Project handbook
+
+These documents define how NUMPA should be built and scaled:
+
+- [Scaling roadmap](docs/SCALING_ROADMAP.md)
+- [Architecture decisions](docs/ARCHITECTURE_DECISIONS.md)
+- [Smart cleaning specification](docs/CLEANING_ENGINE_SPEC.md)
+- [ML readiness specification](docs/ML_READINESS_SPEC.md)
+- [Dataset format support matrix](docs/DATA_FORMAT_SUPPORT.md)
+- [Security and privacy](docs/SECURITY_PRIVACY.md)
+- [Testing and QA](docs/TESTING_QA.md)
+- [Deployment and operations](docs/DEPLOYMENT_OPERATIONS.md)
+- [API and integrations](docs/API_AND_INTEGRATIONS.md)
+- [Release checklist](docs/RELEASE_CHECKLIST.md)
+- [Research library](resources/README.md)
+- [Official technical references](resources/OFFICIAL_TECH_REFERENCES.md)
+- [Competitor watch](resources/COMPETITOR_WATCH.md)
+- [Research backlog](resources/RESEARCH_BACKLOG.md)
