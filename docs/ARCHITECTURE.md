@@ -17,7 +17,7 @@
     docs/                product requirements and architecture
     .github/workflows/   API test workflow
 
-A web application will be added after the backend API shape stabilizes.
+A Next.js web application now lives under `apps/web` on the `mvp/web-workflow` branch. Keep its HTTP contract aligned with the FastAPI routes and validate both with CI before merging.
 
 ## Backend modules
 
@@ -39,10 +39,10 @@ A web application will be added after the backend API shape stabilizes.
 
 ## Development order
 
-1. Build and test secure ingestion/profiling.
+1. Stabilize secure ingestion and profiling, including CSV/XLSX fixtures.
 2. Test cleaning recommendations, options and audit report.
-3. Build visual UI and workflow state.
-4. Improve readiness scoring and task selection.
-5. Harden model comparison, validation and resource limits.
-6. Add additional dataset formats with fixtures.
+3. Finish the web UI's integrated before/after readiness workflow.
+4. Improve readiness scoring and task-specific explanations.
+5. Harden API errors, request limits and resource controls.
+6. Add more dataset formats only with dedicated fixtures.
 7. Deploy only after CI and end-to-end acceptance tests pass.
