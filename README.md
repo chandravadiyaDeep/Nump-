@@ -7,7 +7,7 @@ NUMPA is an MVP for an end-to-end dataset preparation workflow: dataset overview
 - FastAPI backend under apps/api
 - In-memory tabular inspection for CSV, XLSX, JSON, Parquet, Arrow IPC and Feather uploads
 - Dataset overview with rows, columns, data types, missingness, duplicates, profiles and chart-ready summaries
-- Explainable cleaning recommendations and cleaning preview/report
+- Explainable cleaning recommendations, cleaning preview/report, and browser print-to-PDF for visible results
 - Downloadable cleaned CSV
 - Deterministic, explainable readiness score
 - Baseline classification and regression comparison using task-appropriate metrics
