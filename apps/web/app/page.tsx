@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, useMemo, useState } from "react";
+import AuthNav from "./components/auth-nav";
 
 type ApiObject = Record<string, unknown>;
 
@@ -283,7 +284,7 @@ export default function HomePage() {
           <span className="brand-mark">N</span>
           <span>NUMPA</span>
         </div>
-        <div className="top-pill"><span className="status-dot" /> Dataset Quality Studio</div>
+        <div className="topbar-actions"><div className="top-pill"><span className="status-dot" /> Dataset Quality Studio</div><AuthNav /></div>
       </header>
 
       <section className="hero">
