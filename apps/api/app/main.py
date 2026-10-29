@@ -14,7 +14,21 @@ from .profiling import profile_dataframe
 from .readiness import score_readiness
 
 app = FastAPI(title="NUMPA API", description="MVP for dataset inspection, cleaning, readiness and model comparison.", version="0.1.0")
-origins = [v.strip() for v in os.getenv("NUMPA_CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",") if v.strip()]
+# Allow the production website by default, while retaining local development origins.
+# Explicit Render environment origins are added rather than replacing safe defaults.
+default_origins = [
+    "https://numpa.online",
+    "https://www.numpa.online",
+    "https://numpa.vercel.app",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+configured_origins = [
+    origin.strip()
+    for origin in os.getenv("NUMPA_CORS_ORIGINS", "").split(",")
+    if origin.strip()
+]
+origins = list(dict.fromkeys([*default_origins, *configured_origins]))
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=False, allow_methods=["GET", "POST"], allow_headers=["Content-Type", "Authorization"])
 
 
