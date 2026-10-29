@@ -34,7 +34,7 @@ origins = list(dict.fromkeys([*default_origins, *configured_origins]))
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_origin_regex=r"https://numpa-[a-z0-9-]+-depochandravadiya-6509s-projects\\.vercel\\.app",
+    allow_origin_regex=r"https://numpa-[a-z0-9-]+-depochandravadiya-6509s-projects\.vercel\.app",
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type", "Authorization"],
