@@ -1,5 +1,5 @@
 # Render Blueprint for the NUMPA FastAPI service.
-# Import this file in Render and configure NUMPA_CORS_ORIGINS with the deployed Vercel origin.
+# Set NUMPA_CORS_ORIGINS to the deployed Vercel origin in Render.
 services:
   - type: web
     name: numpa-api
