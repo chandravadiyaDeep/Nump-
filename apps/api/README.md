@@ -1,35 +1,42 @@
-# NUMPA API — MVP Slice 1
+# NUMPA API
 
-## Implemented in this slice
+FastAPI service for dataset inspection, conservative cleaning, ML-readiness heuristics, and baseline model comparisons.
 
-- Health check
-- In-memory inspection of CSV, XLSX, JSON, Parquet, Arrow IPC and Feather uploads
-- Dataset overview, column profiles, preview and chart-ready summaries
-- Conservative cleaning recommendations
-- Cleaning preview and downloadable cleaned CSV
-- Deterministic readiness score with dimension explanations
-- Classification/regression baseline comparison with applicable metrics
-- Basic API contract tests
+## Run locally
 
-Folder-based ImageFolder/AudioFolder, WebDataset archives, raw text corpora and specialized optimized-Parquet variants are not supported by this initial tabular loader yet. They need explicit loaders and fixtures.
+From the repository root:
 
-## Run locally on Windows PowerShell
+```powershell
+cd apps/api
+python -m pip install -r requirements.txt
+python -m uvicorn app.main:app --reload --port 8000
+```
 
-    cd apps/api
-    python -m venv .venv
-    .\.venv\Scripts\Activate.ps1
-    python -m pip install -r requirements.txt
-    pytest
-    uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+Health check: `http://127.0.0.1:8000/api/v1/health`.
 
-Open http://127.0.0.1:8000/docs to try endpoints.
+## Deploy to Render
 
-## Upload API
+The repository root contains `render.yaml`. In Render, create a new Blueprint and select this repository. The Blueprint configures the service root as `apps/api`, installs `requirements.txt`, starts Uvicorn on Render's assigned port, and uses `/api/v1/health` for health checks.
 
-- POST /api/v1/datasets/inspect — multipart field file
-- POST /api/v1/cleaning/preview — multipart file, optional fields fill_missing, drop_exact_duplicates, normalize_text
-- POST /api/v1/cleaning/execute — same options; returns cleaned CSV
-- POST /api/v1/ml-readiness/score — multipart file, fields task and optional target
-- POST /api/v1/ml-labs/compare — multipart file, fields task and target
+Set `NUMPA_CORS_ORIGINS` in Render to a comma-separated list of exact web origins, for example:
 
-Requests are processed in memory; uploaded files are not intentionally persisted. Configure proxy/request-size limits in hosted deployments too. Model training is compute-intensive; add timeouts, concurrency limits and job orchestration before exposing this API publicly.
+```text
+https://your-project.vercel.app
+```
+
+If you use a custom domain, include that origin too. Do not include a path or trailing slash. Keep local origins only if you need local development. The API currently does not use cookie-based authentication, so CORS credentials are disabled.
+
+## Tests
+
+```powershell
+python -m pytest -q
+```
+
+## Production limits and caveats
+
+- Upload size is limited to 50 MB; datasets are also limited to 1,000,000 rows and 2,000 columns.
+- Uploaded files are processed in memory and are not intentionally persisted by these endpoints.
+- The API is currently public and does not require user authentication or rate limiting. Do not use it for sensitive datasets until access controls and abuse protections are implemented.
+- Readiness scores are deterministic heuristics, not guarantees of model accuracy.
+- Cleaning output is currently CSV, even when the source file is Excel, JSON, or Parquet.
+- Model comparison is compute-intensive; add rate limiting, timeouts, and concurrency controls before broad public use.
