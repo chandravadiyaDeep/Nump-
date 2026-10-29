@@ -57,9 +57,6 @@ def load_dataframe(filename: str, raw: bytes) -> pd.DataFrame:
         elif suffix == ".xlsx":
             # Restrict Excel support to modern .xlsx files with the openpyxl engine.
             frame = pd.read_excel(io.BytesIO(raw), engine="openpyxl")
-        elif suffix == ".xlsx":
-            # Restrict Excel support to modern .xlsx files with the openpyxl engine.
-            frame = pd.read_excel(io.BytesIO(raw), engine="openpyxl")
         elif suffix == ".parquet":
             frame = pd.read_parquet(io.BytesIO(raw))
         else:
