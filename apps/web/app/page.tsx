@@ -5,9 +5,8 @@ import AuthNav from "./components/auth-nav";
 
 type ApiObject = Record<string, unknown>;
 
-const API_BASE = (
-  process.env.NEXT_PUBLIC_NUMPA_API_URL || "http://localhost:8000"
-).replace(/\/$/, "");
+// Never fall back to localhost in a deployed browser; require the hosted API URL.
+const API_BASE = (process.env.NEXT_PUBLIC_NUMPA_API_URL || "").trim().replace(/\/$/, "");
 
 // Keep API error messages readable instead of showing an unhelpful generic failure.
 async function readApiResponse(response: Response): Promise<ApiObject> {
@@ -60,6 +59,14 @@ export default function HomePage() {
   const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState("");
 
+  // Show a clear configuration error instead of sending production requests to localhost.
+  function ensureApiConfigured(): boolean {
+    if (API_BASE) return true;
+    setError("NUMPA API is not connected yet. Deploy the FastAPI service and set NEXT_PUBLIC_NUMPA_API_URL in Vercel, then redeploy the website.");
+    setNotice("");
+    return false;
+  }
+
   const overviewData = useMemo(() => asObject(overview?.overview), [overview]);
   const score = readiness?.score;
   const scoreLabel =
@@ -89,6 +96,7 @@ export default function HomePage() {
       setError("Choose a dataset file before continuing.");
       return;
     }
+    if (!ensureApiConfigured()) return;
     setBusy("inspect");
     setError("");
     setNotice("");
@@ -121,6 +129,7 @@ export default function HomePage() {
       setError("Enter the target column for classification, regression, or forecasting.");
       return;
     }
+    if (!ensureApiConfigured()) return;
     setBusy("readiness");
     setError("");
     setNotice("");
@@ -150,6 +159,7 @@ export default function HomePage() {
       setError("Choose a dataset file before previewing cleaning.");
       return;
     }
+    if (!ensureApiConfigured()) return;
     setBusy("cleaning");
     setError("");
     setNotice("");
@@ -185,6 +195,7 @@ export default function HomePage() {
       setError("Enter the target column before comparing readiness.");
       return;
     }
+    if (!ensureApiConfigured()) return;
     setBusy("compare");
     setError("");
     setNotice("");
@@ -238,6 +249,7 @@ export default function HomePage() {
       setNotice("Cleaned CSV downloaded to your device.");
       return;
     }
+    if (!ensureApiConfigured()) return;
     setBusy("download");
     setError("");
     try {
