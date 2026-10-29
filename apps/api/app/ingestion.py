@@ -1,6 +1,6 @@
 """Safe, bounded ingestion for supported tabular dataset files.
 
-The first MVP supports CSV, JSON, Parquet and Arrow IPC files. Folder-based and
+The first MVP supports CSV, JSON, XLSX, Parquet and Arrow IPC files. Folder-based and
 archive-based dataset formats are intentionally not accepted by this loader yet.
 """
 from __future__ import annotations
@@ -14,7 +14,7 @@ import pandas as pd
 import pyarrow as pa
 import pyarrow.ipc as ipc
 
-ALLOWED_SUFFIXES = {".csv", ".json", ".parquet", ".arrow", ".feather"}
+ALLOWED_SUFFIXES = {".csv", ".json", ".xlsx", ".parquet", ".arrow", ".feather"}
 MAX_UPLOAD_BYTES = 50 * 1024 * 1024
 MAX_ROWS = 1_000_000
 MAX_COLUMNS = 2_000
@@ -54,6 +54,9 @@ def load_dataframe(filename: str, raw: bytes) -> pd.DataFrame:
                     frame = pd.DataFrame(rows) if rows is not None else pd.json_normalize(value)
                 else:
                     raise DatasetInputError("JSON must contain an object or array of records.")
+        elif suffix == ".xlsx":
+            # Restrict Excel support to modern .xlsx files with the openpyxl engine.
+            frame = pd.read_excel(io.BytesIO(raw), engine="openpyxl")
         elif suffix == ".parquet":
             frame = pd.read_parquet(io.BytesIO(raw))
         else:
