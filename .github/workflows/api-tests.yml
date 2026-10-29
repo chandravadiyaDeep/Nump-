@@ -2,9 +2,9 @@ name: NUMPA API tests
 
 on:
   push:
-    branches: [main]
+    branches: [main, "mvp/**", "feature/**", "fix/**"]
   pull_request:
-    branches: [main]
+    branches: [main, "mvp/**", "feature/**"]
 
 jobs:
   test-api:
@@ -23,5 +23,5 @@ jobs:
           cache-dependency-path: apps/api/requirements.txt
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
-      - name: Run tests
+      - name: Run API smoke tests
         run: python -m pytest -q
