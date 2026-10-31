@@ -38,6 +38,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 - [Codex Phase 1 prompt](CODEX_PHASE_1_PROMPT.md) — the single prompt to run for the workspace foundation.
 - [Codex Phase 2 prompt](CODEX_PHASE_2_PROMPT.md) — the single prompt to run for Data Analysis and Data Preprocessing / Cleaning.
 - [Codex Phase 3 prompt](CODEX_PHASE_3_PROMPT.md) — the single prompt to run for the Data Visualization workspace.
+- [Codex Phase 4 prompt](CODEX_PHASE_4_PROMPT.md) — the single prompt to run for ML Readiness and ML Lab.
 
 ## Mandatory reading order for an implementation agent
 
@@ -53,7 +54,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 
 ## Scope control
 
-Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Phase 3 must not begin until Phase 2 is implemented, tested and accepted. Do not implement integrations, billing, new database tables, raw dataset persistence, or new ML algorithms as part of Phase 2.
+Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Phase 3 must not begin until Phase 2 is implemented, tested and accepted. Phase 4 must not begin until Phase 3 is implemented, tested and accepted. Do not implement integrations, billing, new database tables or raw dataset persistence in earlier phases. Phase 4 may expose only ML tasks, algorithms, metrics and validation strategies already implemented and tested by the existing engine; it does not authorize new scoring formulas, algorithms, backend endpoints or database changes.
 
 ## Change control
 
