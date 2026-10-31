@@ -40,6 +40,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 - [Codex Phase 3 prompt](CODEX_PHASE_3_PROMPT.md) — the single prompt to run for the Data Visualization workspace.
 - [Codex Phase 4 prompt](CODEX_PHASE_4_PROMPT.md) — the single prompt to run for ML Readiness and ML Lab.
 - [Codex Phase 5 prompt](CODEX_PHASE_5_PROMPT.md) — the single prompt to run for Analysis History and Settings.
+- [Codex Phase 6 prompt](CODEX_PHASE_6_PROMPT.md) — the single prompt to run for integrations and commercial launch readiness.
 
 ## Mandatory reading order for an implementation agent
 
@@ -55,7 +56,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 
 ## Scope control
 
-Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Phase 3 must not begin until Phase 2 is implemented, tested and accepted. Phase 4 must not begin until Phase 3 is implemented, tested and accepted. Phase 5 must not begin until Phase 4 is implemented, tested and accepted. Do not implement integrations, billing, new database tables or raw dataset persistence in earlier phases. Phase 4 may expose only ML tasks, algorithms, metrics and validation strategies already implemented and tested by the existing engine; it does not authorize new scoring formulas, algorithms, backend endpoints or database changes. Phase 5 does not authorize Supabase schema, RLS, migration, storage, authentication, infrastructure or API changes; obtain separate explicit approval before proposing or applying any database migration.
+Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Phase 3 must not begin until Phase 2 is implemented, tested and accepted. Phase 4 must not begin until Phase 3 is implemented, tested and accepted. Phase 5 must not begin until Phase 4 is implemented, tested and accepted. Phase 6 must not begin until Phase 5 is implemented, tested and accepted. Do not implement integrations, billing, new database tables or raw dataset persistence in earlier phases. Phase 4 may expose only ML tasks, algorithms, metrics and validation strategies already implemented and tested by the existing engine; it does not authorize new scoring formulas, algorithms, backend endpoints or database changes. Phase 5 does not authorize Supabase schema, RLS, migration, storage, authentication, infrastructure or API changes; obtain separate explicit approval before proposing or applying any database migration. Phase 6 is approval-gated: it does not grant blanket permission to modify production services, database/auth, secrets, external provider accounts, payment processing or API contracts. Implement only verified capabilities after the required separate approvals.
 
 ## Change control
 
