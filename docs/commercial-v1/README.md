@@ -37,6 +37,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 - [Verification plan](VERIFICATION_PLAN.md) — checks and release gates.
 - [Codex Phase 1 prompt](CODEX_PHASE_1_PROMPT.md) — the single prompt to run for the workspace foundation.
 - [Codex Phase 2 prompt](CODEX_PHASE_2_PROMPT.md) — the single prompt to run for Data Analysis and Data Preprocessing / Cleaning.
+- [Codex Phase 3 prompt](CODEX_PHASE_3_PROMPT.md) — the single prompt to run for the Data Visualization workspace.
 
 ## Mandatory reading order for an implementation agent
 
@@ -52,7 +53,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 
 ## Scope control
 
-Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Do not implement integrations, billing, new database tables, raw dataset persistence, or new ML algorithms as part of Phase 2.
+Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Phase 3 must not begin until Phase 2 is implemented, tested and accepted. Do not implement integrations, billing, new database tables, raw dataset persistence, or new ML algorithms as part of Phase 2.
 
 ## Change control
 
