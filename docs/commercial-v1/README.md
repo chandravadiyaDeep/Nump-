@@ -35,7 +35,8 @@ This folder is the single source of truth for the Commercial V1 product directio
 - [Implementation roadmap](IMPLEMENTATION_ROADMAP.md) — phases, dependencies and acceptance criteria.
 - [Safety and architecture constraints](SAFETY_AND_ARCHITECTURE.md) — protected services, no-go changes and implementation rules.
 - [Verification plan](VERIFICATION_PLAN.md) — checks and release gates.
-- [Codex Phase 1 prompt](CODEX_PHASE_1_PROMPT.md) — the single prompt to run for the first implementation phase.
+- [Codex Phase 1 prompt](CODEX_PHASE_1_PROMPT.md) — the single prompt to run for the workspace foundation.
+- [Codex Phase 2 prompt](CODEX_PHASE_2_PROMPT.md) — the single prompt to run for Data Analysis and Data Preprocessing / Cleaning.
 
 ## Mandatory reading order for an implementation agent
 
@@ -51,7 +52,7 @@ This folder is the single source of truth for the Commercial V1 product directio
 
 ## Scope control
 
-Only Phase 1 is authorized by the Phase 1 prompt. Later phases are planning documents, not permission to implement all features at once. Do not implement integrations, billing, new database tables, raw dataset persistence, or new ML algorithms as part of Phase 1.
+Each phase-specific prompt authorizes only that phase. Later phases are planning documents, not permission to implement all features at once. Phase 2 must not begin until Phase 1 is implemented, tested and accepted. Do not implement integrations, billing, new database tables, raw dataset persistence, or new ML algorithms as part of Phase 2.
 
 ## Change control
 
