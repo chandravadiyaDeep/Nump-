@@ -1,75 +1,248 @@
-YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíó}ôN‹Z–‹­¦ëeŠw¬Ô‰ÕÍ”±¥•¹Ğˆì()¥µÁ½ÉĞìÕÍ•™™•Ğ°ÕÍ•5•µ¼°ÕÍ•MÑ…Ñ”ô™É½´€‰É•…Ğˆì)¥µÁ½ÉĞÑåÁ”ì¡…¹•Ù•¹Ğô™É½´€‰É•…Ğˆì)¥µÁ½ÉĞì™¥±Ñ•É¹‘M½ÉÑAÉ½™¥±•Ì°•Ñ½±Õµ¹AÉ½™¥±•Ì°•ÑAÉ½™¥±•MÕµµ…Éä°•ÑEÕ…±¥Ñå=‰Í•ÉÙ…Ñ¥½¹Ì°Í•±•Ñ¥½¹1…‰•°°Ù…±¥‘…Ñ•UÁ±½…ô™É½´€ˆ¸½İ½É­ÍÁ…”µ‘…Ñ„µµ½‘•°¹µ©Ìˆì()ÑåÁ”Á¥=‰©•Ğ€ôI•½ÉñÍÑÉ¥¹œ°Õ¹­¹½İ¸øì)ÑåÁ”±•…¹¥¹=ÕÑÁÕĞ€ôì‰±½ˆè	±½ˆì™¥±•¹…µ”èÍÑÉ¥¹œôğ¹Õ±°ì)ÑåÁ”½µÁ…É¥Í½¸€ôì‰•™½É”èÁ¥=‰©•Ğì…™Ñ•ÈèÁ¥=‰©•Ğôğ¹Õ±°ì()ÑåÁ”¹…±åÍ¥Í]½É­ÍÁ…•AÉ½ÁÌ€ôì(€™¥±”è¥±”ğ¹Õ±°ì(€½Ù•ÉÙ¥•ÜèÁ¥=‰©•Ğğ¹Õ±°ì(€É•…‘¥¹•ÍÌèÁ¥=‰©•Ğğ¹Õ±°ì(€½µÁ…É¥Í½¸è½µÁ…É¥Í½¸ì(€Ñ…Í¬èÍÑÉ¥¹œì(€Ñ…É•ĞèÍÑÉ¥¹œì(€‰ÕÍäèÍÑÉ¥¹œì(€•ÉÉ½ÈèÍÑÉ¥¹œì(€¹½Ñ¥”èÍÑÉ¥¹œì(€½¹¥±•¡…¹”è€¡•Ù•¹Ğè¡…¹•Ù•¹Ğñ!Q51%¹ÁÕÑ±•µ•¹Ğø¤€ôøÙ½¥ì(€½¹%¹ÍÁ•Ğè€ ¤€ôøÙ½¥ì(€½¹I•…‘¥¹•ÍÌè€ ¤€ôøÙ½¥ì(€Í•ÑQ…Í¬è€¡Ù…±Õ”èÍÑÉ¥¹œ¤€ôøÙ½¥ì(€Í•ÑQ…É•Ğè€¡Ù…±Õ”èÍÑÉ¥¹œ¤€ôøÙ½¥ì)ôì()ÑåÁ”±•…¹¥¹]½É­ÍÁ…•AÉ½ÁÌ€ôì(€™¥±”è¥±”ğ¹Õ±°ì(€½Ù•ÉÙ¥•ÜèÁ¥=‰©•Ğğ¹Õ±°ì(€±•…¹¥¹œèÁ¥=‰©•Ğğ¹Õ±°ì(€±•…¹•‘ÍØè±•…¹¥¹=ÕÑÁÕĞì(€™¥±±5¥ÍÍ¥¹œè‰½½±•…¸ì(€‘É½ÁÕÁ±¥…Ñ•Ìè‰½½±•…¸ì(€¹½Éµ…±¥é•Q•áĞè‰½½±•…¸ì(€‰ÕÍäèÍÑÉ¥¹œì(€•ÉÉ½ÈèÍÑÉ¥¹œì(€¹½Ñ¥”èÍÑÉ¥¹œì(€½¹Q½±”è€¡½Á•É…Ñ¥½¸è€‰™¥±±5¥ÍÍ¥¹œˆğ€‰‘É½ÁÕÁ±¥…Ñ•Ìˆğ€‰¹½Éµ…±¥é•Q•áĞˆ°Í•±•Ñ•è‰½½±•…¸¤€ôøÙ½¥ì(€½¹AÉ•Ù¥•Üè€ ¤€ôøÙ½¥ì(€½¹á•ÕÑ”è€ ¤€ôøÙ½¥ì(€½¹½İ¹±½…è€ ¤€ôøÙ½¥ì(€½¹™¥Éµ¥¹œè‰½½±•…¸ì(€½¹	•¥¹½¹™¥Éµ…Ñ¥½¸è€ ¤€ôøÙ½¥ì(€½¹…¹•±½¹™¥Éµ…Ñ¥½¸è€ ¤€ôøÙ½¥ì)ôì()™Õ¹Ñ¥½¸…Í=‰©•Ğ¡Ù…±Õ”èÕ¹­¹½İ¸¤èÁ¥=‰©•Ğì(€É•ÑÕÉ¸Ù…±Õ”€˜˜ÑåÁ•½˜Ù…±Õ”€ôôô€‰½‰©•Ğˆ€˜˜€…ÉÉ…ä¹¥ÍÉÉ…ä¡Ù…±Õ”¤(€€€€ü€¡Ù…±Õ”…ÌÁ¥=‰©•Ğ¤(€€€€èíôì)ô()™Õ¹Ñ¥½¸‘¥ÍÁ±…å9Õµ‰•È¡Ù…±Õ”èÕ¹­¹½İ¸¤èÍÑÉ¥¹œì(€É•ÑÕÉ¸ÑåÁ•½˜Ù…±Õ”€ôôô€‰¹Õµ‰•Èˆ€˜˜9Õµ‰•È¹¥Í¥¹¥Ñ”¡Ù…±Õ”¤€üÙ…±Õ”¹Ñ½1½…±•MÑÉ¥¹œ ¤€è€‹ŠPˆì)ô()™Õ¹Ñ¥½¸™¥±•QåÁ”¡™¥±”è¥±”ğ¹Õ±°°‘…Ñ…Í•ĞèÁ¥=‰©•Ğ¤èÍÑÉ¥¹œì(€½¹ÍĞ™½Éµ…Ğ€ô‘…Ñ…Í•Ğ¹™½Éµ…Ğì(€¥˜€¡ÑåÁ•½˜™½Éµ…Ğ€ôôô€‰ÍÑÉ¥¹œˆ€˜˜™½Éµ…Ğ¤É•ÑÕÉ¸™½Éµ…Ğ¹Ñ½UÁÁ•É…Í” ¤ì(€½¹ÍĞÍÕ™™¥à€ô™¥±”ü¹¹…µ”¹ÍÁ±¥Ğ ˆ¸ˆ¤¹Á½À ¤ì(€É•ÑÕÉ¸ÍÕ™™¥à€˜˜ÍÕ™™¥à€„ôô™¥±”ü¹¹…µ”€üÍÕ™™¥à¹Ñ½UÁÁ•É…Í” ¤€è€‰U¹­¹½İ¸ˆì)ô()™Õ¹Ñ¥½¸½Õ¹Ñ1…‰•°¡Ù…±Õ”èÕ¹­¹½İ¸°¹½Õ¸èÍÑÉ¥¹œ¤èÍÑÉ¥¹œì(€¥˜€¡ÑåÁ•½˜Ù…±Õ”€„ôô€‰¹Õµ‰•Èˆñğ€…9Õµ‰•È¹¥Í¥¹¥Ñ”¡Ù…±Õ”¤¤É•ÑÕÉ¸€‘í¹½Õ¹ô½Õ¹Ğ¹½ĞÉ•ÑÕÉ¹•‘€ì(€É•ÑÕÉ¸€‘í‘¥ÍÁ±…å9Õµ‰•È¡Ù…±Õ”¥ô€‘í¹½Õ¹ô‘íÙ…±Õ”€ôôô€Ä€ü€ˆˆ€è€‰Ì‰ôÉ•Á½ÉÑ•‘€ì)ô()•áÁ½ÉĞ™Õ¹Ñ¥½¸…Ñ…¹…±åÍ¥Í]½É­ÍÁ…”¡ì(€™¥±”°½Ù•ÉÙ¥•Ü°É•…‘¥¹•ÍÌ°½µÁ…É¥Í½¸°Ñ…Í¬°Ñ…É•Ğ°‰ÕÍä°•ÉÉ½È°¹½Ñ¥”°(€½¹¥±•¡…¹”°½¹%¹ÍÁ•Ğ°½¹I•…‘¥¹•ÍÌ°Í•ÑQ…Í¬°Í•ÑQ…É•Ğ°)ôè¹…±åÍ¥Í]½É­ÍÁ…•AÉ½ÁÌ¤ì(€½¹ÍĞmÅÕ•Éä°Í•ÑEÕ•Éåt€ôÕÍ•MÑ…Ñ” ˆˆ¤ì(€½¹ÍĞmÍ½ÉĞ°Í•ÑM½ÉÑt€ôÕÍ•MÑ…Ñ”ğ‰¹…µ”ˆğ€‰µ¥ÍÍ¥¹œˆğ€‰‘¥ÍÑ¥¹Ğˆø ‰¹…µ”ˆ¤ì(€½¹ÍĞmÁ…”°Í•ÑA…•t€ôÕÍ•MÑ…Ñ” À¤ì(€½¹ÍĞÁ…•M¥é”€ô€ÈÔì(€½¹ÍĞ‘…Ñ…Í•Ğ€ô…Í=‰©•Ğ¡½Ù•ÉÙ¥•Üü¹‘…Ñ…Í•Ğ¤ì(€½¹ÍĞ½Ù•ÉÙ¥•İ…Ñ„€ô…Í=‰©•Ğ¡½Ù•ÉÙ¥•Üü¹½Ù•ÉÙ¥•Ü¤ì(€½¹ÍĞÁÉ½™¥±•Ì€ôÕÍ•5•µ¼  ¤€ôø•Ñ½±Õµ¹AÉ½™¥±•Ì¡½Ù•ÉÙ¥•Üü¹½±Õµ¹Ì¤°m½Ù•ÉÙ¥•İt¤ì(€ÕÍ•™™•Ğ  ¤€ôøì(€€€Í•ÑA…” À¤ì(€€€Í•ÑEÕ•Éä ˆˆ¤ì(€ô°m½Ù•ÉÙ¥•İt¤ì(€½¹ÍĞÙ¥Í¥‰±•AÉ½™¥±•Ì€ôÕÍ•5•µ¼  ¤€ôø™¥±Ñ•É¹‘M½ÉÑAÉ½™¥±•Ì¡ÁÉ½™¥±•Ì°ÅÕ•Éä°Í½ÉĞ¤°mÁÉ½™¥±•Ì°ÅÕ•Éä°Í½ÉÑt¤ì(€½¹ÍĞÅÕ…±¥Ñå=‰Í•ÉÙ…Ñ¥½¹Ì€ô•ÑEÕ…±¥Ñå=‰Í•ÉÙ…Ñ¥½¹Ì¡½Ù•ÉÙ¥•İ…Ñ„¤ì(€½¹ÍĞÁ…•½Õ¹Ğ€ô5…Ñ ¹µ…à Ä°5…Ñ ¹•¥°¡Ù¥Í¥‰±•AÉ½™¥±•Ì¹±•¹Ñ €¼Á…•M¥é”¤¤ì(€½¹ÍĞÁ…•AÉ½™¥±•Ì€ôÙ¥Í¥‰±•AÉ½™¥±•Ì¹Í±¥”¡Á…”€¨Á…•M¥é”°€¡Á…”€¬€Ä¤€¨Á…•M¥é”¤ì(€½¹ÍĞÍ½É”€ôÉ•…‘¥¹•ÍÌü¹Í½É”ì(€½¹ÍĞÍ½É•1…‰•°€ôÑåÁ•½˜Í½É”€ôôô€‰¹Õµ‰•Èˆ(€€€€üÍ½É”€øô€àÀ€ü€‰MÑÉ½¹œÍÑ…ÉÑ¥¹œÁ½¥¹Ğˆ€èÍ½É”€øô€ØÀ€ü€‰M½µ”¥µÁÉ½Ù•µ•¹ÑÌÉ•½µµ•¹‘•ˆ€è€‰9••‘ÌÁÉ•Á…É…Ñ¥½¸ˆ(€€€€è€‰ÍÍ•ÍÍµ•¹Ğ¹½ĞÉÕ¸å•Ğˆì(€½¹ÍĞµ¥ÍÍ¥¹œ€ô½Ù•ÉÙ¥•İ…Ñ„¹Ñ½Ñ…±}µ¥ÍÍ¥¹}•±±Ìì(€½¹ÍĞ‘ÕÁ±¥…Ñ•Ì€ô½Ù•ÉÙ¥•İ…Ñ„¹‘ÕÁ±¥…Ñ•}É½İ}½Õ¹Ğì(€½¹ÍĞ±•…¹¥¹A±…¸€ô…Í=‰©•Ğ¡½Ù•ÉÙ¥•Üü¹±•…¹¥¹}Á±…¸¤ì(€½¹ÍĞ…Ñ¥½¹Ì€ôÉÉ…ä¹¥ÍÉÉ…ä¡±•…¹¥¹A±…¸¹…Ñ¥½¹Ì¤€ü±•…¹¥¹A±…¸¹…Ñ¥½¹Ì€èmtì(€½¹ÍĞÍ½É•¥µ•¹Í¥½¹Ì€ôÉÉ…ä¹¥ÍÉÉ…ä¡É•…‘¥¹•ÍÌü¹‘¥µ•¹Í¥½¹Ì¤€üÉ•…‘¥¹•ÍÌ¹‘¥µ•¹Í¥½¹Ì€èmtì((€É•ÑÕÉ¸€ (€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Í¡•±°…¹…±åÍ¥Ìµİ½É­ÍÁ…”ˆø(€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰¡•É¼ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰•å•‰É½Üˆù9U5Aƒ
-ÜQ91eM%Lğ½‘¥Øø(€€€€€€€€ñ ÄùU¹‘•ÉÍÑ…¹å½ÕÈ€ñÍÁ…¸ù‘…Ñ…Í•Ğ¸ğ½ÍÁ…¸øğ½ Äø(€€€€€€€€ñÀù%¹ÍÁ•Ğ¥ÑÌÍÑÉÕÑÕÉ”…¹ÅÕ…±¥Ñä‰•™½É”‘•¥‘¥¹œİ¡…ĞÑ¼‘¼¹•áĞ¸I•Á½ÉÑ•Ù…±Õ•Ì½µ”™É½´Ñ¡”½¹™¥ÕÉ•9U5AA$¸ğ½Àø(€€€€€€ğ½Í•Ñ¥½¸ø((€€€€€í•ÉÉ½È€˜˜€ñ‘¥Ø±…ÍÍ9…µ”ô‰…±•ÉĞˆÉ½±”ô‰…±•ÉĞˆùí•ÉÉ½Éôğ½‘¥Øùô(€€€€€í¹½Ñ¥”€˜˜€ñ‘¥Ø±…ÍÍ9…µ”ô‰…±•ÉĞÍÕ•ÍÌˆÉ½±”ô‰ÍÑ…ÑÕÌˆùí¹½Ñ¥•ôğ½‘¥Øùô((€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰…¹…±åÍ¥ÌµÉ¥ˆø(€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰ÍÑ…¬ˆø(€€€€€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Á…¹•°ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¡•…ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¥½¸ˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠ”ğ½‘¥Øøñ‘¥Øøñ Èù…Ñ…Í•Ğğ½ ÈøñÀùUÁ±½…½¹”ÍÕÁÁ½ÉÑ•Ñ…‰Õ±…È™¥±”™½È¥¸µµ•µ½Éä¥¹ÍÁ•Ñ¥½¸¸ğ½Àøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ‰½‘äˆø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰‘É½Áé½¹”ˆø(€€€€€€€€€€€€€€€€ñÍÑÉ½¹œù¡½½Í”„‘…Ñ…Í•Ğ™¥±”ğ½ÍÑÉ½¹œø(€€€€€€€€€€€€€€€€ñÍµ…±°ùMX°)M=8°a1M`°A…ÉÅÕ•Ğ°ÉÉ½Ü½È•…Ñ¡•Èƒ
-Üµ…á¥µÕ´€ÔÀ5ğ½Íµ…±°ø(€€€€€€€€€€€€€€€€ñ¥¹ÁÕĞ±…ÍÍ9…µ”ô‰™¥±”µ¥¹ÁÕĞˆÑåÁ”ô‰™¥±”ˆ…•ÁĞôˆ¹ÍØ°¹©Í½¸°¹á±Íà°¹Á…ÉÅÕ•Ğ°¹…ÉÉ½Ü°¹™•…Ñ¡•Èˆ½¹¡…¹”õí½¹¥±•¡…¹•ô…É¥„µ±…‰•°ô‰¡½½Í”‘…Ñ…Í•Ğ™¥±”ˆ€¼ø(€€€€€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€€€€í™¥±”€˜˜€ñ‘¥Ø±…ÍÍ9…µ”ô‰™¥±”µ¡¥ÀˆøñÍÁ…¸…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠZŒğ½ÍÁ…¸øñ‘¥ØøñÍÑÉ½¹œùí™¥±”¹¹…µ•ôğ½ÍÑÉ½¹œøñ‰È€¼øñÍÁ…¸ùì¡™¥±”¹Í¥é”€¼€ÄÀÈĞ€¼€ÄÀÈĞ¤¹Ñ½¥á• È¥ô5ƒ
-Üí½Ù•ÉÙ¥•Ü€ü€‰%¹ÍÁ•Ñ•ˆ€è€‰M•±•Ñ•‰ôğ½ÍÁ…¸øğ½‘¥Øøğ½‘¥Øùô(€€€€€€€€€€€€€€ñ‰ÕÑÑ½¸±…ÍÍ9…µ”ô‰ÁÉ¥µ…ÉäˆÍÑå±”õíìµ…É¥¹Q½Àè€ÄØõô½¹±¥¬õí½¹%¹ÍÁ•Ñô‘¥Í…‰±•õì…™¥±”ñğ€„…‰ÕÍåôø(€€€€€€€€€€€€€€€í‰ÕÍä€ôôô€‰¥¹ÍÁ•Ğˆ€ü€ñÍÁ…¸±…ÍÍ9…µ”ô‰±½…‘¥¹œµ±¥¹”ˆøñÍÁ…¸±…ÍÍ9…µ”ô‰ÍÁ¥¹¹•Èˆ€¼ø%¹ÍÁ•Ñ¥¹ŸŠ˜ğ½ÍÁ…¸ø€è½Ù•ÉÙ¥•Ü€ü€‰%¹ÍÁ•Ğ……¥¸ˆ€è€‰%¹ÍÁ•Ğ‘…Ñ…Í•ĞƒŠH‰ô(€€€€€€€€€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰¡¥¹ĞˆùQ¡”Í½ÕÉ”™¥±”ÍÑ…åÌ¥¸Ñ¡¥Ì‰É½İÍ•ÈÍ•ÍÍ¥½¸…¹¥ÌÍ•¹ĞÑ¼Ñ¡”½¹™¥ÕÉ•A$™½ÈÑ•µÁ½É…Éä¥¸µµ•µ½ÉäÁÉ½•ÍÍ¥¹œ¸%Ğ¥Ì¹½ĞÍÑ½É•¥¸Ñ¡¥Ìİ½É­ÍÁ…”¸ğ½Àø(€€€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ğ½Í•Ñ¥½¸ø((€€€€€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Á…¹•°ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¡•…ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¥½¸ˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠ^$ğ½‘¥Øøñ‘¥Øøñ Èù50É•…‘¥¹•ÍÌğ½ ÈøñÀùá¥ÍÑ¥¹œÉ•…‘¥¹•ÍÌ…ÍÍ•ÍÍµ•¹Ğ™½ÈÑ¡”Í•±•Ñ•Í½ÕÉ”™¥±”¸ğ½Àøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ‰½‘äˆø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰™¥•±ˆøñ±…‰•°¡Ñµ±½Èô‰Ñ…Í¬ˆù%¹Ñ•¹‘•50Ñ…Í¬ğ½±…‰•°øñÍ•±•Ğ¥ô‰Ñ…Í¬ˆÙ…±Õ”õíÑ…Í­ô½¹¡…¹”õì¡•Ù•¹Ğ¤€ôøÍ•ÑQ…Í¬¡•Ù•¹Ğ¹Ñ…É•Ğ¹Ù…±Õ”¥ôø(€€€€€€€€€€€€€€€€ñ½ÁÑ¥½¸Ù…±Õ”ô‰±…ÍÍ¥™¥…Ñ¥½¸ˆù±…ÍÍ¥™¥…Ñ¥½¸ğ½½ÁÑ¥½¸øñ½ÁÑ¥½¸Ù…±Õ”ô‰É•É•ÍÍ¥½¸ˆùI•É•ÍÍ¥½¸ğ½½ÁÑ¥½¸øñ½ÁÑ¥½¸Ù…±Õ”ô‰™½É•…ÍÑ¥¹œˆùQ¥µ”µÍ•É¥•Ì™½É•…ÍÑ¥¹œğ½½ÁÑ¥½¸øñ½ÁÑ¥½¸Ù…±Õ”ô‰±ÕÍÑ•É¥¹œˆù±ÕÍÑ•É¥¹œ€¡¹¼Ñ…É•Ğ½±Õµ¸¤ğ½½ÁÑ¥½¸ø(€€€€€€€€€€€€€€ğ½Í•±•Ğøğ½‘¥Øø(€€€€€€€€€€€€€íÑ…Í¬€„ôô€‰±ÕÍÑ•É¥¹œˆ€˜˜€ñ‘¥Ø±…ÍÍ9…µ”ô‰™¥•±ˆøñ±…‰•°¡Ñµ±½Èô‰Ñ…É•ĞˆùQ…É•Ğ½±Õµ¸¹…µ”ğ½±…‰•°øñ¥¹ÁÕĞ¥ô‰Ñ…É•ĞˆÙ…±Õ”õíÑ…É•Ñô½¹¡…¹”õì¡•Ù•¹Ğ¤€ôøÍ•ÑQ…É•Ğ¡•Ù•¹Ğ¹Ñ…É•Ğ¹Ù…±Õ”¥ôÁ±…•¡½±‘•Èô‰”¹œ¸¡ÕÉ¸°ÁÉ¥”°½ÕÑ½µ”ˆ€¼øğ½‘¥Øùô(€€€€€€€€€€€€€€ñ‰ÕÑÑ½¸±…ÍÍ9…µ”ô‰ÁÉ¥µ…ÉäˆÍÑå±”õíìµ…É¥¹Q½Àè€ÄÜõô½¹±¥¬õí½¹I•…‘¥¹•ÍÍô‘¥Í…‰±•õì…™¥±”ñğ€„…‰ÕÍåôø(€€€€€€€€€€€€€€€í‰ÕÍä€ôôô€‰É•…‘¥¹•ÍÌˆ€ü€ñÍÁ…¸±…ÍÍ9…µ”ô‰±½…‘¥¹œµ±¥¹”ˆøñÍÁ…¸±…ÍÍ9…µ”ô‰ÍÁ¥¹¹•Èˆ€¼ø…±Õ±…Ñ¥¹ŸŠ˜ğ½ÍÁ…¸ø€è€‰…±Õ±…Ñ”É•…‘¥¹•ÍÌÍ½É”ƒŠH‰ô(€€€€€€€€€€€€€€ğ½‰ÕÑÑ½¸ø(€€€€€€€€€€€€€íÑ…Í¬€ôôô€‰™½É•…ÍÑ¥¹œˆ€˜˜€ñÀ±…ÍÍ9…µ”ô‰¡¥¹Ğˆù½É•…ÍÑ¥¹œ¥ÌÍÕÁÁ½ÉÑ•‰äÑ¡”ÕÉÉ•¹ĞÉ•…‘¥¹•ÍÌ¡•ÕÉ¥ÍÑ¥ŒìÑ¥µ”µ…İ…É”µ½‘•°Ù…±¥‘…Ñ¥½¸¥Ì¹½ĞÁ…ÉĞ½˜Ñ¡¥Ì…ÍÍ•ÍÍµ•¹Ğ¸ğ½Àùô(€€€€€€€€€€€€€íÉ•…‘¥¹•ÍÌ€˜˜€ñ‘¥Ø±…ÍÍ9…µ”ô‰…¹…±åÍ¥ÌµÉ•…‘¥¹•ÍÌˆø(€€€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Í½É”µİÉ…Àˆøñ‘¥Ø±…ÍÍ9…µ”ô‰Í½É”µÉ¥¹œˆùíÑåÁ•½˜Í½É”€ôôô€‰¹Õµ‰•Èˆ€ü5…Ñ ¹É½Õ¹¡Í½É”¤€è€‹ŠP‰ôğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰Í½É”µ½ÁäˆøñÍÑÉ½¹œùíÍ½É•1…‰•±ôğ½ÍÑÉ½¹œøñÀù=ÕĞ½˜€ÄÀÀƒ
-Ü‘•Ñ•Éµ¥¹¥ÍÑ¥Œ¡•ÕÉ¥ÍÑ¥Œ°¹½Ğ„µ½‘•°µÁ•É™½Éµ…¹”Õ…É…¹Ñ•”¸…Ñ…Í•ĞèÍ½ÕÉ”™¥±”¸ğ½Àøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€€€€€í½µÁ…É¥Í½¸€˜˜€ğøñ‘¥Ø±…ÍÍ9…µ”ô‰É•ÍÕ±ĞµÑ¥Ñ±”ˆøñ Ìù±•…¹¥¹œ½µÁ…É¥Í½¸ğ½ ÌøñÍÁ…¸±…ÍÍ9…µ”ô‰µ¥¹¤µ±…‰•°ˆùM½ÕÉ”ƒŠH±•…¹•MXğ½ÍÁ…¸øğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒµÉ¥ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒˆøñÍÁ…¸ùM½ÕÉ”ğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡½µÁ…É¥Í½¸¹‰•™½É”¹Í½É”¥ôñÍµ…±°ø¼ÄÀÀğ½Íµ…±°øğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒˆøñÍÁ…¸ù±•…¹•MXğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡½µÁ…É¥Í½¸¹…™Ñ•È¹Í½É”¥ôñÍµ…±°ø¼ÄÀÀğ½Íµ…±°øğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒˆøñÍÁ…¸ùM½É”¡…¹”ğ½ÍÁ…¸øñÍÑÉ½¹œùíÑåÁ•½˜½µÁ…É¥Í½¸¹‰•™½É”¹Í½É”€ôôô€‰¹Õµ‰•Èˆ€˜˜ÑåÁ•½˜½µÁ…É¥Í½¸¹…™Ñ•È¹Í½É”€ôôô€‰¹Õµ‰•Èˆ€ü€‘í½µÁ…É¥Í½¸¹…™Ñ•È¹Í½É”€´½µÁ…É¥Í½¸¹‰•™½É”¹Í½É”€ø€À€ü€ˆ¬ˆ€è€ˆ‰ô‘í½µÁ…É¥Í½¸¹…™Ñ•È¹Í½É”€´½µÁ…É¥Í½¸¹‰•™½É”¹Í½É•õ€€è€‹ŠP‰ôğ½ÍÑÉ½¹œøğ½‘¥Øøğ½‘¥Øøğ¼ùô(€€€€€€€€€€€€€€€íÍ½É•¥µ•¹Í¥½¹Ì¹±•¹Ñ €ø€À€˜˜€ñ‘¥Ø±…ÍÍ9…µ”ô‰‘•Ñ…¥°µ±¥ÍĞˆùíÍ½É•¥µ•¹Í¥½¹Ì¹µ…À ¡¥Ñ•´°¥¹‘•à¤€ôøì½¹ÍĞ‘¥µ•¹Í¥½¸€ô…Í=‰©•Ğ¡¥Ñ•´¤ìÉ•ÑÕÉ¸€ñ‘¥Ø±…ÍÍ9…µ”ô‰‘•Ñ…¥°µÉ½Üˆ­•äõíMÑÉ¥¹œ¡‘¥µ•¹Í¥½¸¹¹…µ”€üü¥¹‘•à¥ôøñÍÁ…¸ùíMÑÉ¥¹œ¡‘¥µ•¹Í¥½¸¹¹…µ”€üü‘¥µ•¹Í¥½¸¹‘¥µ•¹Í¥½¸€üü¥µ•¹Í¥½¸€‘í¥¹‘•à€¬€Åõ€¥ôğ½ÍÁ…¸øñÍÑÉ½¹œùíÑåÁ•½˜‘¥µ•¹Í¥½¸¹Í½É”€ôôô€‰¹Õµ‰•Èˆ€ü€‘í‘¥µ•¹Í¥½¸¹Í½É•ô¼ÄÀÁ€€èMÑÉ¥¹œ¡‘¥µ•¹Í¥½¸¹Ù…±Õ”€üü€‰M•”‘•Ñ…¥±Ìˆ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøìô¥ôğ½‘¥Øùô(€€€€€€€€€€€€€€ğ½‘¥Øùô(€€€€€€€€€€€€€€ñÀ±…ÍÍ9…µ”ô‰¡¥¹ĞˆùÉ•…‘¥¹•ÍÌÍ½É”¥Ì„¡•ÕÉ¥ÍÑ¥Œ°¹½Ğ„Õ…É…¹Ñ•”½˜µ½‘•°Á•É™½Éµ…¹”¸ğ½Àø(€€€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€ğ½Í•Ñ¥½¸ø(€€€€€€€€ğ½‘¥Øø((€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰ÍÑ…¬ˆø(€€€€€€€€€€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Á…¹•°ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¡•…ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¥½¸ˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠZ˜ğ½‘¥Øøñ‘¥Øøñ Èù…Ñ…Í•Ğ½Ù•ÉÙ¥•Üğ½ ÈøñÀù¥µ•¹Í¥½¹Ì…¹ÅÕ…±¥ÑäÙ…±Õ•ÌÉ•ÑÕÉ¹•‰ä¥¹ÍÁ•Ñ¥½¸¸ğ½Àøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€í½Ù•ÉÙ¥•Ü€ü€ñ‘¥Ø±…ÍÍ9…µ”ô‰É•ÍÕ±ÑÌˆø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰‘…Ñ…Í•Ğµ¥‘•¹Ñ¥Ñäˆøñ‘¥ØøñÍÁ…¸ùM½ÕÉ”‘…Ñ…Í•Ğğ½ÍÁ…¸øñÍÑÉ½¹œùíMÑÉ¥¹œ¡‘…Ñ…Í•Ğ¹™¥±•¹…µ”€üü™¥±”ü¹¹…µ”€üü€‰U¹­¹½İ¸™¥±”ˆ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥ØøñÍÁ…¸ù¥±”ÑåÁ”ğ½ÍÁ…¸øñÍÑÉ½¹œùí™¥±•QåÁ”¡™¥±”°‘…Ñ…Í•Ğ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥ØøñÍÁ…¸ùAÉ½•ÍÍ¥¹œğ½ÍÁ…¸øñÍÑÉ½¹œùíÑåÁ•½˜‘…Ñ…Í•Ğ¹ÁÉ½•ÍÍ¥¹œ€ôôô€‰ÍÑÉ¥¹œˆ€ü‘…Ñ…Í•Ğ¹ÁÉ½•ÍÍ¥¹œ€è€‰MÑ…ÑÕÌ¹½ĞÉ•ÑÕÉ¹•‰ôğ½ÍÑÉ½¹œøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒµÉ¥ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒˆøñÍÁ…¸ùI½İÌğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡½Ù•ÉÙ¥•İ…Ñ„¹É½İ}½Õ¹Ğ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒˆøñÍÁ…¸ù½±Õµ¹Ìğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡½Ù•ÉÙ¥•İ…Ñ„¹½±Õµ¹}½Õ¹Ğ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰µ•ÑÉ¥ŒˆøñÍÁ…¸ù5¥ÍÍ¥¹œ•±±Ìğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡µ¥ÍÍ¥¹œ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰‘•Ñ…¥°µ±¥ÍĞˆøñ‘¥Ø±…ÍÍ9…µ”ô‰‘•Ñ…¥°µÉ½ÜˆøñÍÁ…¸ù9Õµ•É¥Œ½±Õµ¹Ìğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡½Ù•ÉÙ¥•İ…Ñ„¹¹Õµ•É¥}½±Õµ¹}½Õ¹Ğ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰‘•Ñ…¥°µÉ½ÜˆøñÍÁ…¸ù9½¸µ¹Õµ•É¥Œ½±Õµ¹Ìğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡½Ù•ÉÙ¥•İ…Ñ„¹¹½¹}¹Õµ•É¥}½±Õµ¹}½Õ¹Ğ¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøñ‘¥Ø±…ÍÍ9…µ”ô‰‘•Ñ…¥°µÉ½ÜˆøñÍÁ…¸ùá…Ğ‘ÕÁ±¥…Ñ”É½İÌğ½ÍÁ…¸øñÍÑÉ½¹œùí‘¥ÍÁ±…å9Õµ‰•È¡‘ÕÁ±¥…Ñ•Ì¥ôğ½ÍÑÉ½¹œøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰ÅÕ…±¥Ñäµ½‰Í•ÉÙ…Ñ¥½¹Ìˆ…É¥„µ±…‰•°ô‰…Ñ„ÅÕ…±¥Ñä½‰Í•ÉÙ…Ñ¥½¹Ìˆø(€€€€€€€€€€€€€€€€ñ ÌùEÕ…±¥Ñä½‰Í•ÉÙ…Ñ¥½¹Ìğ½ Ìø(€€€€€€€€€€€€€€€íÅÕ…±¥Ñå=‰Í•ÉÙ…Ñ¥½¹Ì¹µ…À ¡¥Ñ•´¤€ôø€ñÀ±…ÍÍ9…µ”õíÅÕ…±¥Ñä´‘í¥Ñ•´¹Ñ½¹•õô­•äõí¥Ñ•´¹¥‘ôùí¥Ñ•´¹µ•ÍÍ…•ôğ½Àø¥ô(€€€€€€€€€€€€€€€íÉÉ…ä¹¥ÍÉÉ…ä¡½Ù•ÉÙ¥•Ü¹½±Õµ¹Ì¤€˜˜€ñÀùíÁÉ½™¥±•Ì¹±•¹Ñ ¹Ñ½1½…±•MÑÉ¥¹œ ¥ô½˜í½Ù•ÉÙ¥•Ü¹½±Õµ¹Ì¹±•¹Ñ ¹Ñ½1½…±•MÑÉ¥¹œ ¥ôÉ•ÑÕÉ¹•½±Õµ¸ÁÉ½™¥±•Ì…É”…Ù…¥±…‰±”‰•±½Ü¸ğ½Àùô(€€€€€€€€€€€€€€ğ½‘¥Øø(€€€€€€€€€€€€ğ½‘¥Øø€è€ñ‘¥Ø±…ÍÍ9…µ”ô‰•µÁÑäµÍÑ…Ñ”ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰•µÁÑäµÉ…Á¡¥Œˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠZğ½‘¥Øøñ Ìù9¼¥¹ÍÁ•Ñ•‘…Ñ…Í•Ğğ½ ÌøñÀùM•±•Ğ„™¥±”…¹¥¹ÍÁ•Ğ¥ĞÑ¼Í•”‘¥µ•¹Í¥½¹Ì°µ¥ÍÍ¥¹œÙ…±Õ•Ì°‘ÕÁ±¥…Ñ•Ì°…¹½±Õµ¸ÁÉ½™¥±•Ì¸ğ½Àøğ½‘¥Øùô(€€€€€€€€€€ğ½Í•Ñ¥½¸ø((€€€€€€€€€í½Ù•ÉÙ¥•Ü€˜˜€ñÍ•Ñ¥½¸±…ÍÍ9…µ”ô‰Á…¹•°ˆø(€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¡•…ˆøñ‘¥Ø±…ÍÍ9…µ”ô‰Á…¹•°µ¥½¸ˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠbÜğ½‘¥Øøñ‘¥Øøñ Èù½±Õµ¸ÁÉ½™¥±•Ìğ½ ÈøñÀùAÉ½™¥±”Ù…±Õ•ÌÉ•ÑÕÉ¹•‰äÑ¡”A$¸5¥ÍÍ¥¹œÍÕµµ…É¥•Ì…É”Í¡½İ¸…ÌÕ¹…Ù…¥±…‰±”¸ğ½Àøğ½‘¥Øøğ½‘¥Øø(€€€€€€€€€€€íÁÉ½™¥±•Ì¹±•¹Ñ €ü€ñ‘¥Ø±…ÍÍ9…µ”ô‰É•ÍÕ±ÑÌˆø(€€€€€€€€€€€€€€ñ‘¥Ø±…ÍÍ9…µ”ô‰ÁÉ½™¥±”µ½¹ÑÉ½±Ìˆøñ±…‰•°¡Ñµ±½Èô‰ÁÉ½™¥±”µÍ•…É ˆùM•…É ½±Õµ¹Ìğ½±…‰•°øñ¥¹ÁÕĞ¥ô‰ÁÉ½™¥±”µÍ•…É ˆÙ…±Õ”õíÅÕ•Éåô½¹¡…¹”õì¡•Ù•¹Ğ¤€ôøìÍ•ÑEÕ•Éä¡•Ù•¹Ğ¹Ñ…É•Ğ¹Ù…±Õ”¤ìÍ•ÑA…” À¤ìõôÁ±…•¡½±‘•Èô‰½±Õµ¸¹…µ”½ÈÑåÁ”ˆ€¼øñ±…‰•°¡Ñµ±½Èô‰ÁÉ½™¥±”µÍ½ÉĞˆùM½ÉĞ‰äğ½±…‰•°øñÍ•±•Ğ¥ô‰ÁÉ½™¥±”µÍ½ÉĞˆÙ…±Õ”õíÍ½ÉÑô½¹¡…¹”õì¡•Ù•¹Ğ¤€ôøì½¹ÍĞÙ…±Õ”€ô•Ù•¹Ğ¹Ñ…É•Ğ¹Ù…±Õ”ì¥˜€¡Ù…±Õ”€ôôô€‰¹…µ”ˆñğÙ…±Õ”€ôôôƒ}ô¶‰Ëkºwµç[™Ê
-_x $ÉÓX]›Z[Š
-YÙH
-ÈJH
-ˆYÙTÚ^™Kš\ÚX›T›Ùš[\Ë›[™İ
-KÓØØ[Tİš[™Ê
-_HÙˆ	İš\ÚX›T›Ùš[\Ë›[™İÓØØ[Tİš[™Ê
-_H›Ùš[\Øˆ“›ÈX]Ú[™ÈÛÛ[[œÈŸOÜÜ[]]ÛˆÛ\ÜÓ˜[YOHœÙXÛÛ™\Hˆ\OH˜]ÛˆˆÛÛXÚÏ^Ê
-HOˆÙ]YÙJ
-İ\œ™[
-HOˆX]›X^
-İ\œ™[HJJ_H\ØX›Y^ÜYÙHOOHO”™]š[İ\ÏØ]Û]ÛˆÛ\ÜÓ˜[YOHœÙXÛÛ™\Hˆ\OH˜]ÛˆˆÛÛXÚÏ^Ê
-HOˆÙ]YÙJ
-İ\œ™[
-HOˆX]›Z[ŠYÙPÛİ[HKİ\œ™[
-ÈJJ_H\ØX›Y^ÜYÙHHYÙPÛİ[H_O“™^Ø]ÛÙ]Ù]‚ˆÙ]ˆˆ]ˆÛ\ÜÓ˜[YOH™[\K\İ]HÏ“›ÈÛÛ[[ˆ›Ùš[\È™]\›™YÚÏ•H[œÜXİ[Ûˆ™\ÜÛœÙHY›İ[˜ÛYH\ØX›HÛÛ[[ˆ›Ùš[H]KÜÙ]ŸBˆÜÙXİ[ÛŸB‚ˆÈ[İ™\šY]È	‰ˆÙXİ[ÛˆÛ\ÜÓ˜[YOHœ[™[]ˆÛ\ÜÓ˜[YOH™[\K\İ]H]ˆÛ\ÜÓ˜[YOH™[\KYÜ˜\XÈˆ\šXKZY[HYH¸£%OÙ]Ï[˜[\Ú\È™YÚ[œÈÚ][œÜXİ[ÛÚÏÚÛÜÙHH]\Ù]š[HÈšY]È\İÛÜHİ™\šY]È[™ÛÛ[[‹[]™[[™›Ü›X][Û‹ÜÙ]ÜÙXİ[ÛŸBˆÙ]‚ˆÙ]‚ˆÙ]‚ˆ
-NÂŸB‚™^Ü[˜İ[Ûˆ]T™\›ØÙ\ÜÚ[™ÕÛÜšÜÜXÙJÂˆš[Kİ™\šY]ËÛX[š[™ËÛX[™YÜİ‹š[Z\ÜÚ[™Ë›Ü\XØ]\Ë›Ü›X[^™U^\ŞK\œ›Ü‹›İXÙKˆÛ•ÙÙÛKÛ”™]šY]ËÛ‘^Xİ]KÛ‘İÛ›ØYÛÛ™š\›Z[™ËÛ™YÚ[ÛÛ™š\›X][Û‹ÛØ[˜Ù[ÛÛ™š\›X][Û‹ŸNˆÛX[š[™ÕÛÜšÜÜXÙT›ÜÊHÂˆÛÛœİ]\Ù]H\ÓØš™Xİ
-İ™\šY]ÏË™]\Ù]
-NÂˆÛÛœİİ™\šY]Ñ]HH\ÓØš™Xİ
-İ™\šY]ÏË›İ™\šY]ÊNÂˆÛÛœİ[ˆH\ÓØš™Xİ
-İ™\šY]ÏË˜ÛX[š[™×Ü[ŠNÂˆÛÛœİXİ[ÛœÈH\œ˜^Kš\Ğ\œ˜^J[‹˜Xİ[ÛœÊHÈ[‹˜Xİ[ÛœÈˆ×NÂˆÛÛœİ™\ÜH\ÓØš™Xİ
-ÛX[š[™ÏËœ™\Ü
-NÂˆÛÛœİ™Y›Ü™HH\ÓØš™Xİ
-™\Ü˜™Y›Ü™JNÂˆÛÛœİY\ˆH\ÓØš™Xİ
-™\Ü˜Y\ŠNÂˆÛÛœİÜ\˜][ÛœÈH\œ˜^Kš\Ğ\œ˜^J™\Ü›Ü\˜][ÛœÊHÈ™\Ü›Ü\˜][ÛœÈˆ×NÂˆÛÛœİ™]šY]Ô›İÜÈH\œ˜^Kš\Ğ\œ˜^JÛX[š[™ÏËœ™]šY]ÊHÈÛX[š[™Ëœ™]šY]Ë›X\
-\ÓØš™Xİ
-Hˆ×NÂˆÛÛœİ™]šY]ĞÛÛ[[œÈH\œ˜^Kš\Ğ\œ˜^JÛX[š[™ÏË˜ÛÛ[[œÊHÈÛX[š[™Ë˜ÛÛ[[œË™š[\Š
-ÛÛ[[ŠNˆÛÛ[[ˆ\Èİš[™ÈOˆ\[ÙˆÛÛ[[ˆOOHœİš[™ÈŠHˆ×NÂˆÛÛœİØ[”™]šY]ÈHHYš[H	‰ˆH[İ™\šY]È	‰ˆX\ŞNÂˆÛÛœİ™XÛÛ[Y[™][Û•]HH
-Xİ[Ûˆ\SØš™Xİ
-HOˆÂˆYˆ
-Xİ[Û‹š\ÜİYHOOH›Z\ÜÚ[™×İ˜[Y\ÈŠH™]\›ˆZ\ÜÚ[™È˜[Y\È0­È	Ôİš[™ÊXİ[Û‹˜ÛÛ[[ˆÏÈ˜ÛÛ[[ˆŠ_XÂˆYˆ
-Xİ[Û‹š\ÜİYHOOH™^XİÙ\XØ]WÜ›İÜÈŠH™]\›ˆ‘^Xİ\XØ]H›İÜÈÂˆYˆ
-Xİ[Û‹š\ÜİYHOOHœİ[X[Ûİ]Y\œÈŠH™]\›ˆİ[X[İ]Y\œÈ0­È	Ôİš[™ÊXİ[Û‹˜ÛÛ[[ˆÏÈ˜ÛÛ[[ˆŠ_XÂˆ™]\›ˆ\[ÙˆXİ[Û‹š\ÜİYHOOHœİš[™ÈˆÈXİ[Û‹š\ÜİYKœ™\XÙP[
-—È‹ˆŠHˆ‘]H]X[]HØœÙ\˜][ÛˆÂˆNÂ‚ˆ™]\›ˆ
-ˆ]ˆÛ\ÜÓ˜[YOHœÚ[ÛX[š[™Ë]ÛÜšÜÜXÙH‚ˆÙXİ[ÛˆÛ\ÜÓ˜[YOHš\›È]ˆÛ\ÜÓ˜[YOH™^YXœ›İÈ“•STH0­ÈUH‘T“ĞÑTÔÒS‘ÏÙ]O”™]šY]È]™\HÜ[˜Ú[™ÙKÜÜ[ÚOÚÛÜÙHİ\ÜYÛX[š[™ÈÜ\˜][ÛœË[œÜXİH›ÜÜÙYİ]][ˆ^XÚ]H\›İ™HÜ™X][™ÈHÙ\\˜]HÔÕˆÛÜKÜÜÙXİ[Û‚ˆÙ\œ›Üˆ	‰ˆ]ˆÛ\ÜÓ˜[YOH˜[\ˆ›ÛOH˜[\Ù\œ›ÜŸOÙ]ŸBˆÛ›İXÙH	‰ˆ]ˆÛ\ÜÓ˜[YOH˜[\İXØÙ\ÜÈˆ›ÛOHœİ]\ÈÛ›İXÙ_OÙ]ŸBˆÙXİ[ÛˆÛ\ÜÓ˜[YOHœ[™[Ûİ\˜ÙKXÛÛ^]ˆÛ\ÜÓ˜[YOHœ[™[ZXY]ˆÛ\ÜÓ˜[YOHœ[™[ZXÛÛˆˆ\šXKZY[HYH¸¥¨ÏÙ]]Xİ]™HÛİ\˜ÙH]\Ù]ÚÛX[š[™È[Ø^\È™XYÈHÜšYÚ[˜[\ØYˆHÛİ\˜ÙH™[XZ[œÈ[˜Ú[™ÙY[ˆY[[ÜKÜÙ]Ù]‚ˆÙš[H	‰ˆİ™\šY]ÈÈ]ˆÛ\ÜÓ˜[YOHœ™\İ[È]ˆÛ\ÜÓ˜[YOH™]\Ù]ZY[]H]Ü[”Ûİ\˜ÙHš[OÜÜ[İ›Û™ÏÔİš[™Ê]\Ù]™š[[˜[YHÏÈš[K›˜[YJ_OÜİ›Û™ÏÙ]]Ü[‘š[H\OÜÜ[İ›Û™ÏÙš[U\Jš[K]\Ù]
-_OÜİ›Û™ÏÙ]]Ü[‘[Y[œÚ[ÛœÏÜÜ[İ›Û™ÏÙ\Ü^S[X™\Šİ™\šY]Ñ]Kœ›İ×ØÛİ[
-_H›İÜÈ0åÈÙ\Ü^S[X™\Šİ™\šY]Ñ]K˜ÛÛ[[—ØÛİ[
-_HÛÛ[[œÏÜİ›Û™ÏÙ]]Ü[”İ]OÜÜ[İ›Û™Ï’[œÜXİYÛİ\˜ÙH0­È[ˆY[[ÜOÜİ›Û™ÏÙ]Ù]ØÛX[™YÜİˆ	‰ˆÛ\ÜÓ˜[YOH˜ÛX[‹[İ]]ZY[]Hİ›Û™Ï”Ù\\˜]Hİ]]]˜Z[X›NÜİ›Û™ÏˆØÛX[™YÜİ‹™š[[˜[Y_H0­ÈÔÕ‹ˆ\È\È›İHÜšYÚ[˜[š[KÜŸOÙ]ˆˆ]ˆÛ\ÜÓ˜[YOH™[\K\İ]H]ˆÛ\ÜÓ˜[YOH™[\KYÜ˜\XÈˆ\šXKZY[HYH¸¡©OÙ]Ï“›ÈXİ]™H[œÜXİY]\Ù]ÚÏ”™]\›ˆÈ]H[˜[\Ú\ËÚÛÜÙHHİ\ÜYš[K[™[œÜXİ]™Y›Ü™H™]šY]Ú[™ÈÛX[š[™ÈXİ[ÛœËÜÙ]ŸBˆÜÙXİ[Û‚‚ˆÙš[H	‰ˆİ™\šY]È	‰ˆ]ˆÛ\ÜÓ˜[YOH˜ÛX[š[™ËYÜšY‚ˆ]ˆÛ\ÜÓ˜[YOHœİXÚÈ‚ˆÙXİ[ÛˆÛ\ÜÓ˜[YOHœ[™[]ˆÛ\ÜÓ˜[YOHœ[™[ZXY]ˆÛ\ÜÓ˜[YOHœ[™[ZXÛÛˆˆ\šXKZY[HYH¸§,ÏÙ]]THÛX[š[™È™XÛÛ[Y[™][ÛœÏÚ”™XÛÛ[Y[™][ÛœÈ™[İÈ\™H™]\›™Y›Üˆ\ÈÛİ\˜ÙH]\Ù]›İÙ[™\˜]YHHœ›İÜÙ\‹ÜÙ]Ù]‚ˆ]ˆÛ\ÜÓ˜[YOHœ™\İ[È‚ˆØXİ[ÛœË›[™İÈ]ˆÛ\ÜÓ˜[YOH™]Z[[\İØXİ[ÛœË›X\
+"use client";
 
-][K[™^
-HOˆÈÛÛœİXİ[ÛˆH\ÓØš™Xİ
-][JNÈÛÛœİ[œİ\ÜYHXİ[Û‹œİ˜]YŞHOOH™›Y×ÛÛ›HÈ™]\›ˆ]ˆÛ\ÜÓ˜[YOHœ™XÛÛ[Y[™][Û‹\›İÈˆÙ^O^Ø	Ôİš[™ÊXİ[Û‹š\ÜİYJ_KIÔİš[™ÊXİ[Û‹˜ÛÛ[[ˆÏÈ˜[Š_KIÚ[™^XO]İ›Û™ÏÜ™XÛÛ[Y[™][Û•]JXİ[ÛŠ_OÜİ›Û™ÏÔİš[™ÊXİ[Û‹œ™X\ÛÛˆÏÈ”™X\ÛÛˆ›İ™]\›™YˆŠ_OÜÜ[ˆÛ\ÜÓ˜[YOHœ™XÛÛ[Y[™][Û‹[Y]HØÛİ[X™[
-Xİ[Û‹˜Ûİ[˜Y™™XİY›İËØÙ[Š_H0­Èİ[œİ\ÜYÈ•[œİ\ÜYHİ\œ™[^Xİ]HÜ[ÛœÎÈ[™›Ü›X][Û˜[Û›HˆˆXİ[Û‹œ™\]Z\™\×Ø\›İ˜[OOHYHÈ”™]šY]È™Y›Ü™H\Z[™Èˆˆ“›È˜[YKXÚ[™Ú[™ÈÜ\˜][Ûˆ›ÜÜÙYŸOÜÜ[Ù]Ü[ˆÛ\ÜÓ˜[YO^ØZ[šK[X™[	İ[œİ\ÜYÈˆ\Ë[]]YˆˆˆŸXOİ[œİ\ÜYÈ•[œİ\ÜYˆˆTHİYÙÙ\İ[ÛˆŸOÜÜ[Ù]ÈJ_OÙ]İ\[Ùˆ[‹››İHOOHœİš[™Èˆ	‰ˆÛ\ÜÓ˜[YOHš[Ü[‹››İ_OÜŸOÏˆˆ]ˆÛ\ÜÓ˜[YOH™[\K\İ]HÛÛ\XİÏ“›ÈXİ[ÛœÈ™]\›™YÚÏ•HTHY›İ™]\›ˆHÛX[š[™È™XÛÛ[Y[™][Ûˆ›Üˆ\È]\Ù]ÜÙ]ŸBˆÙ]‚ˆÜÙXİ[Û‚‚ˆÙXİ[ÛˆÛ\ÜÓ˜[YOHœ[™[]ˆÛ\ÜÓ˜[YOHœ[™[ZXY]ˆÛ\ÜÓ˜[YOHœ[™[ZXÛÛˆˆ\šXKZY[HYH¸¦-ÏÙ]]”İ\ÜYÜ\˜][ÛœÏÚ•\ÙHÛÛ›ÛÈX\\™XİHÈHİ\œ™[ÛX[š[™È™]šY]È[™^Xİ]H™\]Y\İšY[ËÜÙ]Ù]‚ˆ]ˆÛ\ÜÓ˜[YOHœ[™[X›ÙH‚ˆX™[Û\ÜÓ˜[YOH˜ÚXÚË\›İÈ[œ]\OH˜ÚXÚØ›ŞˆÚXÚÙY^Ùš[Z\ÜÚ[™ßHÛÚ[™ÙO^Ê]™[
-HOˆÛ•ÙÙÛJ™š[Z\ÜÚ[™È‹]™[\™Ù]˜ÚXÚÙY
-_H\ØX›Y^ÈYš[HHX\Ş_HÏÜ[İ›Û™Ï‘š[Z\ÜÚ[™È˜[Y\ÏÜİ›Û™ÏœˆÏ•\Ù\ÈH^\İ[™ÈTHY˜][ÈHÛÛ[[ˆ\H
-YX[‹ÛYYX[‹[ÙHÜˆ8 '[šÛ›İÛ¸ 'JNÈ[[Z\ÜÚ[™ÈÛÛ[[œÈ\™HÚÚ\YÜÜ[Ü[ˆÛ\ÜÓ˜[YO^ØÜ\˜][Û‹\İ]IÙš[Z\ÜÚ[™ÈÈˆ\Ë\Ù[XİYˆˆˆŸXOÜÙ[Xİ[Û“X™[
-š[Z\ÜÚ[™Ê_OÜÜ[ÛX™[‚ˆX™[Û\ÜÓ˜[YOH˜ÚXÚË\›İÈ[œ]\OH˜ÚXÚØ›ŞˆÚXÚÙY^Ù›Ü\XØ]\ßHÛÚ[™ÙO^Ê]™[
-HOˆÛ•ÙÙÛJ™›Ü\XØ]\È‹]™[\™Ù]˜ÚXÚÙY
-_H\ØX›Y^ÈYš[HHX\Ş_HÏÜ[İ›Û™Ï‘›Ü^Xİ\XØ]H›İÜÏÜİ›Û™ÏœˆÏ”™[[İ™\È›İÜÈY[XØ[XÜ›ÜÜÈ]™\HÛÛ[[‹ˆÙY\Ù™ˆYˆ\XØ]\ÈX^H™HYX[š[™Ù[ÜÜ[Ü[ˆÛ\ÜÓ˜[YO^ØÜ\˜][Û‹\İ]IÙ›Ü\XØ]\ÈÈˆ\Ë\Ù[XİYˆˆˆŸXOÜÙ[Xİ[Û“X™[
-›Ü\XØ]\Ê_OÜÜ[ÛX™[‚ˆX™[Û\ÜÓ˜[YOH˜ÚXÚË\›İÈ[œ]\OH˜ÚXÚØ›ŞˆÚXÚÙY^Û›Ü›X[^™U^HÛÚ[™ÙO^Ê]™[
-HOˆÛ•ÙÙÛJ››Ü›X[^™U^‹]™[\™Ù]˜ÚXÚÙY
-_H\ØX›Y^ÈYš[HHX\Ş_HÏÜ[İ›Û™Ï•š[H^Ú]\ÜXÙOÜİ›Û™ÏœˆÏ•š[\ÈXY[™È[™˜Z[[™ÈÜXÙ\È[ˆİ\ÜY^ÛÛ[[œÎÈ]Ù\È›İÚ[™ÙH]\ˆØ\ÙKÜÜ[Ü[ˆÛ\ÜÓ˜[YO^ØÜ\˜][Û‹\İ]IÛ›Ü›X[^™U^Èˆ\Ë\Ù[XİYˆˆˆŸXOÜÙ[Xİ[Û“X™[
-›Ü›X[^™U^
-_OÜÜ[ÛX™[‚ˆÛ\ÜÓ˜[YOHš[•H^Xİ]HTH^ÜÙ\È\ÙH™YH]\Ù][]™[Ü[ÛœËˆ\‹XÛÛ[[ˆ\˜[Y]\ˆÙ[Xİ[Ûˆ[™İ]Y\ˆ[ÙYšXØ][Ûˆ\™H›İİ\ÜYÜ‚ˆ]ÛˆÛ\ÜÓ˜[YOHœš[X\Hˆİ[O^ŞÈX\™Ú[•ÜˆM_HÛÛXÚÏ^ÛÛ”™]šY]ßH\ØX›Y^ÈXØ[”™]šY]ßOØ\ŞHOOHœ™]šY]ÈˆÈÜ[ˆÛ\ÜÓ˜[YOH›ØY[™Ë[[™HÜ[ˆÛ\ÜÓ˜[YOHœÜ[›™\ˆˆÏˆ™\\š[™È™]šY]ø )ÜÜ[ˆˆ”™]šY]ÈÙ[XİYÜ\˜][ÛœÈ8¡¤ˆŸOØ]Û‚ˆÙ]‚ˆÜÙXİ[Û‚ˆÙ]‚‚ˆ]ˆÛ\ÜÓ˜[YOHœİXÚÈ‚ˆÙXİ[ÛˆÛ\ÜÓ˜[YOHœ[™[]ˆÛ\ÜÓ˜[YOHœ[™[ZXY]ˆÛ\ÜÓ˜[YOHœ[™[ZXÛÛˆˆ\šXKZY[HYH¸£%OÙ]]”™]šY]È™Y›Ü™H\›İ˜[Ú”™]šY]È[œÈÛˆHœ™\Ú™\]Y\İœ›ÛHH[˜Ú[™ÙYÛİ\˜ÙHš[KÜÙ]Ù]‚ˆØÛX[š[™ÈÈ]ˆÛ\ÜÓ˜[YOHœ™\İ[È‚ˆ]ˆÛ\ÜÓ˜[YOH™]\Ù]ZY[]H™]šY]ËY[Y[œÚ[ÛœÈ]Ü[™Y›Ü™H0­ÈÛİ\˜ÙOÜÜ[İ›Û™ÏÙ\Ü^S[X™\Š™Y›Ü™Kœ›İÜÈÏÈİ™\šY]Ñ]Kœ›İ×ØÛİ[
-_H›İÜÈ0­ÈÙ\Ü^S[X™\Š™Y›Ü™K˜ÛÛ[[œÈÏÈİ™\šY]Ñ]K˜ÛÛ[[—ØÛİ[
-_HÛÛ[[œÏÜİ›Û™ÏÙ]]Ü[”™]šY]ÙYİ]]ÜÜ[İ›Û™ÏÙ\Ü^S[X™\ŠY\‹œ›İÜÊ_H›İÜÈ0­ÈÙ\Ü^S[X™\ŠY\‹˜ÛÛ[[œÊ_HÛÛ[[œÏÜİ›Û™ÏÙ]]Ü[“Z\ÜÚ[™ÈÙ[ÈY\ˆ™]šY]ÏÜÜ[İ›Û™ÏÙ\Ü^S[X™\ŠY\‹›Z\ÜÚ[™×ØÙ[Ê_OÜİ›Û™ÏÙ]]Ü[‘\XØ]\ÈY\ˆ™]šY]ÏÜÜ[İ›Û™ÏÙ\Ü^S[X™\ŠY\‹™\XØ]WÜ›İÜÊ_OÜİ›Û™ÏÙ]Ù]‚ˆ]ˆÛ\ÜÓ˜[YOHœ™\İ[]]HÏ“Ü\˜][ÛœÈ[ˆ™]šY]È™\ÜÚÏÜ[ˆÛ\ÜÓ˜[YOH›Z[šK[X™[TH™\ÜÛœÙOÜÜ[Ù]‚ˆÛÜ\˜][ÛœË›[™İÈ[Û\ÜÓ˜[YOH›Ü\˜][Û‹\™\ÜÛÜ\˜][ÛœË›X\
+import { useEffect, useMemo, useState } from "react";
+import type { ChangeEvent } from "react";
+import { filterAndSortProfiles, getColumnProfiles, getProfileSummary, getQualityObservations, selectionLabel, validateUpload } from "./workspace-data-model.mjs";
 
-][K[™^
-HOˆÈÛÛœİÜ\˜][ÛˆH\ÓØš™Xİ
-][JNÈ™]\›ˆHÙ^O^Ø	Ôİš[™ÊÜ\˜][Û‹›Ü\˜][ÛŠ_KIÔİš[™ÊÜ\˜][Û‹˜ÛÛ[[ˆÏÈ˜[Š_KIÚ[™^XOİ›Û™ÏÔİš[™ÊÜ\˜][Û‹›Ü\˜][ÛˆÏÈ“Ü\˜][ÛˆŠ_OÜİ›Û™Ïİ\[ÙˆÜ\˜][Û‹˜ÛÛ[[ˆOOHœİš[™ÈˆÈ0­È	ÛÜ\˜][Û‹˜ÛÛ[[ŸXˆˆŸ^İ\[ÙˆÜ\˜][Û‹›Y]ÙOOHœİš[™ÈˆÈ0­È	ÛÜ\˜][Û‹›Y]ÙXˆˆŸ^İ\[ÙˆÜ\˜][Û‹˜Ú[™ÙYØÙ[ÈOOH›[X™\ˆˆÈ0­È	ÛÜ\˜][Û‹˜Ú[™ÙYØÙ[ËÓØØ[Tİš[™Ê
-_HÙ[ØˆˆŸ^İ\[ÙˆÜ\˜][Û‹™š[YØÙ[ÈOOH›[X™\ˆˆÈ0­È	ÛÜ\˜][Û‹™š[YØÙ[ËÓØØ[Tİš[™Ê
-_HÙ[Èš[YˆˆŸ^İ\[ÙˆÜ\˜][Û‹œ™[[İ™YÜ›İÜÈOOH›[X™\ˆˆÈ0­È	ÛÜ\˜][Û‹œ™[[İ™YÜ›İÜËÓØØ[Tİš[™Ê
-_H›İÜÈ™[[İ™YˆˆŸOÛOÈJ_Oİ[ˆˆÛ\ÜÓ˜[YOHš[•H™]šY]È™\Ü™]\›™Y›È\YYÜ\˜][ÛœÈ›Üˆ\ÙHÙ[Xİ[ÛœËÜŸBˆ]ˆÛ\ÜÓ˜[YOHœ™\İ[]]HÏ“İ]]Ø[\OÚÏÜ[ˆÛ\ÜÓ˜[YOH›Z[šK[X™[‘š\œİŒ›İÜÈ™]\›™YÜÜ[Ù]‚ˆÜ™]šY]Ô›İÜË›[™İ	‰ˆ™]šY]ĞÛÛ[[œË›[™İÈ]ˆÛ\ÜÓ˜[YOHX›K]Ü˜\X›OXYÜ™]šY]ĞÛÛ[[œË›X\
+type ApiObject = Record<string, unknown>;
+type CleaningOutput = { blob: Blob; filename: string } | null;
+type Comparison = { before: ApiObject; after: ApiObject } | null;
 
-ÛÛ[[ŠHOˆØÛÜOH˜ÛÛˆÙ^O^ØÛÛ[[ŸOØÛÛ[[ŸOİŠ_OİİXY›ÙOÜ™]šY]Ô›İÜË›X\
+type AnalysisWorkspaceProps = {
+  file: File | null;
+  overview: ApiObject | null;
+  readiness: ApiObject | null;
+  comparison: Comparison;
+  task: string;
+  target: string;
+  busy: string;
+  error: string;
+  notice: string;
+  onFileChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onInspect: () => void;
+  onReadiness: () => void;
+  setTask: (value: string) => void;
+  setTarget: (value: string) => void;
+};
 
-›İË[™^
-HOˆˆÙ^O^Ú[™^OÜ™]šY]ĞÛÛ[[œË›X\
+type CleaningWorkspaceProps = {
+  file: File | null;
+  overview: ApiObject | null;
+  cleaning: ApiObject | null;
+  cleanedCsv: CleaningOutput;
+  fillMissing: boolean;
+  dropDuplicates: boolean;
+  normalizeText: boolean;
+  busy: string;
+  error: string;
+  notice: string;
+  onToggle: (operation: "fillMissing" | "dropDuplicates" | "normalizeText", selected: boolean) => void;
+  onPreview: () => void;
+  onExecute: () => void;
+  onDownload: () => void;
+  confirming: boolean;
+  onBeginConfirmation: () => void;
+  onCancelConfirmation: () => void;
+};
 
-ÛÛ[[ŠHOˆÙ^O^ØÛÛ[[ŸOÜ›İÖØÛÛ[[—HOH[È¸ %ˆˆİš[™Ê›İÖØÛÛ[[—J_OİŠ_OİŠ_Oİ›ÙOİX›OÙ]ˆˆÛ\ÜÓ˜[YOHš[•HTH™]\›™Y›Èİ]]›İÜÈ[ˆ\È™]šY]ËÜŸBˆÛ\ÜÓ˜[YOHœ™]šY]Ë\™\Ü[›İH•\È\ÈH™\Ü™]\›™YHH™]šY]È[™Ú[ˆH^Xİ]H[™Ú[™]\›œÈHÔÕˆš[HÛ›H[™Ù\È›İ™]\›ˆHÙ\\˜]H^Xİ][Ûˆ™\ÜÜ‚ˆÈXÛÛ™š\›Z[™ÈÈ]ÛˆÛ\ÜÓ˜[YOHœš[X\HˆÛÛXÚÏ^ÛÛ™YÚ[ÛÛ™š\›X][ÛŸH\ØX›Y^ÈHX\Ş_O”™]šY]È[™\›İ™H^Xİ][ÛØ]Ûˆˆ]ˆÛ\ÜÓ˜[YOH˜ÛÛ™š\›X][Û‹\[™[ˆ›ÛOH™Ü›İ\ˆ\šXK[X™[YOH˜ÛÛ™š\›KXÛX[š[™Ë]]HÈYH˜ÛÛ™š\›KXÛX[š[™Ë]]HÜ™X]HHÙ\\˜]HÛX[™YÔÕÏÚÏ•HTHÚ[›ØÙ\ÜÈHÜšYÚ[˜[\ØYYØZ[ˆÚ]\ÙHÙ[Xİ[ÛœËˆHÜšYÚ[˜[š[HÚ[™[XZ[ˆ[˜Ú[™ÙYˆH^Ü›Ü›X]\ÈÔÕ‹™YØ\™\ÜÈÙˆHÛİ\˜ÙHš[H\KÜ]ˆÛ\ÜÓ˜[YOH˜]Û‹\›İÈ]ÛˆÛ\ÜÓ˜[YOHœš[X\HˆÛÛXÚÏ^ÛÛ‘^Xİ]_H\ØX›Y^ÈHX\Ş_OØ\ŞHOOH™^Xİ]HˆÈÜ[ˆÛ\ÜÓ˜[YOH›ØY[™Ë[[™HÜ[ˆÛ\ÜÓ˜[YOHœÜ[›™\ˆˆÏˆÜ™X][™ÈÛX[™YÔÕ¸ )ÜÜ[ˆˆÛÛ™š\›H[™Ü™X]HÔÕˆŸOØ]Û]ÛˆÛ\ÜÓ˜[YOHœÙXÛÛ™\HˆÛÛXÚÏ^ÛÛØ[˜Ù[ÛÛ™š\›X][ÛŸH\ØX›Y^ÈHX\Ş_OØ[˜Ù[Ø]ÛÙ]Ù]ŸBˆØÛX[™YÜİˆ	‰ˆ]ˆÛ\ÜÓ˜[YOH˜ÛX[™Y[İ]]]İ›Û™ÏÛX[™YÔÕˆ™XYOÜİ›Û™ÏØÛX[™YÜİ‹™š[[˜[Y_H0­ÈÙ[™\˜]Y\ÈHÙ\\˜]H[‹[Y[[ÜHİ]]ÜÙ]]ÛˆÛ\ÜÓ˜[YOHœÙXÛÛ™\Hˆ\OH˜]ÛˆˆÛÛXÚÏ^ÛÛ‘İÛ›ØYH\ØX›Y^ÈHX\Ş_O¸¡¤ÈİÛ›ØYÔÕØ]ÛÙ]ŸBˆÙ]ˆˆ]ˆÛ\ÜÓ˜[YOH™[\K\İ]H]ˆÛ\ÜÓ˜[YOH™[\KYÜ˜\XÈˆ\šXKZY[HYH¸£%OÙ]Ï”™]šY]È\È™\]Z\™YÚÏ”Ù[Xİİ\ÜYÜ\˜][ÛœÈ[™™\]Y\İH™]šY]Ëˆ›ÈÛX[š[™È^Xİ]\È[[[İH\›İ™H]ÜÙ]ŸBˆÜÙXİ[Û‚ˆÙ]‚ˆÙ]ŸBˆÙ]‚ˆ
-NÂŸB
+function asObject(value: unknown): ApiObject {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? (value as ApiObject)
+    : {};
+}
+
+function displayNumber(value: unknown): string {
+  return typeof value === "number" && Number.isFinite(value) ? value.toLocaleString() : "â€”";
+}
+
+function fileType(file: File | null, dataset: ApiObject): string {
+  const format = dataset.format;
+  if (typeof format === "string" && format) return format.toUpperCase();
+  const suffix = file?.name.split(".").pop();
+  return suffix && suffix !== file?.name ? suffix.toUpperCase() : "Unknown";
+}
+
+function countLabel(value: unknown, noun: string): string {
+  if (typeof value !== "number" || !Number.isFinite(value)) return `${noun} count not returned`;
+  return `${displayNumber(value)} ${noun}${value === 1 ? "" : "s"} reported`;
+}
+
+export function DataAnalysisWorkspace({
+  file, overview, readiness, comparison, task, target, busy, error, notice,
+  onFileChange, onInspect, onReadiness, setTask, setTarget,
+}: AnalysisWorkspaceProps) {
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState<"name" | "missing" | "distinct">("name");
+  const [page, setPage] = useState(0);
+  const pageSize = 25;
+  const dataset = asObject(overview?.dataset);
+  const overviewData = asObject(overview?.overview);
+  const profiles = useMemo(() => getColumnProfiles(overview?.columns), [overview]);
+  useEffect(() => {
+    setPage(0);
+    setQuery("");
+  }, [overview]);
+  const visibleProfiles = useMemo(() => filterAndSortProfiles(profiles, query, sort), [profiles, query, sort]);
+  const qualityObservations = getQualityObservations(overviewData);
+  const pageCount = Math.max(1, Math.ceil(visibleProfiles.length / pageSize));
+  const pageProfiles = visibleProfiles.slice(page * pageSize, (page + 1) * pageSize);
+  const score = readiness?.score;
+  const scoreLabel = typeof score === "number"
+    ? score >= 80 ? "Strong starting point" : score >= 60 ? "Some improvements recommended" : "Needs preparation"
+    : "Assessment not run yet";
+  const missing = overviewData.total_missing_cells;
+  const duplicates = overviewData.duplicate_row_count;
+  const cleaningPlan = asObject(overview?.cleaning_plan);
+  const actions = Array.isArray(cleaningPlan.actions) ? cleaningPlan.actions : [];
+  const scoreDimensions = Array.isArray(readiness?.dimensions) ? readiness.dimensions : [];
+
+  return (
+    <div className="shell analysis-workspace">
+      <section className="hero">
+        <div className="eyebrow">NUMPA Â· DATA ANALYSIS</div>
+        <h1>Understand your <span>dataset.</span></h1>
+        <p>Inspect its structure and quality before deciding what to do next. Reported values come from the configured NUMPA API.</p>
+      </section>
+
+      {error && <div className="alert" role="alert">{error}</div>}
+      {notice && <div className="alert success" role="status">{notice}</div>}
+
+      <div className="analysis-grid">
+        <div className="stack">
+          <section className="panel">
+            <div className="panel-head"><div className="panel-icon" aria-hidden="true">â†¥</div><div><h2>Dataset</h2><p>Upload one supported tabular file for in-memory inspection.</p></div></div>
+            <div className="panel-body">
+              <div className="dropzone">
+                <strong>Choose a dataset file</strong>
+                <small>CSV, JSON, XLSX, Parquet, Arrow or Feather Â· maximum 50 MB</small>
+                <input className="file-input" type="file" accept=".csv,.json,.xlsx,.parquet,.arrow,.feather" onChange={onFileChange} aria-label="Choose dataset file" />
+              </div>
+              {file && <div className="file-chip"><span aria-hidden="true">â–£</span><div><strong>{file.name}</strong><br /><span>{(file.size / 1024 / 1024).toFixed(2)} MB Â· {overview ? "Inspected" : "Selected"}</span></div></div>}
+              <button className="primary" style={{ marginTop: 16 }} onClick={onInspect} disabled={!file || !!busy}>
+                {busy === "inspect" ? <span className="loading-line"><span className="spinner" /> Inspectingâ€¦</span> : overview ? "Inspect again" : "Inspect dataset â†’"}
+              </button>
+              <p className="hint">The source file stays in this browser session and is sent to the configured API for temporary in-memory processing. It is not stored in this workspace.</p>
+            </div>
+          </section>
+
+          <section className="panel">
+            <div className="panel-head"><div className="panel-icon" aria-hidden="true">â—‰</div><div><h2>ML readiness</h2><p>Existing readiness assessment for the selected source file.</p></div></div>
+            <div className="panel-body">
+              <div className="field"><label htmlFor="task">Intended ML task</label><select id="task" value={task} onChange={(event) => setTask(event.target.value)}>
+                <option value="classification">Classification</option><option value="regression">Regression</option><option value="forecasting">Time-series forecasting</option><option value="clustering">Clustering (no target column)</option>
+              </select></div>
+              {task !== "clustering" && <div className="field"><label htmlFor="target">Target column name</label><input id="target" value={target} onChange={(event) => setTarget(event.target.value)} placeholder="e.g. churn, price, outcome" /></div>}
+              <button className="primary" style={{ marginTop: 17 }} onClick={onReadiness} disabled={!file || !!busy}>
+                {busy === "readiness" ? <span className="loading-line"><span className="spinner" /> Calculatingâ€¦</span> : "Calculate readiness score â†’"}
+              </button>
+              {task === "forecasting" && <p className="hint">Forecasting is supported by the current readiness heuristic; time-aware model validation is not part of this assessment.</p>}
+              {readiness && <div className="analysis-readiness">
+                <div className="score-wrap"><div className="score-ring">{typeof score === "number" ? Math.round(score) : "â€”"}</div><div className="score-copy"><strong>{scoreLabel}</strong><p>Out of 100 Â· deterministic heuristic, not a model-performance guarantee. Dataset: source file.</p></div></div>
+                {comparison && <><div className="result-title"><h3>Cleaning comparison</h3><span className="mini-label">Source â†’ cleaned CSV</span></div><div className="metric-grid"><div className="metric"><span>Source</span><strong>{displayNumber(comparison.before.score)}<small>/100</small></strong></div><div className="metric"><span>Cleaned CSV</span><strong>{displayNumber(comparison.after.score)}<small>/100</small></strong></div><div className="metric"><span>Score change</span><strong>{typeof comparison.before.score === "number" && typeof comparison.after.score === "number" ? `${comparison.after.score - comparison.before.score > 0 ? "+" : ""}${comparison.after.score - comparison.before.score}` : "â€”"}</strong></div></div></>}
+                {scoreDimensions.length > 0 && <div className="detail-list">{scoreDimensions.map((item, index) => { const dimension = asObject(item); return <div className="detail-row" key={String(dimension.name ?? index)}><span>{String(dimension.name ?? dimension.dimension ?? `Dimension ${index + 1}`)}</span><strong>{typeof dimension.score === "number" ? `${dimension.score}/100` : String(dimension.value ?? "See details")}</strong></div>; })}</div>}
+              </div>}
+              <p className="hint">A readiness score is a heuristic, not a guarantee of model performance.</p>
+            </div>
+          </section>
+        </div>
+
+        <div className="stack">
+          <section className="panel">
+            <div className="panel-head"><div className="panel-icon" aria-hidden="true">â–¦</div><div><h2>Dataset overview</h2><p>Dimensions and quality values returned by inspection.</p></div></div>
+            {overview ? <div className="results">
+              <div className="dataset-identity"><div><span>Source dataset</span><strong>{String(dataset.filename ?? file?.name ?? "Unknown file")}</strong></div><div><span>File type</span><strong>{fileType(file, dataset)}</strong></div><div><span>Processing</span><strong>{typeof dataset.processing === "string" ? dataset.processing : "Status not returned"}</strong></div></div>
+              <div className="metric-grid"><div className="metric"><span>Rows</span><strong>{displayNumber(overviewData.row_count)}</strong></div><div className="metric"><span>Columns</span><strong>{displayNumber(overviewData.column_count)}</strong></div><div className="metric"><span>Missing cells</span><strong>{displayNumber(missing)}</strong></div></div>
+              <div className="detail-list"><div className="detail-row"><span>Numeric columns</span><strong>{displayNumber(overviewData.numeric_column_count)}</strong></div><div className="detail-row"><span>Non-numeric columns</span><strong>{displayNumber(overviewData.non_numeric_column_count)}</strong></div><div className="detail-row"><span>Exact duplicate rows</span><strong>{displayNumber(duplicates)}</strong></div></div>
+              <div className="quality-observations" aria-label="Data quality observations">
+                <h3>Quality observations</h3>
+                {qualityObservations.map((item) => <p className={`quality-${item.tone}`} key={item.id}>{item.message}</p>)}
+                {Array.isArray(overview.columns) && <p>{profiles.length.toLocaleString()} of {overview.columns.length.toLocaleString()} returned column profiles are available below.</p>}
+              </div>
+            </div> : <div className="empty-state"><div className="empty-graphic" aria-hidden="true">â–¤</div><h3>No inspected dataset</h3><p>Select a file and inspect it to see dimensions, missing values, duplicates, and column profiles.</p></div>}
+          </section>
+
+          {overview && <section className="panel">
+            <div className="panel-head"><div className="panel-icon" aria-hidden="true">â˜·</div><div><h2>Column profiles</h2><p>Profile values returned by the API. Missing summaries are shown as unavailable.</p></div></div>
+            {profiles.length ? <div className="results">
+              <div className="profile-controls"><label htmlFor="profile-search">Search columns</label><input id="profile-search" value={query} onChange={(event) => { setQuery(event.target.value); setPage(0); }} placeholder="Column name or type" /><label htmlFor="profile-sort">Sort by</label><select id="profile-sort" value={sort} onChange={(event) => { const value = event.target.value; if (value === "name" || value === "missing" || value === "distinct") setSort(value); setPage(0); }}><option value="name">Column name</option><option value="missing">Missing count</option><option value="distinct">Distinct count</option></select></div>
+              <div className="table-wrap"><table className="profile-table"><thead><tr><th scope="col">Column</th><th scope="col">Type</th><th scope="col">Missing</th><th scope="col">Distinct</th><th scope="col">Summary returned by API</th></tr></thead><tbody>{pageProfiles.map((profile, index) => <tr key={`${String(profile.name)}-${index}`}><th scope="row">{String(profile.name)}</th><td>{String(profile.dtype)}</td><td>{displayNumber(profile.missing_count)}{typeof profile.missing_percent === "number" ? ` (${profile.missing_percent}%)` : ""}</td><td>{displayNumber(profile.unique_count)}</td><td>{getProfileSummary(profile)}</td></tr>)}</tbody></table></div>
+              <div className="pagination"><span>{visibleProfiles.length ? `${(page * pageSize + 1).toLocaleString()}â€“${Math.min((page + 1) * pageSize, visibleProfiles.length).toLocaleString()} of ${visibleProfiles.length.toLocaleString()} profiles` : "No matching columns"}</span><div><button className="secondary" type="button" onClick={() => setPage((current) => Math.max(0, current - 1))} disabled={page === 0}>Previous</button><button className="secondary" type="button" onClick={() => setPage((current) => Math.min(pageCount - 1, current + 1))} disabled={page >= pageCount - 1}>Next</button></div></div>
+            </div> : <div className="empty-state"><h3>No column profiles returned</h3><p>The inspection response did not include usable column profile data.</p></div>}
+          </section>}
+
+          {!overview && <section className="panel"><div className="empty-state"><div className="empty-graphic" aria-hidden="true">âŒ•</div><h3>Analysis begins with inspection</h3><p>Choose a dataset file to view trustworthy overview and column-level information.</p></div></section>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function DataPreprocessingWorkspace({
+  file, overview, cleaning, cleanedCsv, fillMissing, dropDuplicates, normalizeText, busy, error, notice,
+  onToggle, onPreview, onExecute, onDownload, confirming, onBeginConfirmation, onCancelConfirmation,
+}: CleaningWorkspaceProps) {
+  const dataset = asObject(overview?.dataset);
+  const overviewData = asObject(overview?.overview);
+  const plan = asObject(overview?.cleaning_plan);
+  const actions = Array.isArray(plan.actions) ? plan.actions : [];
+  const report = asObject(cleaning?.report);
+  const before = asObject(report.before);
+  const after = asObject(report.after);
+  const operations = Array.isArray(report.operations) ? report.operations : [];
+  const previewRows = Array.isArray(cleaning?.preview) ? cleaning.preview.map(asObject) : [];
+  const previewColumns = Array.isArray(cleaning?.columns) ? cleaning.columns.filter((column): column is string => typeof column === "string") : [];
+  const canPreview = !!file && !!overview && !busy;
+  const recommendationTitle = (action: ApiObject) => {
+    if (action.issue === "missing_values") return `Missing values Â· ${String(action.column ?? "column")}`;
+    if (action.issue === "exact_duplicate_rows") return "Exact duplicate rows";
+    if (action.issue === "potential_outliers") return `Potential outliers Â· ${String(action.column ?? "column")}`;
+    return typeof action.issue === "string" ? action.issue.replaceAll("_", " ") : "Data quality observation";
+  };
+
+  return (
+    <div className="shell cleaning-workspace">
+      <section className="hero"><div className="eyebrow">NUMPA Â· DATA PREPROCESSING</div><h1>Review every <span>change.</span></h1><p>Choose supported cleaning operations, inspect the proposed output, then explicitly approve creating a separate CSV copy.</p></section>
+      {error && <div className="alert" role="alert">{error}</div>}
+      {notice && <div className="alert success" role="status">{notice}</div>}
+      <section className="panel source-context"><div className="panel-head"><div className="panel-icon" aria-hidden="true">â–£</div><div><h2>Active source dataset</h2><p>Cleaning always reads the original upload. The source remains unchanged in memory.</p></div></div>
+        {file && overview ? <div className="results"><div className="dataset-identity"><div><span>Source file</span><strong>{String(dataset.filename ?? file.name)}</strong></div><div><span>File type</span><strong>{fileType(file, dataset)}</strong></div><div><span>Dimensions</span><strong>{displayNumber(overviewData.row_count)} rows Ã— {displayNumber(overviewData.column_count)} columns</strong></div><div><span>State</span><strong>Inspected source Â· in memory</strong></div></div>{cleanedCsv && <p className="clean-output-identity"><strong>Separate output available:</strong> {cleanedCsv.filename} Â· CSV. This is not the original file.</p>}</div> : <div className="empty-state"><div className="empty-graphic" aria-hidden="true">â†¥</div><h3>No active inspected dataset</h3><p>Return to Data Analysis, choose a supported file, and inspect it before reviewing cleaning actions.</p></div>}
+      </section>
+
+      {file && overview && <div className="cleaning-grid">
+        <div className="stack">
+          <section className="panel"><div className="panel-head"><div className="panel-icon" aria-hidden="true">âœ³</div><div><h2>API cleaning recommendations</h2><p>Recommendations below are returned for this source dataset, not generated by the browser.</p></div></div>
+            <div className="results">
+              {actions.length ? <><div className="detail-list">{actions.map((item, index) => { const action = asObject(item); const unsupported = action.strategy === "flag_only"; return <div className="recommendation-row" key={`${String(action.issue)}-${String(action.column ?? "all")}-${index}`}><div><strong>{recommendationTitle(action)}</strong><p>{String(action.reason ?? "Reason not returned.")}</p><span className="recommendation-meta">{countLabel(action.count, "affected row/cell")} Â· {unsupported ? "Unsupported by current execute options; informational only" : action.requires_approval === true ? "Review before applying" : "No value-changing operation proposed"}</span></div><span className={`mini-label${unsupported ? " is-muted" : ""}`}>{unsupported ? "Unsupported" : "API suggestion"}</span></div>; })}</div>{typeof plan.note === "string" && <p className="hint">{plan.note}</p>}</> : <div className="empty-state compact"><h3>No actions returned</h3><p>The API did not return a cleaning recommendation for this dataset.</p></div>}
+            </div>
+          </section>
+
+          <section className="panel"><div className="panel-head"><div className="panel-icon" aria-hidden="true">â˜·</div><div><h2>Supported operations</h2><p>These controls map directly to the current cleaning preview and execute request fields.</p></div></div>
+            <div className="panel-body">
+              <label className="check-row"><input type="checkbox" checked={fillMissing} onChange={(event) => onToggle("fillMissing", event.target.checked)} disabled={!file || !!busy} /><span><strong>Fill missing values</strong><br />Uses the existing API defaults by column type (mean/median, mode or â€œUnknownâ€); all-missing columns are skipped.</span><span className={`operation-state${fillMissing ? " is-selected" : ""}`}>{selectionLabel(fillMissing)}</span></label>
+              <label className="check-row"><input type="checkbox" checked={dropDuplicates} onChange={(event) => onToggle("dropDuplicates", event.target.checked)} disabled={!file || !!busy} /><span><strong>Drop exact duplicate rows</strong><br />Removes rows identical across every column. Keep off if duplicates may be meaningful.</span><span className={`operation-state${dropDuplicates ? " is-selected" : ""}`}>{selectionLabel(dropDuplicates)}</span></label>
+              <label className="check-row"><input type="checkbox" checked={normalizeText} onChange={(event) => onToggle("normalizeText", event.target.checked)} disabled={!file || !!busy} /><span><strong>Trim text whitespace</strong><br />Trims leading and trailing spaces in supported text columns; it does not change letter case.</span><span className={`operation-state${normalizeText ? " is-selected" : ""}`}>{selectionLabel(normalizeText)}</span></label>
+              <p className="hint">The execute API exposes these three dataset-level options. Per-column parameter selection and outlier modification are not supported.</p>
+              <button className="primary" style={{ marginTop: 14 }} onClick={onPreview} disabled={!canPreview}>{busy === "preview" ? <span className="loading-line"><span className="spinner" /> Preparing previewâ€¦</span> : "Preview selected operations â†’"}</button>
+            </div>
+          </section>
+        </div>
+
+        <div className="stack">
+          <section className="panel"><div className="panel-head"><div className="panel-icon" aria-hidden="true">âŒ•</div><div><h2>Preview before approval</h2><p>Preview runs on a fresh request from the unchanged source file.</p></div></div>
+            {cleaning ? <div className="results">
+              <div className="dataset-identity preview-dimensions"><div><span>Before Â· source</span><strong>{displayNumber(before.rows ?? overviewData.row_count)} rows Â· {displayNumber(before.columns ?? overviewData.column_count)} columns</strong></div><div><span>Previewed output</span><strong>{displayNumber(after.rows)} rows Â· {displayNumber(after.columns)} columns</strong></div><div><span>Missing cells after preview</span><strong>{displayNumber(after.missing_cells)}</strong></div><div><span>Duplicates after preview</span><strong>{displayNumber(after.duplicate_rows)}</strong></div></div>
+              <div className="result-title"><h3>Operations in preview report</h3><span className="mini-label">API response</span></div>
+              {operations.length ? <ul className="operation-report">{operations.map((item, index) => { const operation = asObject(item); return <li key={`${String(operation.operation)}-${String(operation.column ?? "all")}-${index}`}><strong>{String(operation.operation ?? "Operation")}</strong>{typeof operation.column === "string" ? ` Â· ${operation.column}` : ""}{typeof operation.method === "string" ? ` Â· ${operation.method}` : ""}{typeof operation.changed_cells === "number" ? ` Â· ${operation.changed_cells.toLocaleString()} cells` : ""}{typeof operation.filled_cells === "number" ? ` Â· ${operation.filled_cells.toLocaleString()} cells filled` : ""}{typeof operation.removed_rows === "number" ? ` Â· ${operation.removed_rows.toLocaleString()} rows removed` : ""}</li>; })}</ul> : <p className="hint">The preview report returned no applied operations for these selections.</p>}
+              <div className="result-title"><h3>Output sample</h3><span className="mini-label">First 20 rows returned</span></div>
+              {previewRows.length && previewColumns.length ? <div className="table-wrap"><table><thead><tr>{previewColumns.map((column) => <th scope="col" key={column}>{column}</th>)}</tr></thead><tbody>{previewRows.map((row, index) => <tr key={index}>{previewColumns.map((column) => <td key={column}>{row[column] == null ? "â€”" : String(row[column])}</td>)}</tr>)}</tbody></table></div> : <p className="hint">The API returned no output rows in this preview.</p>}
+              <p className="preview-report-note">This is the report returned by the preview endpoint. The execute endpoint returns a CSV file only and does not return a separate execution report.</p>
+              {!confirming ? <button className="primary" onClick={onBeginConfirmation} disabled={!!busy}>Review and approve execution</button> : <div className="confirmation-panel" role="group" aria-labelledby="confirm-cleaning-title"><h3 id="confirm-cleaning-title">Create a separate cleaned CSV?</h3><p>The API will process the original upload again with these selections. The original file will remain unchanged. The export format is CSV, regardless of the source file type.</p><div className="button-row"><button className="primary" onClick={onExecute} disabled={!!busy}>{busy === "execute" ? <span className="loading-line"><span className="spinner" /> Creating cleaned CSVâ€¦</span> : "Confirm and create CSV"}</button><button className="secondary" onClick={onCancelConfirmation} disabled={!!busy}>Cancel</button></div></div>}
+              {cleanedCsv && <div className="cleaned-output"><div><strong>Cleaned CSV ready</strong><p>{cleanedCsv.filename} Â· generated as a separate in-memory output.</p></div><button className="secondary" type="button" onClick={onDownload} disabled={!!busy}>â†“ Download CSV</button></div>}
+            </div> : <div className="empty-state"><div className="empty-graphic" aria-hidden="true">âŒ•</div><h3>Preview is required</h3><p>Select supported operations and request a preview. No cleaning executes until you approve it.</p></div>}
+          </section>
+        </div>
+      </div>}
+    </div>
+  );
+}
+
