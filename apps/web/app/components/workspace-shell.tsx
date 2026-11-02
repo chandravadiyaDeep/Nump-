@@ -17,7 +17,13 @@ const destinations = [
 type Theme = "light" | "dark";
 type Section = (typeof destinations)[number]["label"];
 
-export default function WorkspaceShell({ children }: { children: ReactNode }) {
+type WorkspaceShellProps = {
+  children: ReactNode;
+  preprocessing?: ReactNode;
+  hasActiveDataset?: boolean;
+};
+
+export default function WorkspaceShell({ children, preprocessing, hasActiveDataset = false }: WorkspaceShellProps) {
   const [section, setSection] = useState<Section>("Data Analysis");
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -192,6 +198,11 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
             </div>
           </div>
           <div className="workspace-topbar-actions">
+            {section === "Data Analysis" && hasActiveDataset && (
+              <button className="workspace-next-stage" type="button" onClick={() => setSection("Data Preprocessing / Cleaning")}>
+                Review cleaning →
+              </button>
+            )}
             <span className="workspace-dataset-context">
               {section === "Data Analysis" ? "Dataset Quality Studio" : "Commercial V1"}
             </span>
@@ -210,7 +221,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
         </header>
 
         <main className="workspace-content" id="main-content">
-          {section === "Data Analysis" ? children : (
+          {section === "Data Analysis" ? children : section === "Data Preprocessing / Cleaning" && preprocessing ? preprocessing : (
             <section className="workspace-coming-soon" aria-labelledby="coming-soon-title">
               <span className="workspace-coming-icon" aria-hidden="true">{current.icon}</span>
               <p className="workspace-context">WORKSPACE SECTION</p>
