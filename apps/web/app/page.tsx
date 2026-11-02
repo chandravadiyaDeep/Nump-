@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { ChangeEvent } from "react";
 import WorkspaceShell from "./components/workspace-shell";
 import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "./components/workspace-data-panels";
+import { DataVisualizationWorkspace } from "./components/workspace-data-visualization";
 import { validateUpload } from "./components/workspace-data-model.mjs";
 
 type ApiObject = Record<string, unknown>;
@@ -260,6 +261,7 @@ export default function HomePage() {
           onCancelConfirmation={() => setConfirmingExecution(false)}
         />
       }
+      visualization={<DataVisualizationWorkspace file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv} />}
     >
       <DataAnalysisWorkspace
         file={file} overview={overview} readiness={readiness} comparison={comparison}
