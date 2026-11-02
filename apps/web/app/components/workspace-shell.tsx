@@ -1,6 +1,7 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import AuthNav from "./auth-nav";
 
 const destinations = [
@@ -25,8 +26,12 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
   const drawer = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const savedTheme = window.localStorage.getItem("numpa-theme");
-    if (savedTheme === "dark" || savedTheme === "light") setTheme(savedTheme);
+    try {
+      const savedTheme = window.localStorage.getItem("numpa-theme");
+      if (savedTheme === "dark" || savedTheme === "light") setTheme(savedTheme);
+    } catch {
+      // Keep the light default if browser storage is unavailable.
+    }
   }, []);
 
   useEffect(() => {
@@ -46,7 +51,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
       if (event.key !== "Tab" || !drawer.current) return;
       const focusable = Array.from(
         drawer.current.querySelectorAll<HTMLElement>('button:not([disabled]), a[href]'),
-      );
+      ).filter((element) => element.getClientRects().length > 0);
       if (!focusable.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
@@ -73,7 +78,11 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
     const nextTheme: Theme = theme === "light" ? "dark" : "light";
     setTheme(nextTheme);
     // Persist only the appearance preference; dataset files and results remain in memory.
-    window.localStorage.setItem("numpa-theme", nextTheme);
+    try {
+      window.localStorage.setItem("numpa-theme", nextTheme);
+    } catch {
+      // Theme switching still works for this session if browser storage is unavailable.
+    }
   }
 
   const current = destinations.find((destination) => destination.label === section)!;
@@ -166,7 +175,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
             </button>
             <div>
               <p className="workspace-context">NUMPA WORKSPACE</p>
-              <h1 className="workspace-section-title">{section}</h1>
+              <p className="workspace-section-title" role="heading" aria-level={1}>{section}</p>
             </div>
           </div>
           <div className="workspace-topbar-actions">

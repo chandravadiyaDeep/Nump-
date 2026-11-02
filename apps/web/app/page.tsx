@@ -291,7 +291,7 @@ export default function HomePage() {
 
   return (
     <WorkspaceShell>
-      <main className="shell">
+      <div className="shell">
 
       <section className="hero">
         <div className="eyebrow">● Your data, ready for what comes next</div>
@@ -514,7 +514,7 @@ export default function HomePage() {
         <span><strong>NUMPA</strong> · Dataset Quality Studio · MVP</span>
         <span>Designed for explainable, review-first data preparation</span>
       </footer>
-      </main>
+      </div>
     </WorkspaceShell>
   );
 }
