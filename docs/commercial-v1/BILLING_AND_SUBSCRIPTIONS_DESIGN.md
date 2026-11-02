@@ -9,6 +9,9 @@
 
 ## 1. Executive Summary & Provider Strategy
 
+> [!IMPORTANT]
+> This document is a technical evaluation and architecture proposal. **No merchant accounts, pricing plans, or payment gateway code are active in the application.** All pricing structures and provider choices are tentative proposals awaiting explicit owner approval.
+
 To support commercialization, NUMPA requires a secure, automated billing and subscription infrastructure.
 
 Because NUMPA targets both Indian developers/teams (domestic transactions) and international enterprises (cross-border payments), a clear comparison between **Razorpay** and **Stripe** is required to select the optimal merchant gateway.

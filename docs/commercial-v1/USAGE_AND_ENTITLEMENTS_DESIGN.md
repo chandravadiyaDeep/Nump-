@@ -19,10 +19,13 @@ In a commercial SaaS platform, usage tracking and entitlement enforcement must b
 
 ## 2. Commercial Plan Matrix
 
+> [!IMPORTANT]
+> All pricing figures, plan names, and quota allocations below are **tentative engineering proposals awaiting commercial owner review and explicit approval**. No billing rules or commercial restrictions are currently active in the application.
+
 | Feature / Quota | Free (Evaluation) | Starter | Professional | Enterprise |
 |---|---|---|---|---|
 | **Target Audience** | Individual Explorers | Data Analysts & Students | Data Scientists & Teams | Organizations |
-| **Price (Estimated)** | \$0 / month | \$19 / month | \$79 / month | Custom / Invoiced |
+| **Price (Tentative Proposal)** | \$0 / month | \$19 / month (Proposed) | \$79 / month (Proposed) | Custom / Invoiced |
 | **Web Workspace Access** | Full 7-stage workspace | Full 7-stage workspace | Full 7-stage workspace | Dedicated tenant |
 | **Max Upload File Size** | 10 MB | 25 MB | 50 MB | 250 MB+ |
 | **Dataset Inspections** | 20 / month | 250 / month | Unlimited (fair use) | Unlimited |
