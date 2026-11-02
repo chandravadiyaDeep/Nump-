@@ -493,3 +493,73 @@ tr:last-child td { border-bottom: 0; }
   .cleaned-output .secondary { width: 100%; }
 }
 @media (max-width: 900px) { .workspace-next-stage { display: none; } }
+
+/* Phase 3 data visualization workspace */
+.visualization-context { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 16px; padding: 18px 20px; }
+.visualization-context h2 { margin: 3px 0 5px; overflow-wrap: anywhere; font: 700 1rem "Manrope", sans-serif; }
+.visualization-context p { margin: 0; color: var(--ws-muted); font-size: .78rem; }
+.visualization-context .eyebrow { margin-bottom: 3px; }
+.visualization-field { display: grid; gap: 6px; margin-top: 13px; color: var(--ws-text); font-size: .77rem; font-weight: 700; }
+.visualization-field select { width: 100%; min-height: 40px; border: 1px solid var(--ws-line); border-radius: 9px; padding: 8px 10px; color: var(--ws-text); background: var(--ws-raised); }
+.visualization-field select:focus { outline: 3px solid var(--ws-focus); outline-offset: 2px; }
+.visualization-context .version-select { width: min(100%, 320px); margin: 0; }
+.visualization-layout { display: grid; grid-template-columns: minmax(235px, .34fr) minmax(0, 1fr); align-items: start; gap: 16px; padding-bottom: 20px; }
+.visualization-controls .panel-body, .visualization-result .panel-body { min-width: 0; }
+.visualization-explanation { margin: 14px 0 0; border-left: 3px solid var(--ws-primary); padding: 9px 11px; color: var(--ws-muted); background: var(--ws-raised); font-size: .75rem; line-height: 1.5; }
+.heatmap-columns { display: grid; gap: 7px; margin: 14px 0 0; border: 1px solid var(--ws-line); border-radius: 11px; padding: 10px; }
+.heatmap-columns legend { padding: 0 4px; color: var(--ws-text); font-size: .74rem; font-weight: 700; }
+.heatmap-columns label { display: flex; align-items: center; gap: 8px; color: var(--ws-text); font-size: .75rem; overflow-wrap: anywhere; }
+.heatmap-columns input { accent-color: var(--ws-primary); }
+.heatmap-columns small { color: var(--ws-muted); }
+.chart-visual-frame { width: 100%; min-width: 0; overflow: hidden; }
+.chart-visual { display: block; width: 100%; height: auto; min-height: 250px; overflow: visible; }
+.chart-axis line { stroke: var(--chart-grid); stroke-width: 1.5; }
+.chart-tick { fill: var(--ws-muted); font: 11px "DM Sans", sans-serif; }
+.chart-axis-label { fill: var(--ws-text); font: 12px "DM Sans", sans-serif; }
+.chart-bar { fill: var(--ws-primary); }
+.chart-line { fill: none; stroke: var(--ws-primary); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.chart-point { fill: var(--ws-primary); stroke: var(--ws-surface); stroke-width: 1.5; }
+.chart-whisker, .chart-median { stroke: var(--ws-primary); stroke-width: 2; }
+.chart-box { fill: color-mix(in srgb, var(--ws-primary) 30%, transparent); stroke: var(--ws-primary); stroke-width: 2; }
+.chart-outlier { fill: var(--ws-surface); stroke: var(--ws-primary); stroke-width: 2; }
+.heatmap-value { fill: var(--ws-text); font: 10px "DM Sans", sans-serif; pointer-events: none; }
+.chart-summary { margin: 10px 0 0; color: var(--ws-text); font-size: .79rem; font-weight: 700; line-height: 1.5; }
+.visualization-disclosure { margin-top: 10px; border: 1px solid var(--ws-line); border-radius: 10px; padding: 10px 12px; color: var(--ws-muted); background: var(--ws-raised); font-size: .73rem; line-height: 1.55; }
+.visualization-disclosure strong { color: var(--ws-text); }
+.visualization-data-table { margin-top: 12px; color: var(--ws-text); }
+.visualization-data-table summary { width: fit-content; cursor: pointer; color: var(--ws-primary-strong); font-size: .76rem; font-weight: 700; }
+.visualization-data-table .table-wrap { margin-top: 10px; max-height: 320px; overflow: auto; }
+.visualization-data-table table { font-size: .72rem; }
+.chart-empty { display: grid; min-height: 190px; place-items: center; border: 1px dashed var(--ws-line); border-radius: 12px; padding: 20px; color: var(--ws-muted); background: var(--ws-raised); text-align: center; font-size: .82rem; line-height: 1.55; }
+.visualization-empty-state { margin-bottom: 20px; }
+.workspace-shell { --chart-grid: #cbd6cf; --chart-missing: #7f8b84; }
+.workspace-shell[data-theme="dark"] { --chart-grid: #45534a; --chart-missing: #536159; }
+.workspace-shell[data-theme="dark"] .visualization-context h2,
+.workspace-shell[data-theme="dark"] .visualization-field,
+.workspace-shell[data-theme="dark"] .heatmap-columns legend,
+.workspace-shell[data-theme="dark"] .heatmap-columns label,
+.workspace-shell[data-theme="dark"] .visualization-disclosure strong { color: var(--ws-text); }
+.workspace-shell[data-theme="dark"] .visualization-context,
+.workspace-shell[data-theme="dark"] .visualization-field select,
+.workspace-shell[data-theme="dark"] .heatmap-columns,
+.workspace-shell[data-theme="dark"] .visualization-disclosure,
+.workspace-shell[data-theme="dark"] .visualization-explanation,
+.workspace-shell[data-theme="dark"] .chart-empty { border-color: var(--ws-line); background: var(--ws-raised); }
+.workspace-shell[data-theme="dark"] .chart-axis line { stroke: var(--chart-grid); }
+.workspace-shell[data-theme="dark"] .chart-tick { fill: var(--ws-muted); }
+.workspace-shell[data-theme="dark"] .chart-axis-label,
+.workspace-shell[data-theme="dark"] .heatmap-value { fill: var(--ws-text); }
+@media (max-width: 1050px) {
+  .visualization-layout { grid-template-columns: minmax(0, 1fr); }
+  .visualization-controls .panel-body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 14px; }
+  .visualization-controls .panel-head { padding-bottom: 14px; }
+  .visualization-explanation, .heatmap-columns { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .visualization-context { align-items: stretch; flex-direction: column; }
+  .visualization-context .version-select { width: 100%; }
+  .visualization-controls .panel-body { grid-template-columns: minmax(0, 1fr); }
+  .visualization-explanation, .heatmap-columns { grid-column: auto; }
+  .visualization-result .panel-body, .visualization-controls .panel-body { padding-right: 12px; padding-left: 12px; }
+  .chart-visual { min-height: 190px; }
+}
