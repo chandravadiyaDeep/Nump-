@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, useMemo, useState } from "react";
-import AuthNav from "./components/auth-nav";
+import WorkspaceShell from "./components/workspace-shell";
 
 type ApiObject = Record<string, unknown>;
 
@@ -290,14 +290,8 @@ export default function HomePage() {
     : [];
 
   return (
-    <main className="shell">
-      <header className="topbar">
-        <div className="brand">
-          <span className="brand-mark">N</span>
-          <span>NUMPA</span>
-        </div>
-        <div className="topbar-actions"><div className="top-pill"><span className="status-dot" /> Dataset Quality Studio</div><AuthNav /></div>
-      </header>
+    <WorkspaceShell>
+      <main className="shell">
 
       <section className="hero">
         <div className="eyebrow">● Your data, ready for what comes next</div>
@@ -520,6 +514,7 @@ export default function HomePage() {
         <span><strong>NUMPA</strong> · Dataset Quality Studio · MVP</span>
         <span>Designed for explainable, review-first data preparation</span>
       </footer>
-    </main>
+      </main>
+    </WorkspaceShell>
   );
 }
