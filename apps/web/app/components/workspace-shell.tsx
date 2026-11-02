@@ -44,8 +44,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
 
     function handleDrawerKeys(event: KeyboardEvent) {
       if (event.key === "Escape") {
-        setMobileOpen(false);
-        menuTrigger.current?.focus();
+        closeDrawer();
         return;
       }
       if (event.key !== "Tab" || !drawer.current) return;
@@ -55,7 +54,10 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
       if (!focusable.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
-      if (event.shiftKey && document.activeElement === first) {
+      if (!drawer.current.contains(document.activeElement)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
         last.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
@@ -70,9 +72,22 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
 
   function chooseSection(label: Section) {
     setSection(label);
-    setMobileOpen(false);
-    if (window.matchMedia("(max-width: 780px)").matches) menuTrigger.current?.focus();
+    closeDrawer();
   }
+
+  const restoreDrawerFocus = useRef(false);
+
+  function closeDrawer() {
+    if (!mobileOpen) return;
+    restoreDrawerFocus.current = true;
+    setMobileOpen(false);
+  }
+
+  useEffect(() => {
+    if (mobileOpen || !restoreDrawerFocus.current) return;
+    restoreDrawerFocus.current = false;
+    menuTrigger.current?.focus();
+  }, [mobileOpen]);
 
   function toggleTheme() {
     const nextTheme: Theme = theme === "light" ? "dark" : "light";
@@ -95,8 +110,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
           type="button"
           aria-label="Close navigation menu"
           onClick={() => {
-            setMobileOpen(false);
-            menuTrigger.current?.focus();
+            closeDrawer();
           }}
         />
       )}
@@ -127,8 +141,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
             type="button"
             aria-label="Close navigation menu"
             onClick={() => {
-              setMobileOpen(false);
-              menuTrigger.current?.focus();
+              closeDrawer();
             }}
           >
             <span aria-hidden="true">×</span>
@@ -158,7 +171,7 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
         </div>
       </aside>
 
-      <div className="workspace-main">
+      <div className="workspace-main" inert={mobileOpen}>
         <header className="workspace-topbar">
           <div className="workspace-title-group">
             <button

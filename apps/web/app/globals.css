@@ -370,3 +370,36 @@ tr:last-child td { border-bottom: 0; }
 @media (max-width: 780px) {
   .workspace-sidebar.is-mobile-open .workspace-brand-row { flex-direction: row; }
 }
+
+/* Finish applying the dark tokens to every existing analysis control. */
+.workspace-shell[data-theme="dark"] .workflow-step.active {
+  border-color: #456b52;
+  color: var(--ws-primary-strong);
+  background: var(--ws-soft);
+}
+.workspace-shell[data-theme="dark"] .step-num {
+  color: var(--ws-text);
+  background: #2a3730;
+}
+.workspace-shell[data-theme="dark"] .workflow-step.active .step-num {
+  color: #102018;
+  background: var(--ws-primary);
+}
+.workspace-shell[data-theme="dark"] .metric span,
+.workspace-shell[data-theme="dark"] .dropzone small,
+.workspace-shell[data-theme="dark"] .file-input,
+.workspace-shell[data-theme="dark"] .file-chip span,
+.workspace-shell[data-theme="dark"] .score-copy p { color: var(--ws-muted); }
+.workspace-shell[data-theme="dark"] .check-row input { accent-color: var(--ws-primary); }
+.workspace-shell[data-theme="dark"] .field input::placeholder { color: #a7b4ab; opacity: 1; }
+.workspace-shell[data-theme="dark"] .file-input::file-selector-button {
+  border: 1px solid var(--ws-line);
+  border-radius: 7px;
+  padding: 6px 9px;
+  color: var(--ws-text);
+  background: var(--ws-raised);
+}
+.workspace-shell[data-theme="dark"] .spinner {
+  border-color: rgba(16, 32, 24, .34);
+  border-top-color: #102018;
+}
