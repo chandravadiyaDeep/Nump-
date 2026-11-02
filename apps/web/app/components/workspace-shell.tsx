@@ -21,10 +21,12 @@ type WorkspaceShellProps = {
   children: ReactNode;
   preprocessing?: ReactNode;
   visualization?: ReactNode;
+  mlReadiness?: ReactNode;
+  mlLab?: ReactNode;
   hasActiveDataset?: boolean;
 };
 
-export default function WorkspaceShell({ children, preprocessing, visualization, hasActiveDataset = false }: WorkspaceShellProps) {
+export default function WorkspaceShell({ children, preprocessing, visualization, mlReadiness, mlLab, hasActiveDataset = false }: WorkspaceShellProps) {
   const [section, setSection] = useState<Section>("Data Analysis");
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -222,7 +224,7 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
         </header>
 
         <main className="workspace-content" id="main-content">
-          {section === "Data Analysis" ? children : section === "Data Preprocessing / Cleaning" && preprocessing ? preprocessing : section === "Data Visualization" && visualization ? visualization : (
+          {section === "Data Analysis" ? children : section === "Data Preprocessing / Cleaning" && preprocessing ? preprocessing : section === "Data Visualization" && visualization ? visualization : section === "ML Readiness" && mlReadiness ? mlReadiness : section === "ML Lab" && mlLab ? mlLab : (
             <section className="workspace-coming-soon" aria-labelledby="coming-soon-title">
               <span className="workspace-coming-icon" aria-hidden="true">{current.icon}</span>
               <p className="workspace-context">WORKSPACE SECTION</p>

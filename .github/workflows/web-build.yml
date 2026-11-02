@@ -24,6 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run workspace model tests
-        run: node --test app/components/workspace-data-model.test.mjs app/components/workspace-visualization-model.test.mjs
+        run: node --test app/components/workspace-data-model.test.mjs app/components/workspace-visualization-model.test.mjs app/components/workspace-ml-model.test.mjs
       - name: Build web application
         run: npm run build

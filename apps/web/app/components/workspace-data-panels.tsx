@@ -6,23 +6,14 @@ import { filterAndSortProfiles, getColumnProfiles, getProfileSummary, getQuality
 
 type ApiObject = Record<string, unknown>;
 type CleaningOutput = { blob: Blob; filename: string } | null;
-type Comparison = { before: ApiObject; after: ApiObject } | null;
-
 type AnalysisWorkspaceProps = {
   file: File | null;
   overview: ApiObject | null;
-  readiness: ApiObject | null;
-  comparison: Comparison;
-  task: string;
-  target: string;
   busy: string;
   error: string;
   notice: string;
   onFileChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onInspect: () => void;
-  onReadiness: () => void;
-  setTask: (value: string) => void;
-  setTarget: (value: string) => void;
 };
 
 type CleaningWorkspaceProps = {
@@ -67,10 +58,7 @@ function countLabel(value: unknown, noun: string): string {
   return `${displayNumber(value)} ${noun}${value === 1 ? "" : "s"} reported`;
 }
 
-export function DataAnalysisWorkspace({
-  file, overview, readiness, comparison, task, target, busy, error, notice,
-  onFileChange, onInspect, onReadiness, setTask, setTarget,
-}: AnalysisWorkspaceProps) {
+export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onFileChange, onInspect }: AnalysisWorkspaceProps) {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"name" | "missing" | "distinct">("name");
   const [page, setPage] = useState(0);
@@ -86,15 +74,10 @@ export function DataAnalysisWorkspace({
   const qualityObservations = getQualityObservations(overviewData);
   const pageCount = Math.max(1, Math.ceil(visibleProfiles.length / pageSize));
   const pageProfiles = visibleProfiles.slice(page * pageSize, (page + 1) * pageSize);
-  const score = readiness?.score;
-  const scoreLabel = typeof score === "number"
-    ? score >= 80 ? "Strong starting point" : score >= 60 ? "Some improvements recommended" : "Needs preparation"
-    : "Assessment not run yet";
   const missing = overviewData.total_missing_cells;
   const duplicates = overviewData.duplicate_row_count;
   const cleaningPlan = asObject(overview?.cleaning_plan);
   const actions = Array.isArray(cleaningPlan.actions) ? cleaningPlan.actions : [];
-  const scoreDimensions = Array.isArray(readiness?.dimensions) ? readiness.dimensions : [];
 
   return (
     <div className="shell analysis-workspace">
@@ -122,26 +105,6 @@ export function DataAnalysisWorkspace({
                 {busy === "inspect" ? <span className="loading-line"><span className="spinner" /> Inspecting…</span> : overview ? "Inspect again" : "Inspect dataset →"}
               </button>
               <p className="hint">The source file stays in this browser session and is sent to the configured API for temporary in-memory processing. It is not stored in this workspace.</p>
-            </div>
-          </section>
-
-          <section className="panel">
-            <div className="panel-head"><div className="panel-icon" aria-hidden="true">◉</div><div><h2>ML readiness</h2><p>Existing readiness assessment for the selected source file.</p></div></div>
-            <div className="panel-body">
-              <div className="field"><label htmlFor="task">Intended ML task</label><select id="task" value={task} onChange={(event) => setTask(event.target.value)}>
-                <option value="classification">Classification</option><option value="regression">Regression</option><option value="forecasting">Time-series forecasting</option><option value="clustering">Clustering (no target column)</option>
-              </select></div>
-              {task !== "clustering" && <div className="field"><label htmlFor="target">Target column name</label><input id="target" value={target} onChange={(event) => setTarget(event.target.value)} placeholder="e.g. churn, price, outcome" /></div>}
-              <button className="primary" style={{ marginTop: 17 }} onClick={onReadiness} disabled={!file || !!busy}>
-                {busy === "readiness" ? <span className="loading-line"><span className="spinner" /> Calculating…</span> : "Calculate readiness score →"}
-              </button>
-              {task === "forecasting" && <p className="hint">Forecasting is supported by the current readiness heuristic; time-aware model validation is not part of this assessment.</p>}
-              {readiness && <div className="analysis-readiness">
-                <div className="score-wrap"><div className="score-ring">{typeof score === "number" ? Math.round(score) : "—"}</div><div className="score-copy"><strong>{scoreLabel}</strong><p>Out of 100 · deterministic heuristic, not a model-performance guarantee. Dataset: source file.</p></div></div>
-                {comparison && <><div className="result-title"><h3>Cleaning comparison</h3><span className="mini-label">Source → cleaned CSV</span></div><div className="metric-grid"><div className="metric"><span>Source</span><strong>{displayNumber(comparison.before.score)}<small>/100</small></strong></div><div className="metric"><span>Cleaned CSV</span><strong>{displayNumber(comparison.after.score)}<small>/100</small></strong></div><div className="metric"><span>Score change</span><strong>{typeof comparison.before.score === "number" && typeof comparison.after.score === "number" ? `${comparison.after.score - comparison.before.score > 0 ? "+" : ""}${comparison.after.score - comparison.before.score}` : "—"}</strong></div></div></>}
-                {scoreDimensions.length > 0 && <div className="detail-list">{scoreDimensions.map((item, index) => { const dimension = asObject(item); return <div className="detail-row" key={String(dimension.name ?? index)}><span>{String(dimension.name ?? dimension.dimension ?? `Dimension ${index + 1}`)}</span><strong>{typeof dimension.score === "number" ? `${dimension.score}/100` : String(dimension.value ?? "See details")}</strong></div>; })}</div>}
-              </div>}
-              <p className="hint">A readiness score is a heuristic, not a guarantee of model performance.</p>
             </div>
           </section>
         </div>

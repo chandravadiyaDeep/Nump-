@@ -563,3 +563,52 @@ tr:last-child td { border-bottom: 0; }
   .visualization-result .panel-body, .visualization-controls .panel-body { padding-right: 12px; padding-left: 12px; }
   .chart-visual { min-height: 190px; }
 }
+
+/* Phase 4 ML workspace panels */
+.ml-workspace { padding-bottom: 30px; }
+.ml-dataset-context { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px; margin-bottom: 18px; padding: 18px 20px; border: 1px solid var(--ws-line); border-radius: 16px; background: var(--ws-panel); }
+.ml-dataset-context.has-cleaned-version { grid-template-columns: minmax(0, 1fr) auto minmax(190px, 250px); }
+.ml-dataset-context h2 { margin: 4px 0; color: var(--ws-text); font-size: 1.05rem; overflow-wrap: anywhere; }
+.ml-dataset-context p:not(.eyebrow) { margin: 0; color: var(--ws-muted); font-size: .82rem; }
+.ml-context-dimensions { display: flex; gap: 16px; color: var(--ws-muted); font-size: .78rem; }
+.ml-context-dimensions span { display: grid; gap: 4px; }
+.ml-context-dimensions strong { color: var(--ws-text); }
+.ml-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: 820px; margin-bottom: 12px; }
+.ml-workspace .field { min-width: 0; color: var(--ws-text); }
+.ml-workspace .field select { width: 100%; min-height: 42px; padding: 9px 11px; border: 1px solid var(--ws-line); border-radius: 9px; color: var(--ws-text); background: var(--ws-raised); }
+.ml-workspace .hint { color: var(--ws-muted); }
+.ml-validation { padding: 11px 13px; border: 1px solid var(--amber); border-radius: 10px; color: var(--amber); background: var(--amber-soft); font-size: .84rem; line-height: 1.55; }
+.workspace-shell[data-theme="dark"] .ml-validation { color: #f2c66e; border-color: #80612d; background: #352c1d; }
+.ml-dimension-list { display: grid; gap: 10px; margin: 16px 0; }
+.ml-dimension { padding: 13px 15px; border: 1px solid var(--ws-line); border-radius: 11px; background: var(--ws-raised); }
+.ml-dimension > div { display: flex; justify-content: space-between; gap: 12px; color: var(--ws-text); }
+.ml-dimension > div span { color: var(--ws-muted); font-size: .82rem; }
+.ml-dimension p, .ml-issues li, .ml-validation-info p, .ml-metric-guide p { color: var(--ws-muted); font-size: .84rem; line-height: 1.6; }
+.ml-dimension p { margin: 7px 0 0; }
+.ml-issues, .ml-cleaning-comparison, .ml-validation-info, .ml-candidate-list, .ml-metric-guide { margin: 15px 0; padding: 14px 16px; border: 1px solid var(--ws-line); border-radius: 11px; background: var(--ws-raised); }
+.ml-issues h3, .ml-cleaning-comparison h3, .ml-metric-guide h3 { margin: 0 0 8px; color: var(--ws-text); font-size: .95rem; }
+.ml-issues ul, .ml-candidate-list ul { margin: 8px 0 0; padding-left: 20px; color: var(--ws-muted); line-height: 1.7; }
+.ml-candidate-list { color: var(--ws-text); }
+.ml-validation-info strong { color: var(--ws-text); }
+.ml-metric-guide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.ml-metric-guide h3 { grid-column: 1 / -1; }
+.ml-metric-guide article { padding-top: 9px; border-top: 1px solid var(--ws-line); }
+.ml-metric-guide article strong { color: var(--ws-text); font-size: .84rem; }
+.ml-metric-guide article p { margin: 5px 0 0; }
+.ml-results-table { min-width: 640px; }
+.ml-results-table caption { padding: 10px; color: var(--ws-muted); text-align: left; }
+.ml-results-table td, .ml-results-table th { vertical-align: top; }
+.ml-version-select { margin: 0; }
+.ml-version-select select { margin-top: 5px; }
+@media (max-width: 900px) {
+  .ml-dataset-context, .ml-dataset-context.has-cleaned-version { grid-template-columns: minmax(0, 1fr) minmax(150px, auto); }
+  .ml-version-select { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .ml-dataset-context { grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 15px; }
+  .ml-context-dimensions { justify-content: space-between; }
+  .ml-form-grid, .ml-metric-guide { grid-template-columns: minmax(0, 1fr); }
+  .ml-metric-guide h3 { grid-column: auto; }
+  .ml-dimension > div { flex-direction: column; }
+  .ml-results-table { min-width: 560px; }
+}

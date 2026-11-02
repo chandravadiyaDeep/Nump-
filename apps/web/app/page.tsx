@@ -5,6 +5,8 @@ import type { ChangeEvent } from "react";
 import WorkspaceShell from "./components/workspace-shell";
 import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "./components/workspace-data-panels";
 import { DataVisualizationWorkspace } from "./components/workspace-data-visualization";
+import { MlLabWorkspace, MlReadinessWorkspace } from "./components/workspace-ml-workspaces";
+import { getMlColumns, parseComparisonResponse, parseReadinessResponse, validateComparisonSelection, validateReadinessSelection } from "./components/workspace-ml-model.mjs";
 import { validateUpload } from "./components/workspace-data-model.mjs";
 
 type ApiObject = Record<string, unknown>;
@@ -42,7 +44,7 @@ function downloadBlob(blob: Blob, filename: string) {
 export default function HomePage() {
   // Keep workflow state above the section switch so navigation never discards the active source.
   const [file, setFile] = useState<File | null>(null);
-  const [task, setTask] = useState("classification");
+  const [task, setTask] = useState("");
   const [target, setTarget] = useState("");
   const [fillMissing, setFillMissing] = useState(true);
   const [dropDuplicates, setDropDuplicates] = useState(false);
@@ -51,6 +53,9 @@ export default function HomePage() {
   const [readiness, setReadiness] = useState<ApiObject | null>(null);
   const [cleaning, setCleaning] = useState<ApiObject | null>(null);
   const [comparison, setComparison] = useState<ReadinessComparison>(null);
+  const [mlComparison, setMlComparison] = useState<ApiObject | null>(null);
+  const [mlDatasetVersion, setMlDatasetVersion] = useState<"source" | "cleaned">("source");
+  const [confirmingMlComparison, setConfirmingMlComparison] = useState(false);
   const [cleanedCsv, setCleanedCsv] = useState<CleaningOutput>(null);
   const [confirmingExecution, setConfirmingExecution] = useState(false);
   const [error, setError] = useState("");
@@ -68,6 +73,7 @@ export default function HomePage() {
     const nextFile = event.target.files?.[0] ?? null;
     event.target.value = "";
     setFile(nextFile);
+    setMlDatasetVersion("source"); setMlComparison(null); setConfirmingMlComparison(false);
     setOverview(null);
     setReadiness(null);
     setCleaning(null);
@@ -104,7 +110,7 @@ export default function HomePage() {
       form.append("file", file);
       const result = await readApiResponse(await fetch(`${API_BASE}/api/v1/datasets/inspect`, { method: "POST", body: form }));
       setOverview(result);
-      setReadiness(null);
+      setReadiness(null); setMlComparison(null); setMlDatasetVersion("source"); setConfirmingMlComparison(false);
       setCleaning(null);
       setComparison(null);
       setCleanedCsv(null);
@@ -117,38 +123,71 @@ export default function HomePage() {
     }
   }
 
-  async function calculateReadiness() {
-    if (!validateSelectedFile() || !file) return;
-    if (task !== "clustering" && !target.trim()) {
-      setError("Enter the target column for classification, regression, or forecasting.");
-      return;
+  function getAssessmentFile(): File | null {
+    if (mlDatasetVersion === "cleaned") {
+      if (!cleanedCsv) return null;
+      return new File([cleanedCsv.blob], cleanedCsv.filename, { type: "text/csv" });
     }
-    if (!ensureApiConfigured()) return;
-    setBusy("readiness");
-    setError("");
-    setNotice("");
-    try {
-      const form = new FormData();
-      form.append("file", file);
-      form.append("task", task);
-      if (target.trim()) form.append("target", target.trim());
-      const result = await readApiResponse(await fetch(`${API_BASE}/api/v1/ml-readiness/score`, { method: "POST", body: form }));
-      setReadiness(result);
-      setComparison(null);
-      setNotice("Readiness assessment completed for the source dataset. This score is a heuristic, not a guarantee of model performance.");
-    } catch (cause) {
-      setError(cause instanceof Error ? cause.message : "Unable to assess readiness.");
-    } finally {
-      setBusy("");
-    }
+    return file;
   }
 
+  function validateReadinessBeforeRequest(): string {
+    return validateReadinessSelection({ hasDataset: !!getAssessmentFile() && !!overview, task, target, columns: getMlColumns(overview) });
+  }
+
+  async function calculateReadiness() {
+    const candidate = getAssessmentFile();
+    const issue = validateReadinessBeforeRequest();
+    if (issue) { setError(issue); return; }
+    if (!candidate || !ensureApiConfigured()) return;
+    setBusy("readiness"); setError(""); setNotice(""); setReadiness(null); setMlComparison(null); setConfirmingMlComparison(false);
+    try {
+      const form = new FormData(); form.append("file", candidate); form.append("task", task);
+      if (task !== "clustering") form.append("target", target);
+      const result = parseReadinessResponse(await readApiResponse(await fetch(`${API_BASE}/api/v1/ml-readiness/score`, { method: "POST", body: form })), task, task === "clustering" ? "" : target);
+      setReadiness(result);
+      setNotice(`Readiness assessment completed for the ${mlDatasetVersion === "cleaned" ? "cleaned CSV" : "source dataset"}. This score is a heuristic, not a guarantee of model performance.`);
+    } catch (cause) { setError(cause instanceof Error ? cause.message : "Unable to assess readiness. The active dataset remains available for retry."); }
+    finally { setBusy(""); }
+  }
+
+  function currentDuplicateCount(): unknown {
+    if (mlDatasetVersion === "cleaned" && cleanedCsv) {
+      return (((cleaning?.report as ApiObject | undefined)?.after as ApiObject | undefined)?.duplicate_rows);
+    }
+    return (overview?.overview as ApiObject | undefined)?.duplicate_row_count;
+  }
+
+  function prepareMlComparison() {
+    const issue = validateComparisonSelection({ hasDataset: !!getAssessmentFile() && !!overview, task, target, columns: getMlColumns(overview), duplicateCount: currentDuplicateCount() });
+    if (issue) { setError(issue); return; }
+    setError(""); setNotice(""); setMlComparison(null); setConfirmingMlComparison(true);
+  }
+
+  async function runMlComparison() {
+    const candidate = getAssessmentFile();
+    const issue = validateComparisonSelection({ hasDataset: !!candidate && !!overview, task, target, columns: getMlColumns(overview), duplicateCount: currentDuplicateCount() });
+    if (issue) { setError(issue); setConfirmingMlComparison(false); return; }
+    if (!candidate || !ensureApiConfigured()) return;
+    setBusy("comparison"); setError(""); setNotice(""); setMlComparison(null); setConfirmingMlComparison(false);
+    try {
+      const form = new FormData(); form.append("file", candidate); form.append("task", task); form.append("target", target);
+      const result = parseComparisonResponse(await readApiResponse(await fetch(`${API_BASE}/api/v1/ml-labs/compare`, { method: "POST", body: form })), task, target);
+      setMlComparison(result);
+      setNotice(`Baseline comparison completed for the ${mlDatasetVersion === "cleaned" ? "cleaned CSV" : "source dataset"}. Review the holdout limitations with the results.`);
+    } catch (cause) { setError(cause instanceof Error ? cause.message : "Unable to compare the supported baselines."); }
+    finally { setBusy(""); }
+  }
+
+  function changeMlTask(value: string) { setTask(value); setReadiness(null); setMlComparison(null); setComparison(null); setConfirmingMlComparison(false); }
+  function changeMlTarget(value: string) { setTarget(value); setReadiness(null); setMlComparison(null); setComparison(null); setConfirmingMlComparison(false); }
+  function changeMlDatasetVersion(value: "source" | "cleaned") { setMlDatasetVersion(value); setReadiness(null); setMlComparison(null); setConfirmingMlComparison(false); setError(""); setNotice(""); }
   function changeCleaningOption(operation: "fillMissing" | "dropDuplicates" | "normalizeText", selected: boolean) {
     if (operation === "fillMissing") setFillMissing(selected);
     if (operation === "dropDuplicates") setDropDuplicates(selected);
     if (operation === "normalizeText") setNormalizeText(selected);
     setCleaning(null);
-    setCleanedCsv(null);
+    setCleanedCsv(null); setMlDatasetVersion("source"); setMlComparison(null); setReadiness(null); setConfirmingMlComparison(false);
     setComparison(null);
     setConfirmingExecution(false);
     setError("");
@@ -165,7 +204,7 @@ export default function HomePage() {
     setError("");
     setNotice("");
     setCleaning(null);
-    setCleanedCsv(null);
+    setCleanedCsv(null); setMlDatasetVersion("source"); setMlComparison(null); setReadiness(null); setConfirmingMlComparison(false);
     setConfirmingExecution(false);
     try {
       const form = new FormData();
@@ -225,7 +264,6 @@ export default function HomePage() {
           };
           const [before, after] = await Promise.all([scoreFile(file), scoreFile(cleanedFile)]);
           setComparison({ before, after });
-          setReadiness(after);
           setNotice("A separate cleaned CSV is ready. Before/after readiness results are shown for source and cleaned CSV; the source remains unchanged.");
         } catch (cause) {
           const detail = cause instanceof Error ? cause.message : "Readiness comparison could not be completed.";
@@ -248,6 +286,13 @@ export default function HomePage() {
     setNotice("Cleaned CSV download started.");
   }
 
+  const mlWorkspaceProps = {
+    file, overview, cleaning, cleanedCsv, version: mlDatasetVersion, onVersionChange: changeMlDatasetVersion,
+    task, target, onTaskChange: changeMlTask, onTargetChange: changeMlTarget,
+    readiness, comparison, busy, error, notice, onReadiness: calculateReadiness,
+    onStartComparison: prepareMlComparison, onCancelComparison: () => setConfirmingMlComparison(false),
+    onConfirmComparison: runMlComparison, confirmingComparison: confirmingMlComparison,
+  };
   return (
     <WorkspaceShell
       hasActiveDataset={!!(file && overview)}
@@ -262,12 +307,12 @@ export default function HomePage() {
         />
       }
       visualization={<DataVisualizationWorkspace file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv} />}
+      mlReadiness={<MlReadinessWorkspace {...mlWorkspaceProps} />}
+      mlLab={<MlLabWorkspace {...mlWorkspaceProps} />}
     >
       <DataAnalysisWorkspace
-        file={file} overview={overview} readiness={readiness} comparison={comparison}
-        task={task} target={target} busy={busy} error={error} notice={notice}
-        onFileChange={handleFileChange} onInspect={inspectDataset} onReadiness={calculateReadiness}
-        setTask={(value) => { setTask(value); setComparison(null); }} setTarget={(value) => { setTarget(value); setComparison(null); }}
+        file={file} overview={overview} busy={busy} error={error} notice={notice}
+        onFileChange={handleFileChange} onInspect={inspectDataset}
       />
     </WorkspaceShell>
   );
