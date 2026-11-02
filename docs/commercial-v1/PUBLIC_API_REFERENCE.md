@@ -26,8 +26,8 @@ The loader in `apps/api/app/ingestion.py` enforces the following hard constraint
 |---|---|---|
 | **Accepted File Extensions** | `.csv`, `.json`, `.xlsx`, `.parquet`, `.arrow`, `.feather` | HTTP 400 (`Unsupported file format '...'. Supported formats: .arrow, .csv, .feather, .json, .parquet, .xlsx.`) |
 | **Maximum Upload File Size** | 50 MB (`52,428,800 bytes`) | HTTP 413 (`File exceeds the 50 MB MVP upload limit.`) |
-| **Maximum Row Count** | 1,000,000 rows | HTTP 400 (`Dataset exceeds the 1,000,000-row MVP limit.`) |
-| **Maximum Column Count** | 2,000 columns | HTTP 400 (`Dataset exceeds the 2,000-column MVP limit.`) |
+| **Maximum Row Count** | 1,000,000 rows | HTTP 413 (`Dataset exceeds the 1,000,000-row MVP limit.`) |
+| **Maximum Column Count** | 2,000 columns | HTTP 413 (`Dataset exceeds the 2,000-column MVP limit.`) |
 | **Empty File / Empty Dataset** | 0 bytes or 0 rows | HTTP 400 (`The uploaded file is empty.` / `The dataset has no rows.`) |
 | **Duplicate Column Headers** | Permitted | Automatically deduplicated with `_2`, `_3` suffix notation to ensure deterministic indexing. |
 | **JSON Structure** | Records array or JSON lines | Unparseable or nested non-tabular JSON raises HTTP 400. |
@@ -406,8 +406,8 @@ The API raises standard HTTP status codes with informative JSON detail messages:
 
 | Status Code | Exception Type | Cause | Example Response |
 |---|---|---|---|
-| `400 Bad Request` | `DatasetInputError` / `ValueError` / `ModelEvaluationError` | File parse error, row limit exceeded, unsupported task, target column missing or having fewer than 2 classes. | `{"detail": "Classification requires at least two target classes."}` |
-| `413 Payload Too Large` | `HTTPException(status_code=413)` | Upload payload exceeds 50 MB (`MAX_UPLOAD_BYTES`). | `{"detail": "File exceeds the 50 MB MVP upload limit."}` |
+| `400 Bad Request` | `DatasetInputError` / `ValueError` / `ModelEvaluationError` | File parse error, unsupported format, empty dataset, unsupported task, target column missing or having fewer than 2 classes. | `{"detail": "Classification requires at least two target classes."}` |
+| `413 Payload Too Large` | `HTTPException(status_code=413)` | Upload payload exceeds 50 MB, or the dataset exceeds the 1,000,000-row / 2,000-column limits. | `{"detail": "File exceeds the 50 MB MVP upload limit."}` |
 | `422 Unprocessable Entity` | FastAPI request validation | Missing required form field or incorrect type. | Standard FastAPI validation payload |
 | `500 Internal Server Error` | Unhandled runtime exception | Out of memory or unexpected crash. | `{"detail": "Internal Server Error"}` |
 
