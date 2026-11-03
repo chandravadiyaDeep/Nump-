@@ -732,3 +732,6 @@ tr:last-child td { border-bottom: 0; }
   .public-card { transition: none; }
   .public-card:hover { transform: none; }
 }
+
+.public-article-sources a { color: #176b4d; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.public-article-sources a:hover { color: #10543b; }
