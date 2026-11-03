@@ -39,9 +39,11 @@
 - Demo values are explicitly labelled synthetic and demonstrative.
 
 ### Phase 5 — Workspace navigation polish
-- Added a link back to the public site.
-- Added a five-item mobile quick-navigation bar; remaining sections stay available in the existing drawer/sidebar.
-- Aligned workspace primary accents with the Minimal Intelligence violet theme while retaining existing light/dark theme behavior.
+- Added a link back to the public site and fixed the workspace link markup.
+- Added a five-item mobile quick-navigation bar; Analysis History and Settings remain available in the drawer/sidebar.
+- Aligned shared workspace panels, form controls, table surfaces, navigation accents and buttons with the Minimal Intelligence violet theme while retaining the light/dark theme variables.
+- Added a guided first-run onboarding panel with three clear steps and a one-click synthetic sample option.
+- Added the sample dataset option to the normal upload panel; selecting it creates a browser File and does not send it to the API until the user chooses Inspect.
 - Preserved the current single-page workspace state model so section changes do not discard the active in-memory source dataset.
 
 ## Intentionally not done
@@ -59,11 +61,12 @@
 ## Verification
 
 - Source-level audit completed.
-- GitHub Actions API tests: latest run is pending/in progress at the time of this document; an earlier run on the branch passed.
-- GitHub Actions web build: latest run is pending/in progress at the time of this document; earlier web build on the initial implementation commit passed before later route/theme polish.
-- Vercel preview check: pending at the time of this document.
-- Lighthouse, browser visual testing and production workflow verification have not been performed.
-- Do not merge or deploy until checks are green and a reviewer verifies the preview.
+- The previous verified head (`4e5bd7a83bd969e13c4065c58615f6c7e600693a`) passed the NUMPA web build, API tests and Vercel preview check.
+- New workspace onboarding and shared-style commits were pushed after that verified head. Their CI checks must complete before merge; do not reuse the earlier green result as proof for the latest head.
+- Vercel preview URL from the current deployment: `https://numpa-git-redesign-mini-047995-depochandravadiya-6509s-projects.vercel.app`.
+- Automated preview comment check reports no unresolved feedback.
+- Lighthouse scores, real-browser visual testing, keyboard walkthrough and end-to-end production API workflow verification have not been performed in this environment. The preview host is not accessible to the available page-inspection tool, so do not claim visual or Lighthouse verification.
+- Do not merge or deploy until checks are green and a human reviewer verifies the preview.
 
 ## Rollback
 
