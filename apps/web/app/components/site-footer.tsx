@@ -63,7 +63,7 @@ export default function SiteFooter() {
     <footer className="numpa-site-footer" aria-label="NUMPA site footer">
       <div className="numpa-footer-main">
         <div className="numpa-footer-brand">
-          <Link className="numpa-footer-logo" href="/" aria-label="NUMPA workspace home">
+          <Link className="numpa-footer-logo" href="/" aria-label="NUMPA home">
             <span className="numpa-footer-mark" aria-hidden="true">N</span>
             <span>NUMPA</span>
           </Link>
