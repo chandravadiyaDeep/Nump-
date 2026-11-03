@@ -249,6 +249,15 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
         </main>
         <SiteFooter />
       </div>
+      <nav className="workspace-mobile-tabs" aria-label="Quick workspace navigation">
+        {mobileDestinations.map(({ label, icon }) => (
+          <button key={label} type="button" className={section === label ? "is-active" : ""} aria-current={section === label ? "page" : undefined} onClick={() => chooseSection(label)}>
+            <span aria-hidden="true">{icon}</span>
+            <small>{label === "Data Preprocessing / Cleaning" ? "Clean" : label === "Data Visualization" ? "Charts" : label === "ML Readiness" ? "Readiness" : label === "Data Analysis" ? "Analysis" : "ML Lab"}</small>
+          </button>
+        ))}
+      </nav>
+      </div>
     </div>
   );
 }
