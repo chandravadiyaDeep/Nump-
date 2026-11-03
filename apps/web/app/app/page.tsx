@@ -7,6 +7,7 @@ import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "../components
 import { DataVisualizationWorkspace } from "../components/workspace-data-visualization";
 import { MlLabWorkspace, MlReadinessWorkspace } from "../components/workspace-ml-workspaces";
 import { DataTransformationStudio } from "../components/workspace-transformation-studio";
+import { DataFeatureEngineeringStudio } from "../components/workspace-feature-engineering";
 import { getMlColumns, parseComparisonResponse, parseReadinessResponse, validateComparisonSelection, validateReadinessSelection } from "../components/workspace-ml-model.mjs";
 import { validateUpload } from "../components/workspace-data-model.mjs";
 
@@ -338,7 +339,7 @@ export default function HomePage() {
             confirming={confirmingExecution} onBeginConfirmation={() => { setConfirmingExecution(true); setError(""); }}
             onCancelConfirmation={() => setConfirmingExecution(false)}
           />
-          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} /></div>
+          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} /><DataFeatureEngineeringStudio file={file} columns={getMlColumns(overview)} task={task} target={target} /></div>
         </>
       }
       visualization={<DataVisualizationWorkspace file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv} />}
