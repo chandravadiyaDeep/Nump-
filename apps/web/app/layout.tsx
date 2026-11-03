@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./landing.css";
 
 // Shared metadata defaults for the NUMPA workspace and public discovery pages.
 export const metadata: Metadata = {
