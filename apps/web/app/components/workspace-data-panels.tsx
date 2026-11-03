@@ -58,7 +58,7 @@ function countLabel(value: unknown, noun: string): string {
   return `${displayNumber(value)} ${noun}${value === 1 ? "" : "s"} reported`;
 }
 
-export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onFileChange, onInspect }: AnalysisWorkspaceProps) {
+export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onFileChange, onInspect, onUseSampleDataset, sampleBusy }: AnalysisWorkspaceProps) {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"name" | "missing" | "distinct">("name");
   const [page, setPage] = useState(0);
@@ -98,7 +98,7 @@ export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onF
               <div className="dropzone">
                 <strong>Choose a dataset file</strong>
                 <small>CSV, JSON, XLSX, Parquet, Arrow or Feather · maximum 50 MB</small>
-                <input className="file-input" type="file" accept=".csv,.json,.xlsx,.parquet,.arrow,.feather" onChange={onFileChange} aria-label="Choose dataset file" />
+                <input className="file-input" type="file" accept=".csv,.json,.xlsx,.parquet,.arrow,.feather" onChange={onFileChange} aria-label="Choose dataset file" />\n                <button className="secondary" type="button" onClick={onUseSampleDataset} disabled={sampleBusy || !!busy}>{sampleBusy ? "Loading sample…" : "Try a sample dataset"}</button>
               </div>
               {file && <div className="file-chip"><span aria-hidden="true">▣</span><div><strong>{file.name}</strong><br /><span>{(file.size / 1024 / 1024).toFixed(2)} MB · {overview ? "Inspected" : "Selected"}</span></div></div>}
               <button className="primary" style={{ marginTop: 16 }} onClick={onInspect} disabled={!file || !!busy}>
