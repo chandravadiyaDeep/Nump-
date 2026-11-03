@@ -14,6 +14,8 @@ type AnalysisWorkspaceProps = {
   notice: string;
   onFileChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onInspect: () => void;
+  onUseSampleDataset: () => void;
+  sampleBusy: boolean;
 };
 
 type CleaningWorkspaceProps = {
@@ -58,7 +60,7 @@ function countLabel(value: unknown, noun: string): string {
   return `${displayNumber(value)} ${noun}${value === 1 ? "" : "s"} reported`;
 }
 
-export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onFileChange, onInspect }: AnalysisWorkspaceProps) {
+export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onFileChange, onInspect, onUseSampleDataset, sampleBusy }: AnalysisWorkspaceProps) {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"name" | "missing" | "distinct">("name");
   const [page, setPage] = useState(0);
@@ -90,6 +92,22 @@ export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onF
       {error && <div className="alert" role="alert">{error}</div>}
       {notice && <div className="alert success" role="status">{notice}</div>}
 
+      {!overview && (
+        <section className="workspace-onboarding panel" aria-labelledby="workspace-onboarding-title">
+          <div className="workspace-onboarding-copy">
+            <span className="workspace-onboarding-kicker">GET STARTED</span>
+            <h2 id="workspace-onboarding-title">{file ? "Your dataset is ready to inspect." : "Start with a dataset. NUMPA will guide the next steps."}</h2>
+            <p>{file ? "Your selected file stays in this browser session. Inspect it to see its structure and quality checks." : "Upload a supported file or explore the synthetic sample. Your source file is kept separate from any cleaned output."}</p>
+            {!file && <button className="primary workspace-onboarding-action" type="button" onClick={onUseSampleDataset} disabled={sampleBusy || !!busy}>{sampleBusy ? "Loading sample…" : "Explore the sample dataset →"}</button>}
+          </div>
+          <ol className="workspace-onboarding-steps">
+            <li><span>01</span><div><strong>Choose</strong><small>Upload a CSV, Excel or supported dataset.</small></div></li>
+            <li><span>02</span><div><strong>Inspect</strong><small>Review structure, missing values and duplicates.</small></div></li>
+            <li><span>03</span><div><strong>Prepare</strong><small>Preview cleaning and assess ML readiness.</small></div></li>
+          </ol>
+        </section>
+      )}
+
       <div className="analysis-grid">
         <div className="stack">
           <section className="panel">
@@ -98,7 +116,7 @@ export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onF
               <div className="dropzone">
                 <strong>Choose a dataset file</strong>
                 <small>CSV, JSON, XLSX, Parquet, Arrow or Feather · maximum 50 MB</small>
-                <input className="file-input" type="file" accept=".csv,.json,.xlsx,.parquet,.arrow,.feather" onChange={onFileChange} aria-label="Choose dataset file" />
+                <input className="file-input" type="file" accept=".csv,.json,.xlsx,.parquet,.arrow,.feather" onChange={onFileChange} aria-label="Choose dataset file" />\n                <button className="secondary" type="button" onClick={onUseSampleDataset} disabled={sampleBusy || !!busy}>{sampleBusy ? "Loading sample…" : "Try a sample dataset"}</button>
               </div>
               {file && <div className="file-chip"><span aria-hidden="true">▣</span><div><strong>{file.name}</strong><br /><span>{(file.size / 1024 / 1024).toFixed(2)} MB · {overview ? "Inspected" : "Selected"}</span></div></div>}
               <button className="primary" style={{ marginTop: 16 }} onClick={onInspect} disabled={!file || !!busy}>

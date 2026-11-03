@@ -12,7 +12,7 @@ export type PublicCard = {
 export function PublicSiteHeader() {
   return (
     <header className="public-site-header">
-      <Link className="public-site-brand" href="/" aria-label="NUMPA workspace home">
+      <Link className="public-site-brand" href="/" aria-label="NUMPA home">
         <span className="public-site-brand-mark" aria-hidden="true">N</span>
         <span>NUMPA</span>
       </Link>
@@ -21,7 +21,7 @@ export function PublicSiteHeader() {
         <Link href="/learn">Learn</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/resources">Resources</Link>
-        <Link className="public-site-cta" href="/">Open workspace</Link>
+        <Link className="public-site-cta" href="/app">Open workspace</Link>
       </nav>
     </header>
   );

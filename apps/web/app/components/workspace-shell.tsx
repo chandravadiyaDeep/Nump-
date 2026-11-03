@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import AuthNav, { type AuthAccountState } from "./auth-nav";
 import SiteFooter from "./site-footer";
@@ -16,6 +17,8 @@ const destinations = [
   { label: "Analysis History", icon: "◷", description: "Review previous analysis reports." },
   { label: "Settings", icon: "⚙", description: "Manage account and workspace preferences." },
 ] as const;
+
+const mobileDestinations = [destinations[0], destinations[1], destinations[2], destinations[3], destinations[4]] as const;
 
 type Theme = "light" | "dark";
 type Section = (typeof destinations)[number]["label"];
@@ -142,7 +145,7 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
         id="workspace-navigation"
       >
         <div className="workspace-brand-row">
-          <a className="workspace-brand" href="/" aria-label="NUMPA home">
+          <a className="workspace-brand" href="/app" aria-label="NUMPA workspace home">
             <span className="workspace-brand-mark" aria-hidden="true">N</span>
             <span className="workspace-brand-name">NUMPA</span>
           </a>
@@ -210,7 +213,7 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
               <p className="workspace-section-title" role="heading" aria-level={1}>{section}</p>
             </div>
           </div>
-          <div className="workspace-topbar-actions">
+          <div className="workspace-topbar-actions">\n            <Link className="workspace-public-link" href="/">Public site</Link>
             {section === "Data Analysis" && hasActiveDataset && (
               <button className="workspace-next-stage" type="button" onClick={() => setSection("Data Preprocessing / Cleaning")}>
                 Review cleaning →
@@ -246,6 +249,14 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
         </main>
         <SiteFooter />
       </div>
+      <nav className="workspace-mobile-tabs" aria-label="Quick workspace navigation">
+        {mobileDestinations.map(({ label, icon }) => (
+          <button key={label} type="button" className={section === label ? "is-active" : ""} aria-current={section === label ? "page" : undefined} onClick={() => chooseSection(label)}>
+            <span aria-hidden="true">{icon}</span>
+            <small>{label === "Data Preprocessing / Cleaning" ? "Clean" : label === "Data Visualization" ? "Charts" : label === "ML Readiness" ? "Readiness" : label === "Data Analysis" ? "Analysis" : "ML Lab"}</small>
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }
