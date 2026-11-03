@@ -244,7 +244,7 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
             </section>
           )}
         </main>
-        <SiteFooter onNavigate={chooseSection} />
+        <SiteFooter />
       </div>
     </div>
   );
