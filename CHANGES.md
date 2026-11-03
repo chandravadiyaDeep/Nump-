@@ -45,8 +45,11 @@
 
 ## Verification
 - Source diff and route/component wiring reviewed.
-- GitHub Actions web lint, workspace model tests, and production build were triggered for the latest branch commit; record their final status before considering this change ready.
-- GitHub Actions API smoke tests were triggered for the same branch commit; record their final status before considering this change ready.
+- GitHub Actions web lint: passed.
+- Workspace model tests: passed.
+- Next.js production build: passed.
+- API smoke tests: passed.
+- These checks ran on commit `4729221adcdb183903e6ce1c3029229c53c7feac`; the only later commit adds this implementation record.
 - Browser visual QA across desktop/tablet/mobile and both themes has not been independently performed in this GitHub-only editing session. Do not claim it has passed.
 - Lighthouse, accessibility automation, and production preview verification have not been measured.
 
