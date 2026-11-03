@@ -343,6 +343,7 @@ export default function HomePage() {
       <DataAnalysisWorkspace
         file={file} overview={overview} busy={busy} error={error} notice={notice}
         onFileChange={handleFileChange} onInspect={inspectDataset}
+        onUseSampleDataset={useSampleDataset} sampleBusy={sampleBusy}
       />
     </WorkspaceShell>
   );
