@@ -257,7 +257,6 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
           </button>
         ))}
       </nav>
-      </div>
     </div>
   );
 }
