@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// Shared metadata for NUMPA's first web workflow.
+// Shared metadata defaults for the NUMPA workspace and public discovery pages.
 export const metadata: Metadata = {
-  title: "NUMPA — Dataset Quality Studio",
+  metadataBase: new URL("https://numpa.online"),
+  title: { default: "NUMPA — Data Analysis and ML Readiness", template: "%s" },
   description:
     "Inspect, clean, and assess the machine-learning readiness of tabular datasets.",
 };

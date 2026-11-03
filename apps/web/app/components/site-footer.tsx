@@ -1,79 +1,73 @@
 "use client";
 
-type WorkspaceDestination = "Data Analysis" | "Data Preprocessing / Cleaning" | "Data Visualization" | "ML Readiness" | "ML Lab" | "Analysis History" | "Settings";
-
-type SiteFooterProps = {
-  onNavigate: (destination: WorkspaceDestination) => void;
-};
+import Link from "next/link";
 
 const footerGroups = [
   {
     title: "Products & Services",
     links: [
-      { label: "Data Cleaning", destination: "Data Preprocessing / Cleaning" as const, available: true },
-      { label: "ML Readiness", destination: "ML Readiness" as const, available: true },
-      { label: "Dataset Analysis", destination: "Data Analysis" as const, available: true },
-      { label: "AI Tools", available: false },
+      { label: "Data Cleaning", href: "/services/data-cleaning" },
+      { label: "ML Readiness", href: "/services/ml-readiness" },
+      { label: "Dataset Analysis", href: "/services/dataset-analysis" },
+      { label: "AI Tools", href: "/services/ai-tools", planned: true },
     ],
   },
   {
     title: "Learn",
     links: [
-      { label: "Artificial Intelligence", available: false },
-      { label: "Machine Learning", available: false },
-      { label: "Data Science", available: false },
-      { label: "Python", available: false },
+      { label: "Artificial Intelligence", href: "/learn/artificial-intelligence" },
+      { label: "Machine Learning", href: "/learn/machine-learning" },
+      { label: "Data Science", href: "/learn/data-science" },
+      { label: "Python", href: "/learn/python" },
     ],
   },
   {
     title: "Explore",
     links: [
-      { label: "Blog", available: false },
-      { label: "Tutorials", available: false },
-      { label: "Infographics", available: false },
-      { label: "Research", available: false },
+      { label: "Blog", href: "/blog" },
+      { label: "Tutorials", href: "/explore/tutorials" },
+      { label: "Infographics", href: "/explore/infographics" },
+      { label: "Research", href: "/explore/research" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Datasets", available: false },
-      { label: "Cheat Sheets", available: false },
-      { label: "Learning Roadmaps", available: false },
-      { label: "Useful Tools", available: false },
+      { label: "Datasets", href: "/resources/datasets" },
+      { label: "Cheat Sheets", href: "/resources/cheat-sheets" },
+      { label: "Learning Roadmaps", href: "/resources/learning-roadmaps" },
+      { label: "Useful Tools", href: "/resources/useful-tools" },
     ],
   },
   {
     title: "Community",
     links: [
-      { label: "Write for NUMPA", available: false },
-      { label: "Authors", available: false },
-      { label: "Contributions", available: false },
+      { label: "Write for NUMPA", href: "/community/write-for-numpa" },
+      { label: "Authors", href: "/community/authors" },
+      { label: "Contributions", href: "/community/contributions" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", available: false },
-      { label: "Contact", available: false },
-      { label: "Privacy", available: false },
-      { label: "Terms", available: false },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Privacy", href: "", planned: true },
+      { label: "Terms", href: "", planned: true },
     ],
   },
 ] as const;
 
-export default function SiteFooter({ onNavigate }: SiteFooterProps) {
+export default function SiteFooter() {
   return (
     <footer className="numpa-site-footer" aria-label="NUMPA site footer">
       <div className="numpa-footer-main">
         <div className="numpa-footer-brand">
-          <a className="numpa-footer-logo" href="#main-content" aria-label="NUMPA workspace home">
+          <Link className="numpa-footer-logo" href="/" aria-label="NUMPA workspace home">
             <span className="numpa-footer-mark" aria-hidden="true">N</span>
             <span>NUMPA</span>
-          </a>
-          <p>
-            Practical tools and knowledge for data analysis, data preparation and machine-learning readiness.
-          </p>
+          </Link>
+          <p>Practical tools and knowledge for data analysis, data preparation and machine-learning readiness.</p>
           <span className="numpa-footer-note">Services first. Useful knowledge alongside them.</span>
         </div>
 
@@ -83,13 +77,12 @@ export default function SiteFooter({ onNavigate }: SiteFooterProps) {
             <ul>
               {group.links.map((link) => (
                 <li key={link.label}>
-                  {"available" in link && link.available && "destination" in link ? (
-                    <button type="button" onClick={() => onNavigate(link.destination)}>{link.label}</button>
-                  ) : (
+                  {"planned" in link && link.planned ? (
                     <span className="numpa-footer-planned" aria-disabled="true">
-                      {link.label}
-                      <span className="numpa-footer-status">Planned</span>
+                      {link.label}<span className="numpa-footer-status">Planned</span>
                     </span>
+                  ) : (
+                    <Link href={link.href}>{link.label}</Link>
                   )}
                 </li>
               ))}
@@ -100,7 +93,7 @@ export default function SiteFooter({ onNavigate }: SiteFooterProps) {
 
       <div className="numpa-footer-bottom">
         <p>© {new Date().getFullYear()} NUMPA. All rights reserved.</p>
-        <p>More learning, resources and community destinations will be published as they become useful and ready.</p>
+        <p>Explore services, practical learning and carefully sourced resources.</p>
       </div>
     </footer>
   );
