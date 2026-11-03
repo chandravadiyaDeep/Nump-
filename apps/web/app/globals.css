@@ -914,3 +914,214 @@ tr:last-child td { border-bottom: 0; }
   .workspace-shell .panel-body,
   .workspace-shell .results { padding: 17px 16px; }
 }
+
+
+/* --------------------------------------------------------------------------
+   Minimal Intelligence — complete workspace polish (phases 1–5)
+   Shared tokens and component treatments for every workspace surface.
+   -------------------------------------------------------------------------- */
+.workspace-shell {
+  --ws-panel: var(--ws-surface);
+  --ws-accent-cyan: #0891b2;
+  --ws-accent-cyan-soft: #e6f8fc;
+  --ws-success: #15803d;
+  --ws-success-soft: #eaf7ef;
+  --ws-warning: #a16207;
+  --ws-warning-soft: #fff6e5;
+  --ws-danger: #b42318;
+  isolation: isolate;
+}
+.workspace-shell[data-theme="dark"] {
+  --ws-accent-cyan: #67d9f2;
+  --ws-accent-cyan-soft: #17313a;
+  --ws-success: #86d6a0;
+  --ws-success-soft: #1b3527;
+  --ws-warning: #f5c66b;
+  --ws-warning-soft: #392e1b;
+  --ws-danger: #ffaaa4;
+}
+.workspace-shell .workspace-topbar {
+  background: color-mix(in srgb, var(--ws-surface) 90%, transparent);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--ws-line) 65%, transparent);
+}
+.workspace-public-link {
+  color: var(--ws-muted);
+  font-size: .76rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+.workspace-public-link:hover { color: var(--ws-primary); text-decoration: underline; text-underline-offset: 3px; }
+.workspace-shell .workspace-section-title { font-size: 1.08rem; }
+.workspace-shell .workspace-content { min-height: calc(100vh - 150px); }
+.workspace-shell .workspace-content .shell { max-width: 1320px; }
+.workspace-shell .hero { margin-bottom: 2px; }
+.workspace-shell .hero h1 { max-width: 900px; }
+.workspace-shell .hero p { max-width: 760px; line-height: 1.7; }
+.workspace-shell .panel { overflow: clip; }
+.workspace-shell .panel-head { gap: 13px; }
+.workspace-shell .panel-head h2 { font-size: 1rem; }
+.workspace-shell .panel-head p { line-height: 1.55; }
+.workspace-shell .panel-icon { flex-shrink: 0; }
+.workspace-shell .primary, .workspace-shell .secondary { min-height: 42px; font-weight: 700; }
+.workspace-shell button:focus-visible,
+.workspace-shell input:focus-visible,
+.workspace-shell select:focus-visible,
+.workspace-shell summary:focus-visible,
+.workspace-shell a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--ws-focus) 72%, transparent);
+  outline-offset: 3px;
+}
+.workspace-shell :disabled { cursor: not-allowed; opacity: .58; }
+.workspace-shell .hint { line-height: 1.6; }
+.workspace-shell .alert { border-radius: 12px; line-height: 1.55; }
+.workspace-shell .mini-label { border: 1px solid var(--ws-line); }
+.workspace-shell .metric span { color: var(--ws-muted); }
+.workspace-shell .metric strong { font-variant-numeric: tabular-nums; }
+.workspace-shell .empty-state { min-height: 220px; }
+.workspace-shell .empty-state p { line-height: 1.65; }
+.workspace-shell .footer { gap: 8px 18px; line-height: 1.55; }
+
+/* Phase 2 — onboarding, dataset inspection, cleaning and approval. */
+.workspace-onboarding {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(250px, .9fr);
+  gap: 24px;
+  margin: 0 0 20px;
+  padding: clamp(20px, 3vw, 30px);
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--ws-primary) 9%, transparent), transparent 18rem),
+    var(--ws-surface);
+}
+.workspace-onboarding-copy { align-self: center; }
+.workspace-onboarding-kicker { color: var(--ws-primary); font-size: .68rem; font-weight: 850; letter-spacing: .13em; }
+.workspace-onboarding h2 { max-width: 620px; margin: 9px 0; color: var(--ws-text); font: 800 clamp(1.35rem, 2.6vw, 2rem)/1.16 "Manrope", sans-serif; letter-spacing: -.045em; }
+.workspace-onboarding p { max-width: 590px; margin: 0; color: var(--ws-muted); font-size: .85rem; line-height: 1.7; }
+.workspace-onboarding-action { width: auto; margin-top: 17px; }
+.workspace-onboarding-steps { display: grid; gap: 10px; align-content: center; margin: 0; padding: 0; list-style: none; }
+.workspace-onboarding-steps li { display: flex; align-items: center; gap: 12px; border: 1px solid var(--ws-line); border-radius: 12px; padding: 11px 13px; background: color-mix(in srgb, var(--ws-raised) 82%, transparent); }
+.workspace-onboarding-steps li > span { display: grid; width: 31px; height: 31px; flex: 0 0 31px; place-items: center; border-radius: 9px; color: var(--ws-primary); background: var(--ws-soft); font-size: .69rem; font-weight: 850; }
+.workspace-onboarding-steps li div { display: grid; gap: 3px; }
+.workspace-onboarding-steps strong { color: var(--ws-text); font-size: .8rem; }
+.workspace-onboarding-steps small { color: var(--ws-muted); font-size: .72rem; line-height: 1.45; }
+.workspace-shell .dropzone { gap: 7px; }
+.workspace-shell .dropzone strong { color: var(--ws-text); }
+.workspace-shell .file-input { max-width: 100%; }
+.workspace-shell .dataset-identity > div { min-width: 0; }
+.workspace-shell .dataset-identity strong { line-height: 1.45; }
+.workspace-shell .quality-observations { line-height: 1.55; }
+.workspace-shell .profile-controls { margin-bottom: 2px; }
+.workspace-shell .profile-table th[scope="row"] { color: var(--ws-text); }
+.workspace-shell .cleaning-workspace .check-row { padding: 11px 0; border-bottom: 1px solid var(--ws-line); }
+.workspace-shell .cleaning-workspace .check-row:last-of-type { border-bottom: 0; }
+.workspace-shell .recommendation-row { padding: 14px 0; }
+.workspace-shell .confirmation-panel { box-shadow: inset 3px 0 0 var(--ws-primary); }
+.workspace-shell .cleaned-output { flex-wrap: wrap; }
+.workspace-shell .cleaned-output > div { min-width: 0; }
+
+/* Phase 3 — visualization studio. */
+.workspace-shell .visualization-context { border-radius: 16px; }
+.workspace-shell .visualization-layout { grid-template-columns: minmax(245px, 300px) minmax(0, 1fr); }
+.workspace-shell .visualization-controls .panel-body { display: block; }
+.workspace-shell .visualization-field { margin-top: 15px; }
+.workspace-shell .visualization-field:first-child { margin-top: 0; }
+.workspace-shell .visualization-field select { font-weight: 550; }
+.workspace-shell .visualization-result .panel-body { padding-top: 16px; }
+.workspace-shell .chart-visual-frame { border: 1px solid var(--ws-line); border-radius: 14px; padding: 12px; background: var(--ws-raised); }
+.workspace-shell .chart-visual { min-height: 270px; }
+.workspace-shell .chart-summary { font-size: .83rem; line-height: 1.6; }
+.workspace-shell .visualization-disclosure { border-radius: 11px; line-height: 1.65; }
+.workspace-shell .visualization-data-table { margin-top: 16px; }
+.workspace-shell .visualization-data-table summary { padding: 5px 0; }
+.workspace-shell .visualization-data-table .table-wrap { max-height: 360px; }
+.workspace-shell .chart-empty { min-height: 250px; }
+
+/* Phase 4 — readiness and model lab. */
+.workspace-shell .ml-dataset-context { border-color: var(--ws-line); border-radius: 16px; background: var(--ws-surface); box-shadow: var(--ws-shadow); }
+.workspace-shell .ml-context-dimensions { flex-wrap: wrap; }
+.workspace-shell .ml-context-dimensions span { min-width: 70px; }
+.workspace-shell .ml-context-dimensions strong { font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.workspace-shell .ml-workspace > .panel { margin-bottom: 16px; }
+.workspace-shell .ml-form-grid { gap: 14px; }
+.workspace-shell .ml-validation { border-radius: 11px; line-height: 1.6; }
+.workspace-shell .ml-dimension { border-radius: 12px; }
+.workspace-shell .ml-dimension > div { align-items: baseline; }
+.workspace-shell .ml-dimension > div > span { font-variant-numeric: tabular-nums; }
+.workspace-shell .ml-issues { border-color: color-mix(in srgb, var(--ws-warning) 30%, var(--ws-line)); background: var(--ws-warning-soft); }
+.workspace-shell .ml-issues h3 { color: var(--ws-text); }
+.workspace-shell .ml-issues li { color: var(--ws-text); }
+.workspace-shell .ml-candidate-list { border-color: var(--ws-line); }
+.workspace-shell .ml-candidate-list h3 { color: var(--ws-text); }
+.workspace-shell .ml-results-table { white-space: normal; }
+.workspace-shell .ml-results-table th:first-child { min-width: 180px; }
+.workspace-shell .ml-results-table caption { line-height: 1.6; }
+.workspace-shell .ml-metric-guide article { min-width: 0; }
+.workspace-shell .ml-cleaning-comparison { border-color: color-mix(in srgb, var(--ws-primary) 25%, var(--ws-line)); }
+.workspace-shell .ml-cleaning-comparison .metric strong { color: var(--ws-primary-strong); }
+.workspace-shell .ml-workspace .field select { font-weight: 550; }
+
+/* Phase 5 — history, settings and truthful capability states. */
+.workspace-shell .support-workspace .support-notice { border-radius: 13px; line-height: 1.65; }
+.workspace-shell .settings-subnav { max-width: 100%; overflow-x: auto; }
+.workspace-shell .settings-subnav button { white-space: nowrap; font-size: .78rem; font-weight: 650; }
+.workspace-shell .settings-card { border-radius: 16px; }
+.workspace-shell .integration-card { border-radius: 13px; }
+.workspace-shell .integration-card p { font-size: .81rem; line-height: 1.6; }
+.workspace-shell .settings-theme-options { gap: 10px 20px; }
+.workspace-shell .settings-theme-options label { cursor: pointer; font-size: .83rem; }
+.workspace-shell .settings-theme-options input { width: 16px; height: 16px; }
+.workspace-shell .settings-link { text-underline-offset: 3px; }
+.workspace-shell .support-status { line-height: 1.6; }
+.workspace-shell .workspace-coming-soon { border-radius: 18px; }
+
+/* Responsive workspace navigation and content. */
+.workspace-mobile-tabs { display: none; }
+@media (max-width: 780px) {
+  .workspace-shell .workspace-content { min-height: calc(100vh - 150px); padding-bottom: 96px; }
+  .workspace-shell .workspace-sidebar { padding-bottom: 22px; }
+  .workspace-mobile-tabs {
+    position: fixed; z-index: 30; right: 12px; bottom: max(10px, env(safe-area-inset-bottom)); left: 12px;
+    display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 3px;
+    border: 1px solid var(--ws-line); border-radius: 17px; padding: 7px;
+    background: color-mix(in srgb, var(--ws-surface) 94%, transparent);
+    box-shadow: 0 12px 35px rgba(12, 10, 22, .18); backdrop-filter: blur(18px);
+  }
+  .workspace-mobile-tabs button {
+    display: grid; min-width: 0; min-height: 51px; align-content: center; justify-items: center; gap: 4px;
+    border: 1px solid transparent; border-radius: 11px; padding: 5px 2px;
+    color: var(--ws-muted); background: transparent; cursor: pointer;
+  }
+  .workspace-mobile-tabs button > span { font-size: 1.08rem; line-height: 1; }
+  .workspace-mobile-tabs button small { max-width: 100%; overflow: hidden; color: inherit; font-size: .59rem; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
+  .workspace-mobile-tabs button.is-active { border-color: color-mix(in srgb, var(--ws-primary) 20%, transparent); color: var(--ws-primary-strong); background: var(--ws-soft); }
+  .workspace-shell .workspace-topbar { padding-right: 14px; padding-left: 14px; }
+  .workspace-shell .workspace-topbar-actions { gap: 8px; }
+  .workspace-shell .workspace-public-link { display: none; }
+  .workspace-onboarding { grid-template-columns: 1fr; }
+  .workspace-onboarding-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .workspace-onboarding-steps li { align-items: flex-start; flex-direction: column; }
+  .workspace-shell .visualization-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 520px) {
+  .workspace-shell .workspace-content { padding-right: 11px; padding-left: 11px; }
+  .workspace-shell .hero h1 { font-size: clamp(1.75rem, 8vw, 2.2rem); }
+  .workspace-shell .hero p { font-size: .88rem; }
+  .workspace-onboarding { gap: 18px; padding: 18px; }
+  .workspace-onboarding-steps { grid-template-columns: 1fr; }
+  .workspace-onboarding-steps li { align-items: center; flex-direction: row; }
+  .workspace-shell .ml-dataset-context { gap: 10px; }
+  .workspace-shell .ml-context-dimensions { justify-content: flex-start; gap: 22px; }
+  .workspace-shell .ml-dimension > div { gap: 6px; }
+  .workspace-shell .chart-visual-frame { padding: 5px; }
+  .workspace-shell .chart-visual { min-height: 205px; }
+  .workspace-shell .visualization-context { padding: 15px; }
+  .workspace-shell .panel-head { padding-right: 15px; padding-left: 15px; }
+  .workspace-shell .panel-body, .workspace-shell .results { padding-right: 15px; padding-left: 15px; }
+  .workspace-shell .ml-metric-guide { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .workspace-shell *, .workspace-shell *::before, .workspace-shell *::after,
+  .workspace-mobile-tabs * { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+@media print {
+  .workspace-mobile-tabs { display: none !important; }
+}
