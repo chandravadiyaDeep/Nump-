@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import AuthNav, { type AuthAccountState } from "./auth-nav";
+import SiteFooter from "./site-footer";
 import { AnalysisHistoryWorkspace } from "./workspace-history";
 import { SettingsWorkspace } from "./workspace-settings";
 
@@ -243,6 +244,7 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
             </section>
           )}
         </main>
+        <SiteFooter onNavigate={chooseSection} />
       </div>
     </div>
   );
