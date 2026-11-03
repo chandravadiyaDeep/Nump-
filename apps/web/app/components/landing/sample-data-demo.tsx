@@ -63,7 +63,7 @@ function cleanRows(rows: SampleRow[], removeDuplicates: boolean, fillMissing: bo
   }
   if (trimOutliers) {
     // A transparent demo-only rule: remove rows outside plausible bounds for age and spend.
-    result = result.filter((row) => !(typeof row.age === "number" && row.age > 85) && !(typeof row.total_spent === "number" && row.total_spent > 80000));
+    result = result.filter((row) => !(typeof row.age === "number" && row.age > 85) && !(typeof row.income === "number" && row.income > 200000) && !(typeof row.total_spent === "number" && row.total_spent > 80000));
   }
   return result;
 }
@@ -164,7 +164,7 @@ export default function SampleDataDemo() {
                   <div><h3>Choose sample cleaning operations</h3><p className="demo-muted">These transformations affect only this demo copy.</p>
                     <label><input type="checkbox" checked={removeDuplicates} onChange={(event) => setRemoveDuplicates(event.target.checked)} /> Remove exact duplicate rows <small>3 repeated records in this sample</small></label>
                     <label><input type="checkbox" checked={fillMissing} onChange={(event) => setFillMissing(event.target.checked)} /> Fill numeric missing values <small>Median imputation, calculated from sample values</small></label>
-                    <label><input type="checkbox" checked={trimOutliers} onChange={(event) => setTrimOutliers(event.target.checked)} /> Trim extreme sample values <small>Demo bounds: age above 85 or spend above 80,000</small></label>
+                    <label><input type="checkbox" checked={trimOutliers} onChange={(event) => setTrimOutliers(event.target.checked)} /> Trim extreme sample values <small>Demo bounds: age above 85, income above 200,000 or spend above 80,000</small></label>
                   </div>
                   <div className="demo-preview-result"><span>PREVIEW RESULT</span><strong>{cleaned.length} rows</strong><p>{rows.length - cleaned.length} rows removed</p><strong>{missingCount(cleaned)} missing cells</strong><p>Remaining missing cells in the sample copy</p><strong>{duplicatesCount(cleaned)} duplicates</strong><p>Remaining exact duplicate rows</p></div>
                 </div>
@@ -184,7 +184,7 @@ export default function SampleDataDemo() {
                 </div>
               )}
             </div>
-            <div className="demo-disclaimer">Synthetic dataset · Bundled with NUMPA · Demonstration only · No visitor upload required</div>
+            <div className="demo-disclaimer">Synthetic dataset · Bundled with NUMPA · Updated 03 Nov 2026 · Demonstration only · No visitor upload required</div>
           </>
         )}
       </div>
