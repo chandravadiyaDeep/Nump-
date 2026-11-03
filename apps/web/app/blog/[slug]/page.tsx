@@ -10,5 +10,5 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const post = blogPosts.find((item) => item.slug === slug); if (!post) notFound();
-  return <PublicPage eyebrow={`BLOG / ${post.category.toUpperCase()}`} title={post.title} description={post.summary}><PublicArticle title={post.title} updated={post.updated} intro={post.intro} sections={post.sections} /></PublicPage>;
+  return <PublicPage eyebrow={`BLOG / ${post.category.toUpperCase()}`} title={post.title} description={post.summary}><PublicArticle updated={post.updated} intro={post.intro} sections={post.sections} /></PublicPage>;
 }
