@@ -7,6 +7,7 @@ import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "../components
 import { DataVisualizationWorkspace } from "../components/workspace-data-visualization";
 import { MlLabWorkspace, MlReadinessWorkspace } from "../components/workspace-ml-workspaces";
 import { DataTransformationStudio } from "../components/workspace-transformation-studio";
+import { DataFeatureEngineeringStudio } from "../components/workspace-feature-engineering";
 import { getMlColumns, parseComparisonResponse, parseReadinessResponse, validateComparisonSelection, validateReadinessSelection } from "../components/workspace-ml-model.mjs";
 import { validateUpload } from "../components/workspace-data-model.mjs";
 
@@ -317,6 +318,12 @@ export default function HomePage() {
     setNotice("Cleaned CSV download started.");
   }
 
+  // The profiling response exposes column descriptors; the feature API needs their names only.
+  const featureColumns = Array.isArray(overview?.columns)
+    ? overview.columns.map((item) => typeof item === "string" ? item : item && typeof item === "object" && "name" in item ? String((item as ApiObject).name) : "")
+      .filter((name): name is string => !!name)
+    : [];
+
   const mlWorkspaceProps = {
     file, overview, cleaning, cleanedCsv, version: mlDatasetVersion, onVersionChange: changeMlDatasetVersion,
     task, target, onTaskChange: changeMlTask, onTargetChange: changeMlTarget,
@@ -338,7 +345,7 @@ export default function HomePage() {
             confirming={confirmingExecution} onBeginConfirmation={() => { setConfirmingExecution(true); setError(""); }}
             onCancelConfirmation={() => setConfirmingExecution(false)}
           />
-          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} /></div>
+          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} /><DataFeatureEngineeringStudio file={file} columns={featureColumns} task={task} target={target} /></div>
         </>
       }
       visualization={<DataVisualizationWorkspace file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv} />}

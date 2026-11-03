@@ -14,6 +14,7 @@ from .ml_labs import ModelEvaluationError, compare_models
 from .profiling import profile_dataframe
 from .readiness import score_readiness
 from .transformations import TransformationError, apply_transformations
+from .feature_engineering import FeatureEngineeringError, apply_feature_operations
 
 app = FastAPI(title="NUMPA API", description="MVP for dataset inspection, cleaning, readiness and model comparison.", version="0.1.0")
 # Allow the production website by default, while retaining local development origins.
@@ -161,6 +162,55 @@ async def execute_transformations(
         media_type="text/csv",
         headers={"Content-Disposition": f'attachment; filename="{stem}-transformed.csv"'},
     )
+
+
+@app.post("/api/v1/features/preview")
+async def preview_features(
+    file: Annotated[UploadFile, File(...)],
+    operations_json: Annotated[str, Form()],
+    task: Annotated[str, Form()],
+    target: Annotated[str | None, Form()] = None,
+) -> dict:
+    """Preview stateless task-aware feature creation while protecting the target."""
+    if len(operations_json.encode("utf-8")) > 64 * 1024:
+        raise HTTPException(status_code=413, detail="Feature instructions exceed the 64 KB request limit.")
+    try:
+        operations = json.loads(operations_json)
+    except json.JSONDecodeError as exc:
+        raise HTTPException(status_code=400, detail="Feature instructions must be valid JSON.") from exc
+    frame = _load_upload(file.filename, await _read_upload(file))
+    try:
+        featured, report = apply_feature_operations(frame, operations, target=target, task=task)
+    except FeatureEngineeringError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    preview = featured.head(25).astype(object).where(pd.notna(featured.head(25)), None).to_dict(orient="records")
+    return {"report": report, "preview": preview, "columns": [str(c) for c in featured.columns], "preview_row_limit": 25}
+
+
+@app.post("/api/v1/features/execute")
+async def execute_features(
+    file: Annotated[UploadFile, File(...)],
+    operations_json: Annotated[str, Form()],
+    task: Annotated[str, Form()],
+    target: Annotated[str | None, Form()] = None,
+) -> StreamingResponse:
+    """Create deterministic features and return a separate CSV without fitting transforms."""
+    if len(operations_json.encode("utf-8")) > 64 * 1024:
+        raise HTTPException(status_code=413, detail="Feature instructions exceed the 64 KB request limit.")
+    try:
+        operations = json.loads(operations_json)
+    except json.JSONDecodeError as exc:
+        raise HTTPException(status_code=400, detail="Feature instructions must be valid JSON.") from exc
+    frame = _load_upload(file.filename, await _read_upload(file))
+    try:
+        featured, _report = apply_feature_operations(frame, operations, target=target, task=task)
+    except FeatureEngineeringError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    buffer = io.StringIO()
+    featured.to_csv(buffer, index=False)
+    stem = (file.filename or "dataset").rsplit(".", 1)[0]
+    return StreamingResponse(iter([buffer.getvalue()]), media_type="text/csv",
+        headers={"Content-Disposition": f'attachment; filename="{stem}-features.csv"'})
 
 
 @app.post("/api/v1/ml-readiness/score")
