@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
-import { PublicCardGrid, PublicPage } from "../components/public-site";
-import { resourceCards } from "../components/public-content";
+import { PublicPage } from "../components/public-site";
+import ResourceDirectory from "../components/resource-directory";
+import { curatedResources } from "../components/resource-library";
 
-export const metadata: Metadata = { title: "Data Science Resources | NUMPA", description: "Explore public datasets, cheat sheets, learning roadmaps and useful data tools." };
+export const metadata: Metadata = {
+  title: "Data Science Resources | NUMPA",
+  description: "Search a curated directory of public datasets, official documentation, learning courses, data-quality tools and visualization resources.",
+};
+
 export default function ResourcesPage() {
-  return <PublicPage eyebrow="RESOURCES" title="Useful resources for practical data work" description="A curated starting point for datasets, documentation, learning sequences and tools. Check source licences and terms before reuse."><PublicCardGrid cards={resourceCards} /></PublicPage>;
+  return (
+    <PublicPage
+      eyebrow="NUMPA RESOURCE LIBRARY"
+      title="A practical directory for better data work"
+      description={`Explore ${curatedResources.length} curated resources from original publishers, open-source projects and established learning platforms. Search by topic, skill level or tool.`}
+    >
+      <ResourceDirectory />
+    </PublicPage>
+  );
 }
