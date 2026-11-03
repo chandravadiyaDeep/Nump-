@@ -118,6 +118,10 @@ export const blogPosts = [
       { heading: "Protect evaluation from leakage", paragraphs: ["Fit preprocessing steps only on training data within the validation pipeline. Information from validation or test data must not influence training-time transformations or feature selection.", "Choose a split strategy that reflects the real task. Time-dependent data generally needs time-aware validation rather than a random split."] },
       { heading: "Use readiness scores carefully", paragraphs: ["A readiness assessment can summarize data-quality risks and point to next steps. It is a heuristic, not a guarantee of accuracy, fairness or production performance."] },
     ],
+    sources: [
+      { label: "scikit-learn: Common pitfalls and recommended practices", url: "https://scikit-learn.org/stable/common_pitfalls.html" },
+      { label: "scikit-learn: Cross-validation", url: "https://scikit-learn.org/stable/modules/cross_validation.html" },
+    ],
   },
   {
     slug: "understanding-missing-values",
@@ -130,6 +134,10 @@ export const blogPosts = [
       { heading: "Measure the pattern", paragraphs: ["Calculate missing counts and percentages by column and, where useful, by important groups or time periods. Check whether missingness is concentrated in particular segments.", "Review whether a column is essential to the task and whether missingness itself may carry information."] },
       { heading: "Choose a defensible treatment", paragraphs: ["Possible treatments include leaving values missing for models that support them, imputing with a statistic or domain rule, adding a missingness indicator, or excluding rows/columns when justified. Document the choice and its limitations."] },
       { heading: "Avoid leakage", paragraphs: ["For predictive modelling, learn imputation values from the training split only. Apply the fitted transformation to validation and test data without recalculating statistics from those sets."] },
+    ],
+    sources: [
+      { label: "pandas: Working with missing data", url: "https://pandas.pydata.org/docs/user_guide/missing_data.html" },
+      { label: "scikit-learn: Imputation of missing values", url: "https://scikit-learn.org/stable/modules/impute.html" },
     ],
   },
 ];
