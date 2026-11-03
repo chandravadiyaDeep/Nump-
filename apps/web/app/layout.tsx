@@ -4,7 +4,7 @@ import "./globals.css";
 // Shared metadata defaults for the NUMPA workspace and public discovery pages.
 export const metadata: Metadata = {
   metadataBase: new URL("https://numpa.online"),
-  title: { default: "NUMPA — Data Analysis and ML Readiness", template: "%s | NUMPA" },
+  title: { default: "NUMPA — Data Analysis and ML Readiness", template: "%s" },
   description:
     "Inspect, clean, and assess the machine-learning readiness of tabular datasets.",
 };
