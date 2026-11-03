@@ -7,6 +7,7 @@ import AuthNav, { type AuthAccountState } from "./auth-nav";
 import SiteFooter from "./site-footer";
 import { AnalysisHistoryWorkspace } from "./workspace-history";
 import { SettingsWorkspace } from "./workspace-settings";
+import { WorkflowProgress } from "./workspace-workflow-progress";
 
 const destinations = [
   { label: "Data Analysis", icon: "⌕", description: "Inspect a dataset and review its quality." },
@@ -30,9 +31,10 @@ type WorkspaceShellProps = {
   mlReadiness?: ReactNode;
   mlLab?: ReactNode;
   hasActiveDataset?: boolean;
+  workflowStatus: { hasFile: boolean; inspected: boolean; cleaned: boolean; readinessComplete: boolean; comparisonComplete: boolean };
 };
 
-export default function WorkspaceShell({ children, preprocessing, visualization, mlReadiness, mlLab, hasActiveDataset = false }: WorkspaceShellProps) {
+export default function WorkspaceShell({ children, preprocessing, visualization, mlReadiness, mlLab, hasActiveDataset = false, workflowStatus }: WorkspaceShellProps) {
   const [section, setSection] = useState<Section>("Data Analysis");
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -236,6 +238,12 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
             <AuthNav onAccountStateChange={setAccount} />
           </div>
         </header>
+
+        <WorkflowProgress
+          activeSection={section}
+          {...workflowStatus}
+          onNavigate={(destination) => chooseSection(destination as Section)}
+        />
 
         <main className="workspace-content" id="main-content">
           {section === "Data Analysis" ? children : section === "Data Preprocessing / Cleaning" && preprocessing ? preprocessing : section === "Data Visualization" && visualization ? visualization : section === "ML Readiness" && mlReadiness ? mlReadiness : section === "ML Lab" && mlLab ? mlLab : section === "Analysis History" ? <AnalysisHistoryWorkspace /> : section === "Settings" ? <SettingsWorkspace account={account} theme={theme} onThemeChange={setThemePreference} /> : (
