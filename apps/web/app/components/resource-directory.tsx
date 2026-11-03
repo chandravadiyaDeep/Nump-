@@ -46,7 +46,7 @@ export default function ResourceDirectory({ initialCategory = "all" }: { initial
       ) : (
         <div className="resource-empty-state"><h2>No matching resources</h2><p>Try a broader search or select another category.</p><button type="button" onClick={() => { setQuery(""); setCategory("all"); }}>Clear filters</button></div>
       )}
-      <p className="resource-directory-disclaimer">NUMPA curates links; it does not own or mirror these resources. Availability, licences, dataset conditions and third-party terms can change. Always verify details on the original publisher's page before downloading, using or redistributing material.</p>
+      <p className="resource-directory-disclaimer">NUMPA curates links; it does not own or mirror these resources. Availability, licences, dataset conditions and third-party terms can change. Always verify details on the original publisher&apos;s page before downloading, using or redistributing material.</p>
     </section>
   );
 }
