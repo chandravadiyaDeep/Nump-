@@ -47,13 +47,19 @@ export function WorkflowProgress({
         {stages.map((stage, index) => {
           const done = completed.has(stage.id);
           const available = isAvailable(stage.requirement);
-          const active = activeSection === stage.section && (
-            stage.id === "source" || stage.id === "inspect" ? activeSection === "Data Analysis" :
-            stage.id === "prepare" ? activeSection === "Data Preprocessing / Cleaning" :
-            stage.id === "visualize" ? activeSection === "Data Visualization" :
-            stage.id === "readiness" ? activeSection === "ML Readiness" :
-            stage.id === "models" ? activeSection === "ML Lab" : false
-          );
+          const active = stage.id === "source"
+            ? activeSection === "Data Analysis" && !hasFile
+            : stage.id === "inspect"
+              ? activeSection === "Data Analysis" && hasFile && !inspected
+              : stage.id === "analyze"
+                ? activeSection === "Data Analysis" && inspected
+                : stage.id === "prepare"
+                  ? activeSection === "Data Preprocessing / Cleaning"
+                  : stage.id === "visualize"
+                    ? activeSection === "Data Visualization"
+                    : stage.id === "readiness"
+                      ? activeSection === "ML Readiness"
+                      : activeSection === "ML Lab";
           return (
             <li key={stage.id} className={`workflow-progress-step${done ? " is-complete" : ""}${active ? " is-current" : ""}${!available ? " is-locked" : ""}`}>
               <button
