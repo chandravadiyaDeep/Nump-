@@ -1,0 +1,144 @@
+# NUMPA Commercial V1 — User Onboarding & Operational Guide
+
+**Product:** NUMPA — Automated Data Workflow  
+**Release Target:** Commercial V1  
+**Audience:** End Users, Analysts, Data Scientists, Developers  
+
+---
+
+## 1. Introduction & Core Philosophy
+
+NUMPA is an automated tabular data workbench designed for fast, reproducible, and privacy-preserving data preparation.
+
+### Core Architecture & Privacy Principles
+- **In-Memory Ephemerality:** All data operations execute strictly in system RAM. Uploaded datasets are never written to permanent disks or database storage.
+- **Explainable Automation:** Cleaning and readiness recommendations are deterministic and explainable. No hidden black-box transformations are applied.
+- **Connected Pipeline:** Once a dataset is uploaded, it is automatically shared across all 7 workspace stages without re-uploading.
+
+---
+
+## 2. Workspace Navigation Walkthrough
+
+```text
+1. Data Analysis ------------> In-memory profiling, quality heuristics, column statistics
+      |
+      v
+2. Data Cleaning ------------> Configure imputation, duplicate dropping, text trimming
+      |                        Preview audit & export cleaned CSV
+      v
+3. Data Visualization -------> Distribution histograms, bar aggregations, scatter & correlation
+      |
+      v
+4. ML Readiness -------------> Deterministic 0–100 score across 4 structural dimensions
+      |
+      v
+5. ML Lab -------------------> Benchmark baseline scikit-learn models using 80/20 holdout
+      |
+      v
+6. Analysis History ---------> View past analysis metadata (requires persistence approval)
+      |
+      v
+7. Settings -----------------> Account, light/dark theme, API access info, commercial plans
+```
+
+---
+
+## 3. Step-by-Step Workflow Guides
+
+### 3.1 Step 1: Uploading & Inspecting Datasets
+1. Drag and drop your tabular file into the upload zone or click "Browse files".
+2. **Supported Formats:**
+   - Comma-Separated Values (`.csv`)
+   - Microsoft Excel (`.xlsx`)
+   - JavaScript Object Notation (`.json`)
+   - Apache Parquet (`.parquet`)
+   - Apache Arrow IPC & Feather (`.arrow`, `.feather`)
+3. **Hard Boundaries:**
+   - Maximum file size: **50 MB**
+   - Maximum rows: **1,000,000 rows**
+   - Maximum columns: **2,000 columns**
+4. **Inspecting the Quality Profile:**
+   - **Overview:** Row count, column count, duplicate rows, missing cell count, and memory usage.
+   - **Column Profiler:** Inspect data types, missingness ratios, unique value counts, numeric summaries (`min`, `max`, `mean`, `median`, `std`), and top category frequencies.
+   - **Cleaning Recommendations:** Review conservative suggestions (imputation strategies, duplicate row alerts, outlier notices).
+
+---
+
+### 3.2 Step 2: Data Preprocessing & Cleaning
+1. Navigate to **Data Preprocessing / Cleaning** in the left sidebar.
+2. Configure your cleaning options:
+   - **Fill Missing Values:** Imputes numeric features using median (if skewed) or mean; imputes categorical features using mode (if <30 unique values) or an explicit `"Unknown"` category.
+   - **Drop Exact Duplicates:** Removes duplicate rows across all features, retaining the first occurrence.
+   - **Normalize Text:** Trims leading/trailing whitespace (`.strip()`) on string columns. Case is preserved to prevent altering categorical identifiers.
+3. Click **Preview Cleaning** to inspect the 20-row preview and operation audit report.
+4. Click **Download Cleaned CSV** to export the cleaned dataset directly to your local computer.
+
+---
+
+### 3.3 Step 3: Data Visualization
+1. Navigate to **Data Visualization**.
+2. Select between the **Source Dataset** or **Cleaned Version**.
+3. Choose a chart type:
+   - **Histogram:** Visualize frequency distribution of any numeric column.
+   - **Bar Chart:** Compare categorical group frequencies. High-cardinality categories are automatically grouped into "Other".
+   - **Line Chart:** Inspect chronological trends over valid ISO-8601 date columns.
+   - **Scatter Plot:** Analyze bivariate relationships between two numeric features with deterministic sampling.
+   - **Box Plot:** Inspect Tukey five-number summaries (median, quartiles, whiskers, outliers).
+   - **Correlation Heatmap:** Compute pairwise Pearson correlation coefficients with color-coded intensity.
+
+---
+
+### 3.4 Step 4: ML Readiness Assessment
+1. Navigate to **ML Readiness**.
+2. Select your intended Machine Learning task:
+   - **`classification`:** Predict discrete categories or labels.
+   - **`regression`:** Predict continuous numerical quantities.
+   - **`forecasting`:** Model temporal sequential dependencies (chronological validation required).
+   - **`clustering`:** Discover natural group partitions (unsupervised; target column optional).
+3. Select the **Target Column** (for supervised tasks).
+4. Review the **Readiness Score (0–100)** across four fixed dimensions:
+   - **Data Quality (35% weight):** Evaluates overall missingness and duplicate row ratios.
+   - **Dataset Size and Shape (20% weight):** Assesses whether sample volume and feature counts meet basic statistical baseline minimums.
+   - **Task and Target (25% weight):** Checks target completeness, variation, and class balance.
+   - **Feature Availability (20% weight):** Confirms presence of valid predictor columns.
+5. Overall status:
+   - **Good starting point** (Score ≥ 75)
+   - **Needs preparation** (50 ≤ Score < 75)
+   - **Significant issues** (Score < 50)
+6. Review specific diagnostic issues before model training.
+
+---
+
+### 3.5 Step 5: ML Lab (Model Benchmarking)
+1. Navigate to **ML Lab**.
+2. Select task (`Classification` or `Regression`) and the `Target Column`.
+3. Click **Compare Models**.
+4. The system executes reproducible scikit-learn baseline pipelines:
+   - Evaluated using an 80% train / 20% test holdout split (`random_state=42`).
+   - Preprocessing transformers (imputation, one-hot encoding, standard scaling) are strictly fitted on the train split to prevent data leakage.
+5. Candidate Estimators & Metrics:
+   - **Classification Estimators:** `Logistic Regression` (scaled), `Random Forest` (120 trees), `Extra Trees` (120 trees).  
+     *Metrics:* `CA` (Classification Accuracy), `Precision` (weighted), `Recall` (weighted), `F1-Score` (weighted), `AUC` (ROC-AUC).
+   - **Regression Estimators:** `Linear Regression` (scaled), `Ridge Regression` (scaled), `Random Forest Regressor` (120 trees).  
+     *Metrics:* `MSE` (Mean Squared Error), `RMSE` (Root Mean Squared Error), `MAE` (Mean Absolute Error), `R2` (R² Score).
+
+---
+
+## 4. Understanding Heuristic Scores vs. Actual Model Performance
+
+> [!IMPORTANT]
+> - The **ML Readiness Score** is a heuristic diagnostic metric measuring dataset quality, balance, and feature characteristics. A high readiness score indicates data sanity, but does **not** guarantee high model accuracy in production.
+> - **ML Lab Benchmarks** represent un-tuned baseline estimators. Production applications typically require domain-specific feature engineering, hyperparameter tuning, and cross-validation.
+
+---
+
+## 5. Troubleshooting & FAQ
+
+### Q: Why did my upload receive a 413 error?
+The file exceeds the 50 MB in-memory upload limit. Compress your dataset or sample rows before uploading.
+
+### Q: Why did my browser session reset when I refreshed?
+NUMPA does not persist datasets to a server database or localStorage for privacy and security reasons. Refreshing the browser clears in-memory state. Keep your cleaned CSV exports downloaded locally.
+
+### Q: Why is Analysis History showing "Unavailable"?
+Persistent history requires database schema approval from the repository owner to prevent unapproved cloud data storage.

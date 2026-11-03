@@ -23,5 +23,7 @@ jobs:
           cache-dependency-path: apps/web/package.json
       - name: Install dependencies
         run: npm install
+      - name: Run workspace model tests
+        run: node --test app/components/workspace-data-model.test.mjs app/components/workspace-visualization-model.test.mjs app/components/workspace-ml-model.test.mjs app/components/workspace-settings-model.test.mjs
       - name: Build web application
         run: npm run build

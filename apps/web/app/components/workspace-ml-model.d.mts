@@ -1,0 +1,10 @@
+export const READINESS_TASKS: string[];
+export const LAB_ALGORITHMS: Record<string, string[]>;
+export const LAB_METRICS: Record<string, Record<string, { label: string; direction: string; units: string; explanation: string }>>;
+export function getMlColumns(overview: unknown): Record<string, unknown>[];
+export function isNumericColumn(column: unknown): boolean;
+export function targetOptions(columns: Record<string, unknown>[], task: string): Record<string, unknown>[];
+export function validateReadinessSelection(args: { hasDataset: boolean; task: string; target: string; columns: Record<string, unknown>[] }): string;
+export function validateComparisonSelection(args: { hasDataset: boolean; task: string; target: string; columns: Record<string, unknown>[]; duplicateCount: unknown }): string;
+export function parseReadinessResponse(value: unknown, task: string, target: string): Record<string, unknown>;
+export function parseComparisonResponse(value: unknown, task: string, target: string): Record<string, unknown>;

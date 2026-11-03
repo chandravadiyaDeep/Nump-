@@ -2,7 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import AuthNav from "./auth-nav";
+import AuthNav, { type AuthAccountState } from "./auth-nav";
+import { AnalysisHistoryWorkspace } from "./workspace-history";
+import { SettingsWorkspace } from "./workspace-settings";
 
 const destinations = [
   { label: "Data Analysis", icon: "⌕", description: "Inspect a dataset and review its quality." },
@@ -17,11 +19,21 @@ const destinations = [
 type Theme = "light" | "dark";
 type Section = (typeof destinations)[number]["label"];
 
-export default function WorkspaceShell({ children }: { children: ReactNode }) {
+type WorkspaceShellProps = {
+  children: ReactNode;
+  preprocessing?: ReactNode;
+  visualization?: ReactNode;
+  mlReadiness?: ReactNode;
+  mlLab?: ReactNode;
+  hasActiveDataset?: boolean;
+};
+
+export default function WorkspaceShell({ children, preprocessing, visualization, mlReadiness, mlLab, hasActiveDataset = false }: WorkspaceShellProps) {
   const [section, setSection] = useState<Section>("Data Analysis");
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState<Theme>("light");
+  const [account, setAccount] = useState<AuthAccountState>({ status: "loading", email: null });
   const menuTrigger = useRef<HTMLButtonElement>(null);
   const drawer = useRef<HTMLElement>(null);
 
@@ -91,12 +103,18 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
 
   function toggleTheme() {
     const nextTheme: Theme = theme === "light" ? "dark" : "light";
+    setThemePreference(nextTheme);
+  }
+
+  function setThemePreference(nextTheme: Theme): boolean {
     setTheme(nextTheme);
     // Persist only the appearance preference; dataset files and results remain in memory.
     try {
       window.localStorage.setItem("numpa-theme", nextTheme);
+      return true;
     } catch {
       // Theme switching still works for this session if browser storage is unavailable.
+      return false;
     }
   }
 
@@ -192,6 +210,11 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
             </div>
           </div>
           <div className="workspace-topbar-actions">
+            {section === "Data Analysis" && hasActiveDataset && (
+              <button className="workspace-next-stage" type="button" onClick={() => setSection("Data Preprocessing / Cleaning")}>
+                Review cleaning →
+              </button>
+            )}
             <span className="workspace-dataset-context">
               {section === "Data Analysis" ? "Dataset Quality Studio" : "Commercial V1"}
             </span>
@@ -205,23 +228,18 @@ export default function WorkspaceShell({ children }: { children: ReactNode }) {
               <span aria-hidden="true">{theme === "light" ? "☾" : "☀"}</span>
               <span className="workspace-theme-label">{theme === "light" ? "Dark mode" : "Light mode"}</span>
             </button>
-            <AuthNav />
+            <AuthNav onAccountStateChange={setAccount} />
           </div>
         </header>
 
         <main className="workspace-content" id="main-content">
-          {section === "Data Analysis" ? children : (
+          {section === "Data Analysis" ? children : section === "Data Preprocessing / Cleaning" && preprocessing ? preprocessing : section === "Data Visualization" && visualization ? visualization : section === "ML Readiness" && mlReadiness ? mlReadiness : section === "ML Lab" && mlLab ? mlLab : section === "Analysis History" ? <AnalysisHistoryWorkspace /> : section === "Settings" ? <SettingsWorkspace account={account} theme={theme} onThemeChange={setThemePreference} /> : (
             <section className="workspace-coming-soon" aria-labelledby="coming-soon-title">
               <span className="workspace-coming-icon" aria-hidden="true">{current.icon}</span>
               <p className="workspace-context">WORKSPACE SECTION</p>
               <h2 id="coming-soon-title">{section}</h2>
               <p>{current.description}</p>
               <div className="workspace-planned-badge">Coming soon</div>
-              {section === "Settings" && (
-                <p className="workspace-settings-note">
-                  Appearance is available in the top bar. Integrations will be managed within Settings when that workspace is built.
-                </p>
-              )}
             </section>
           )}
         </main>
