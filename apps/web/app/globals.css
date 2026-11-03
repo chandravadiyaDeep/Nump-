@@ -1125,3 +1125,39 @@ tr:last-child td { border-bottom: 0; }
 @media print {
   .workspace-mobile-tabs { display: none !important; }
 }
+
+/* Unified data workflow navigator — truthful state from the active browser session. */
+.workflow-progress {
+  width: min(1320px, calc(100% - 48px));
+  margin: 14px auto 0;
+  padding: 16px 18px 13px;
+  border: 1px solid var(--ws-line);
+  border-radius: 16px;
+  background: var(--ws-surface);
+  box-shadow: var(--ws-shadow);
+}
+.workflow-progress-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 13px; }
+.workflow-progress-eyebrow { margin: 0 0 4px; color: var(--ws-primary); font-size: .62rem; font-weight: 850; letter-spacing: .13em; }
+.workflow-progress-heading h2 { margin: 0; color: var(--ws-text); font-size: .95rem; font-weight: 800; letter-spacing: -.025em; }
+.workflow-progress-state { flex: 0 0 auto; border: 1px solid var(--ws-line); border-radius: 999px; padding: 6px 10px; color: var(--ws-muted); font-size: .68rem; font-weight: 700; }
+.workflow-progress-steps { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 7px; margin: 0; padding: 0; list-style: none; }
+.workflow-progress-step { min-width: 0; }
+.workflow-progress-step button { display: flex; width: 100%; min-height: 42px; align-items: center; gap: 7px; border: 1px solid var(--ws-line); border-radius: 10px; padding: 7px 8px; color: var(--ws-muted); background: var(--ws-raised); cursor: pointer; text-align: left; }
+.workflow-progress-index { display: grid; width: 23px; height: 23px; flex: 0 0 23px; place-items: center; border-radius: 7px; background: var(--ws-surface); font-size: .63rem; font-weight: 850; }
+.workflow-progress-label { overflow: hidden; font-size: .68rem; font-weight: 750; text-overflow: ellipsis; white-space: nowrap; }
+.workflow-progress-step.is-complete button { border-color: color-mix(in srgb, var(--ws-success) 35%, var(--ws-line)); color: var(--ws-success); }
+.workflow-progress-step.is-complete .workflow-progress-index { background: var(--ws-success-soft); }
+.workflow-progress-step.is-current button { border-color: var(--ws-primary); color: var(--ws-primary-strong); box-shadow: inset 0 0 0 1px var(--ws-primary); }
+.workflow-progress-step.is-locked button { cursor: not-allowed; opacity: .48; }
+.workflow-progress-note { margin: 10px 0 0; color: var(--ws-muted); font-size: .68rem; line-height: 1.5; }
+@media (max-width: 1050px) { .workflow-progress-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 780px) {
+  .workflow-progress { width: calc(100% - 28px); margin-top: 10px; padding: 13px; }
+  .workflow-progress-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .workflow-progress { width: calc(100% - 22px); }
+  .workflow-progress-heading { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .workflow-progress-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .workflow-progress-step button { min-height: 40px; }
+}
