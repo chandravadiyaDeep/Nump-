@@ -5,6 +5,8 @@ import { useMemo, useState } from "react";
 type ApiObject = Record<string, unknown>;
 type OperationType = "rename_column" | "drop_column" | "cast_numeric" | "cast_datetime" | "filter_rows";
 type Operation = { type: OperationType; column: string; new_name?: string; operator?: string; value?: string };
+type SavedPipeline = { name: string; version: 1; operations: Operation[] };
+const operationTypes: OperationType[] = ["rename_column", "drop_column", "cast_numeric", "cast_datetime", "filter_rows"];
 
 const API_BASE = (process.env.NEXT_PUBLIC_NUMPA_API_URL || "").trim().replace(/\/$/, "");
 const operators = ["eq", "ne", "gt", "gte", "lt", "lte", "contains", "is_null", "not_null"];
@@ -32,6 +34,8 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
   const [value, setValue] = useState("");
   const [operator, setOperator] = useState("eq");
   const [operations, setOperations] = useState<Operation[]>([]);
+  const [pipelineName, setPipelineName] = useState("My transformation pipeline");
+  const [savedPipelines, setSavedPipelines] = useState<SavedPipeline[]>([]);
   const [preview, setPreview] = useState<ApiObject | null>(null);
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
@@ -51,6 +55,65 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
     setOperations((current) => [...current, operation]);
     setPreview(null); setError(""); setMessage("");
     if (type === "rename_column" || type === "filter_rows") setValue("");
+  }
+
+  // Pipelines contain operation definitions only; source rows and files are never saved.
+  function savePipeline() {
+    const name = pipelineName.trim();
+    if (!name || !operations.length) { setError("Give the pipeline a name and add at least one operation."); return; }
+    const pipeline: SavedPipeline = { name, version: 1, operations: operations.map((item) => ({ ...item })) };
+    setSavedPipelines((current) => [...current.filter((item) => item.name !== name), pipeline]);
+    setMessage(`“${name}” saved for this browser session. Export JSON to reuse it later.`);
+    setError("");
+  }
+
+  function loadPipeline(name: string) {
+    const pipeline = savedPipelines.find((item) => item.name === name);
+    if (!pipeline) return;
+    setPipelineName(pipeline.name);
+    setOperations(pipeline.operations.map((item) => ({ ...item })));
+    setPreview(null); setError(""); setMessage(`Loaded “${pipeline.name}”. Preview it against the currently selected source before execution.`);
+  }
+
+  function exportPipeline() {
+    if (!operations.length) { setError("Add operations before exporting a pipeline."); return; }
+    const payload: SavedPipeline = { name: pipelineName.trim() || "NUMPA pipeline", version: 1, operations };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url; link.download = "numpa-transformation-pipeline.json";
+    document.body.appendChild(link); link.click(); link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    setMessage("Pipeline definition exported. It contains operation settings only, not dataset data.");
+  }
+
+  async function importPipeline(event: React.ChangeEvent<HTMLInputElement>) {
+    const selected = event.target.files?.[0];
+    event.target.value = "";
+    if (!selected) return;
+    try {
+      if (selected.size > 65536) throw new Error("Pipeline file exceeds the 64 KB limit.");
+      const parsed: unknown = JSON.parse(await selected.text());
+      if (!parsed || typeof parsed !== "object") throw new Error("Pipeline file must contain a JSON object.");
+      const candidate = parsed as Record<string, unknown>;
+      if (candidate.version !== 1 || !Array.isArray(candidate.operations) || candidate.operations.length < 1 || candidate.operations.length > 25) {
+        throw new Error("Unsupported pipeline version or operation count. Expected version 1 and 1–25 operations.");
+      }
+      const imported = candidate.operations.map((item): Operation => {
+        if (!item || typeof item !== "object") throw new Error("Invalid operation entry.");
+        const op = item as Record<string, unknown>;
+        if (!operationTypes.includes(op.type as OperationType) || typeof op.column !== "string" || !op.column.trim()) throw new Error("Pipeline contains an unsupported operation or column.");
+        if (op.type === "rename_column" && (typeof op.new_name !== "string" || !op.new_name.trim())) throw new Error("Rename operation is missing its new column name.");
+        if (op.type === "filter_rows" && (typeof op.operator !== "string" || !operators.includes(op.operator))) throw new Error("Filter operation contains an unsupported condition.");
+        if (op.value !== undefined && typeof op.value !== "string") throw new Error("Operation values must be strings.");
+        return { type: op.type as OperationType, column: op.column, ...(typeof op.new_name === "string" ? { new_name: op.new_name } : {}), ...(typeof op.operator === "string" ? { operator: op.operator } : {}), ...(typeof op.value === "string" ? { value: op.value } : {}) };
+      });
+      const name = typeof candidate.name === "string" && candidate.name.trim() ? candidate.name.trim() : selected.name.replace(/\\.json$/i, "");
+      setPipelineName(name); setOperations(imported); setPreview(null); setError("");
+      setMessage(`Imported “${name}”. Review its columns and preview against the active dataset before execution.`);
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Unable to import this pipeline file.");
+    }
   }
 
   async function request(kind: "preview" | "execute") {
@@ -98,6 +161,18 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
           <select id="transform-column" value={column} onChange={(event) => setColumn(event.target.value)}><option value="">Select column</option>{columns.map((name) => <option key={name} value={name}>{name}</option>)}</select>
           {type === "filter_rows" && <><label htmlFor="transform-operator">Condition</label><select id="transform-operator" value={operator} onChange={(event) => setOperator(event.target.value)}>{operators.map((item) => <option key={item} value={item}>{item}</option>)}</select></>}
           {(type === "rename_column" || (type === "filter_rows" && !["is_null", "not_null"].includes(operator))) && <><label htmlFor="transform-value">{type === "rename_column" ? "New column name" : "Compare value"}</label><input id="transform-value" value={value} onChange={(event) => setValue(event.target.value)} /></>}
+        </div>
+        <div className="detail-list" style={{ marginBottom: 16 }}>
+          <h3>Reusable pipeline</h3>
+          <label htmlFor="pipeline-name">Pipeline name</label>
+          <input id="pipeline-name" value={pipelineName} onChange={(event) => setPipelineName(event.target.value)} maxLength={80} />
+          <div className="button-row" style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 10 }}>
+            <button className="secondary" type="button" onClick={savePipeline} disabled={!operations.length || !!busy}>Save in this session</button>
+            <button className="secondary" type="button" onClick={exportPipeline} disabled={!operations.length || !!busy}>Export JSON</button>
+            <label className="secondary" style={{ display: "inline-flex", alignItems: "center", cursor: "pointer" }}>Import JSON<input type="file" accept=".json,application/json" onChange={importPipeline} hidden disabled={!!busy} /></label>
+          </div>
+          {savedPipelines.length > 0 && <div className="detail-row" style={{ marginTop: 10 }}><label htmlFor="saved-pipeline">Saved this session</label><select id="saved-pipeline" defaultValue="" onChange={(event) => loadPipeline(event.target.value)}><option value="">Choose a pipeline</option>{savedPipelines.map((item) => <option key={item.name} value={item.name}>{item.name}</option>)}</select></div>}
+          <p className="hint">Only transformation instructions are saved/exported. Dataset contents are never included. Imported pipelines must be previewed against the active dataset.</p>
         </div>
         <button className="secondary" type="button" onClick={addOperation} disabled={!column || operations.length >= 25 || !!busy}>Add operation</button>
         <p className="hint">Maximum 25 operations. Operations run in order. Invalid casts, missing columns, collisions and empty outputs are rejected.</p>
