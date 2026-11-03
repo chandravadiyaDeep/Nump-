@@ -75,7 +75,7 @@ export const resourceContent: Record<string, { title: string; description: strin
     title: "Public Datasets",
     description: "A starting directory for finding data to practise analysis and machine learning. Always check source terms before reuse.",
     sections: [
-      { heading: "Where to look", paragraphs: ["Prefer dataset publishers and official repositories so you can inspect provenance, documentation, licensing and collection methods."], bullets: ["UCI Machine Learning Repository — https://archive.ics.uci.edu/", "政府 open-data portals and national statistics offices — check each portal's licence and terms", "Kaggle Datasets — https://www.kaggle.com/datasets — review each dataset's licence and source"] },
+      { heading: "Where to look", paragraphs: ["Prefer dataset publishers and official repositories so you can inspect provenance, documentation, licensing and collection methods."], bullets: ["UCI Machine Learning Repository — https://archive.ics.uci.edu/", "Government open-data portals and national statistics offices — check each portal's licence and terms", "Kaggle Datasets — https://www.kaggle.com/datasets — review each dataset's licence and source"] },
       { heading: "Before using a dataset", paragraphs: ["Record the source, version, licence, target definition, collection period, known limitations and whether personal or sensitive information is present. Do not upload sensitive data to a third-party service without authorization."] },
     ],
   },
