@@ -62,7 +62,7 @@ function cleanRows(rows: SampleRow[], removeDuplicates: boolean, fillMissing: bo
     });
   }
   if (trimOutliers) {
-    // A transparent demo-only rule: remove rows outside plausible bounds for age and spend.
+    // A transparent demo-only rule: remove rows outside the documented sample bounds.
     result = result.filter((row) => !(typeof row.age === "number" && row.age > 85) && !(typeof row.income === "number" && row.income > 200000) && !(typeof row.total_spent === "number" && row.total_spent > 80000));
   }
   return result;
@@ -107,7 +107,6 @@ export default function SampleDataDemo() {
     count: rows.filter((row) => row[column] === "").length,
   })).filter((item) => item.count > 0).sort((a, b) => b.count - a.count), [rows]);
   const ageValues = rows.map((row) => row.age).filter((value): value is number => typeof value === "number");
-  const maxAge = Math.max(...ageValues, 1);
   const incomeValues = rows.map((row) => row.income).filter((value): value is number => typeof value === "number");
   const spendValues = rows.map((row) => row.total_spent).filter((value): value is number => typeof value === "number");
   const maxIncome = Math.max(...incomeValues, 1);
