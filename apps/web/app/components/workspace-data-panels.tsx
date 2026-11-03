@@ -14,6 +14,8 @@ type AnalysisWorkspaceProps = {
   notice: string;
   onFileChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onInspect: () => void;
+  onUseSampleDataset: () => void;
+  sampleBusy: boolean;
 };
 
 type CleaningWorkspaceProps = {
