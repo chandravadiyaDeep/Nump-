@@ -341,3 +341,20 @@
   .workspace-content { padding-bottom: 92px; }
   .workspace-public-link { display: none; }
 }
+
+/* Align existing public discovery pages with the landing-page visual language. */
+.public-page { color: #17151f; background: #fcfcfd; }
+.public-site-header { border-color: #e9e7ef; background: #fcfcfd; }
+.public-site-brand { color: #17151f; }
+.public-site-brand-mark { background: #6d28d9; }
+.public-site-header nav a:hover { color: #6d28d9; }
+.public-site-header nav .public-site-cta { background: #6d28d9; }
+.public-eyebrow { color: #6d28d9; }
+.public-card { border-color: #e9e7ef; box-shadow: 0 10px 30px rgba(25,20,45,.035); }
+.public-card:hover { border-color: #c9b7ed; box-shadow: 0 15px 36px rgba(25,20,45,.08); }
+.public-card-eyebrow, .public-card-link, .public-primary-link { color: #6d28d9; }
+.public-primary-link { color: #fff; background: #6d28d9; }
+.public-primary-link:hover { background: #5720b2; }
+.public-callout { border-left-color: #8b5cf6; color: #51476a; background: #f5f1ff; }
+.public-site-simple-footer { border-color: #e9e7ef; background: #fff; }
+.public-site-simple-footer a, .public-article-sources a { color: #6d28d9; }
