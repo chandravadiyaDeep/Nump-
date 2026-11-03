@@ -6,6 +6,7 @@ import WorkspaceShell from "../components/workspace-shell";
 import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "../components/workspace-data-panels";
 import { DataVisualizationWorkspace } from "../components/workspace-data-visualization";
 import { MlLabWorkspace, MlReadinessWorkspace } from "../components/workspace-ml-workspaces";
+import { DataTransformationStudio } from "../components/workspace-transformation-studio";
 import { getMlColumns, parseComparisonResponse, parseReadinessResponse, validateComparisonSelection, validateReadinessSelection } from "../components/workspace-ml-model.mjs";
 import { validateUpload } from "../components/workspace-data-model.mjs";
 
@@ -328,14 +329,17 @@ export default function HomePage() {
       hasActiveDataset={!!(file && overview)}
       workflowStatus={{ hasFile: !!file, inspected: !!overview, cleaned: !!cleanedCsv, readinessComplete: !!readiness, comparisonComplete: !!mlComparison }}
       preprocessing={
-        <DataPreprocessingWorkspace
-          file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv}
-          fillMissing={fillMissing} dropDuplicates={dropDuplicates} normalizeText={normalizeText}
-          busy={busy} error={error} notice={notice} onToggle={changeCleaningOption}
-          onPreview={previewCleaning} onExecute={executeCleaning} onDownload={downloadCleanedCsv}
-          confirming={confirmingExecution} onBeginConfirmation={() => { setConfirmingExecution(true); setError(""); }}
-          onCancelConfirmation={() => setConfirmingExecution(false)}
-        />
+        <>
+          <DataPreprocessingWorkspace
+            file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv}
+            fillMissing={fillMissing} dropDuplicates={dropDuplicates} normalizeText={normalizeText}
+            busy={busy} error={error} notice={notice} onToggle={changeCleaningOption}
+            onPreview={previewCleaning} onExecute={executeCleaning} onDownload={downloadCleanedCsv}
+            confirming={confirmingExecution} onBeginConfirmation={() => { setConfirmingExecution(true); setError(""); }}
+            onCancelConfirmation={() => setConfirmingExecution(false)}
+          />
+          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} /></div>
+        </>
       }
       visualization={<DataVisualizationWorkspace file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv} />}
       mlReadiness={<MlReadinessWorkspace {...mlWorkspaceProps} />}
