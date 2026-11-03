@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import type { ChangeEvent } from "react";
-import WorkspaceShell from "./components/workspace-shell";
-import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "./components/workspace-data-panels";
-import { DataVisualizationWorkspace } from "./components/workspace-data-visualization";
-import { MlLabWorkspace, MlReadinessWorkspace } from "./components/workspace-ml-workspaces";
-import { getMlColumns, parseComparisonResponse, parseReadinessResponse, validateComparisonSelection, validateReadinessSelection } from "./components/workspace-ml-model.mjs";
-import { validateUpload } from "./components/workspace-data-model.mjs";
+import WorkspaceShell from "../components/workspace-shell";
+import { DataAnalysisWorkspace, DataPreprocessingWorkspace } from "../components/workspace-data-panels";
+import { DataVisualizationWorkspace } from "../components/workspace-data-visualization";
+import { MlLabWorkspace, MlReadinessWorkspace } from "../components/workspace-ml-workspaces";
+import { getMlColumns, parseComparisonResponse, parseReadinessResponse, validateComparisonSelection, validateReadinessSelection } from "../components/workspace-ml-model.mjs";
+import { validateUpload } from "../components/workspace-data-model.mjs";
 
 type ApiObject = Record<string, unknown>;
 type ReadinessComparison = { before: ApiObject; after: ApiObject } | null;
