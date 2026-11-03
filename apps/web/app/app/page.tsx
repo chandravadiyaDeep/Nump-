@@ -61,6 +61,7 @@ export default function HomePage() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [busy, setBusy] = useState("");
+  const [sampleBusy, setSampleBusy] = useState(false);
 
   function ensureApiConfigured(): boolean {
     if (API_BASE) return true;
@@ -85,6 +86,35 @@ export default function HomePage() {
     if (!nextFile) return;
     const validationError = validateUpload(nextFile.name, nextFile.size);
     if (validationError) setError(validationError);
+  }
+
+  async function useSampleDataset() {
+    setSampleBusy(true);
+    setError("");
+    setNotice("");
+    try {
+      const response = await fetch("/data/sample/ecommerce_customers_synthetic.csv");
+      if (!response.ok) throw new Error("The bundled sample dataset is currently unavailable.");
+      const csv = await response.text();
+      const sampleFile = new File([csv], "ecommerce_customers_synthetic.csv", { type: "text/csv" });
+      const validationError = validateUpload(sampleFile.name, sampleFile.size);
+      if (validationError) throw new Error(validationError);
+      setFile(sampleFile);
+      setMlDatasetVersion("source");
+      setMlComparison(null);
+      setConfirmingMlComparison(false);
+      setOverview(null);
+      setReadiness(null);
+      setCleaning(null);
+      setComparison(null);
+      setCleanedCsv(null);
+      setConfirmingExecution(false);
+      setNotice("Synthetic sample selected. Inspect it to begin; it has not been uploaded yet.");
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Unable to load the bundled sample dataset.");
+    } finally {
+      setSampleBusy(false);
+    }
   }
 
   function validateSelectedFile(): boolean {
