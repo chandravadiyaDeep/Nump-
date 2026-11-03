@@ -326,6 +326,7 @@ export default function HomePage() {
   return (
     <WorkspaceShell
       hasActiveDataset={!!(file && overview)}
+      workflowStatus={{ hasFile: !!file, inspected: !!overview, cleaned: !!cleanedCsv, readinessComplete: !!readiness, comparisonComplete: !!mlComparison }}
       preprocessing={
         <DataPreprocessingWorkspace
           file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv}
