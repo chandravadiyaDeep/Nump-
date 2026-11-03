@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SiteFooter from "./site-footer";
 import type { ReactNode } from "react";
 
 export type PublicCard = {
@@ -27,13 +28,7 @@ export function PublicSiteHeader() {
 }
 
 export function PublicSiteFooter() {
-  return (
-    <footer className="public-site-simple-footer">
-      <span>© {new Date().getFullYear()} NUMPA</span>
-      <span>Data workflows and practical learning, together.</span>
-      <Link href="/">Open workspace</Link>
-    </footer>
-  );
+  return <SiteFooter />;
 }
 
 export function PublicPage({
