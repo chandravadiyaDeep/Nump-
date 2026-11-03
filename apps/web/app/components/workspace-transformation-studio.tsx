@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { ChangeEvent } from "react";
 
 type ApiObject = Record<string, unknown>;
 type OperationType = "rename_column" | "drop_column" | "cast_numeric" | "cast_datetime" | "filter_rows";
@@ -87,7 +88,7 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
     setMessage("Pipeline definition exported. It contains operation settings only, not dataset data.");
   }
 
-  async function importPipeline(event: React.ChangeEvent<HTMLInputElement>) {
+  async function importPipeline(event: ChangeEvent<HTMLInputElement>) {
     const selected = event.target.files?.[0];
     event.target.value = "";
     if (!selected) return;
