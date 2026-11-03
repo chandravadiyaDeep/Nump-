@@ -92,6 +92,22 @@ export function DataAnalysisWorkspace({ file, overview, busy, error, notice, onF
       {error && <div className="alert" role="alert">{error}</div>}
       {notice && <div className="alert success" role="status">{notice}</div>}
 
+      {!overview && (
+        <section className="workspace-onboarding panel" aria-labelledby="workspace-onboarding-title">
+          <div className="workspace-onboarding-copy">
+            <span className="workspace-onboarding-kicker">GET STARTED</span>
+            <h2 id="workspace-onboarding-title">{file ? "Your dataset is ready to inspect." : "Start with a dataset. NUMPA will guide the next steps."}</h2>
+            <p>{file ? "Your selected file stays in this browser session. Inspect it to see its structure and quality checks." : "Upload a supported file or explore the synthetic sample. Your source file is kept separate from any cleaned output."}</p>
+            {!file && <button className="primary workspace-onboarding-action" type="button" onClick={onUseSampleDataset} disabled={sampleBusy || !!busy}>{sampleBusy ? "Loading sample…" : "Explore the sample dataset →"}</button>}
+          </div>
+          <ol className="workspace-onboarding-steps">
+            <li><span>01</span><div><strong>Choose</strong><small>Upload a CSV, Excel or supported dataset.</small></div></li>
+            <li><span>02</span><div><strong>Inspect</strong><small>Review structure, missing values and duplicates.</small></div></li>
+            <li><span>03</span><div><strong>Prepare</strong><small>Preview cleaning and assess ML readiness.</small></div></li>
+          </ol>
+        </section>
+      )}
+
       <div className="analysis-grid">
         <div className="stack">
           <section className="panel">
