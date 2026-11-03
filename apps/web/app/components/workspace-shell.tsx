@@ -142,7 +142,7 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
         id="workspace-navigation"
       >
         <div className="workspace-brand-row">
-          <a className="workspace-brand" href="/" aria-label="NUMPA home">
+          <a className="workspace-brand" href="/app" aria-label="NUMPA workspace home">
             <span className="workspace-brand-mark" aria-hidden="true">N</span>
             <span className="workspace-brand-name">NUMPA</span>
           </a>
