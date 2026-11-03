@@ -56,7 +56,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         <h2>What this workflow helps you do</h2>
         <ul>{service.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
         <PublicCallout>NUMPA keeps the original uploaded source separate from cleaning outputs. Readiness results are assessments of dataset signals, not promises of model outcomes.</PublicCallout>
-        <Link className="public-primary-link" href="/">Open NUMPA workspace <span aria-hidden="true">→</span></Link>
+        <Link className="public-primary-link" href="/app">Open NUMPA workspace <span aria-hidden="true">→</span></Link>
       </section>
     </PublicPage>
   );
