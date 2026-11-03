@@ -77,10 +77,12 @@ export function PublicArticle({
   updated,
   intro,
   sections,
+  sources = [],
 }: {
   updated: string;
   intro: string;
   sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
+  sources?: { label: string; url: string }[];
 }) {
   return (
     <article className="public-article">
@@ -95,6 +97,12 @@ export function PublicArticle({
           ) : null}
         </section>
       ))}
+      {sources.length > 0 ? (
+        <section className="public-article-sources">
+          <h2>Further reading</h2>
+          <ul>{sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}</a></li>)}</ul>
+        </section>
+      ) : null}
     </article>
   );
 }
