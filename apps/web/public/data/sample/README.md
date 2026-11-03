@@ -11,6 +11,6 @@ File: `ecommerce_customers_synthetic.csv`
 - License: Original synthetic demonstration data supplied with this repository.
 - Personal data: No real customer records or identifiers are included.
 
-The sample intentionally includes missing cells, three duplicate rows and numeric outliers. Demo calculations run in the browser from this bundled sample. They are illustrative and are not calls to the production ML Readiness API or production customer analytics.
+The sample intentionally includes 96 missing cells (8% of the 1,200-cell grid), three duplicate rows and numeric outliers. Demo calculations run in the browser from this bundled sample. They are illustrative and are not calls to the production ML Readiness API or production customer analytics.
 
 The sample is public static demo content. Never place an uploaded visitor dataset in this directory, localStorage, or source control.
