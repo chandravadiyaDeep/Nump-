@@ -213,7 +213,8 @@ export default function WorkspaceShell({ children, preprocessing, visualization,
               <p className="workspace-section-title" role="heading" aria-level={1}>{section}</p>
             </div>
           </div>
-          <div className="workspace-topbar-actions">\n            <Link className="workspace-public-link" href="/">Public site</Link>
+          <div className="workspace-topbar-actions">
+            <Link className="workspace-public-link" href="/">Public site</Link>
             {section === "Data Analysis" && hasActiveDataset && (
               <button className="workspace-next-stage" type="button" onClick={() => setSection("Data Preprocessing / Cleaning")}>
                 Review cleaning →
