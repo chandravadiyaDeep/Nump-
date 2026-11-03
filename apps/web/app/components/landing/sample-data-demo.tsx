@@ -170,7 +170,7 @@ export default function SampleDataDemo() {
               )}
               {activeTab === "ML readiness" && (
                 <div className="demo-readiness">
-                  <div><span className="demo-kicker">DEMO DATA-QUALITY INDICATOR</span><strong>{beforeScore}<small>/100</small></strong><p>Calculated from sample missing-cell and duplicate rates. This is not NUMPA's production ML Readiness score.</p></div>
+                  <div><span className="demo-kicker">DEMO DATA-QUALITY INDICATOR</span><strong>{beforeScore}<small>/100</small></strong><p>Calculated from sample missing-cell and duplicate rates. This is not NUMPA&apos;s production ML Readiness score.</p></div>
                   <div><h3>What affects this indicator?</h3><ul><li>{missingCount(rows)} missing cells are present in the source sample.</li><li>{duplicatesCount(rows)} exact duplicate records are present.</li><li>Target choice, leakage, task-specific checks and validation strategy are not evaluated in this landing-page demo.</li></ul></div>
                 </div>
               )}
