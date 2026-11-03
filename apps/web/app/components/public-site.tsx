@@ -79,12 +79,10 @@ export function PublicCardGrid({ cards }: { cards: PublicCard[] }) {
 }
 
 export function PublicArticle({
-  title,
   updated,
   intro,
   sections,
 }: {
-  title: string;
   updated: string;
   intro: string;
   sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
