@@ -149,7 +149,7 @@ export default function SampleDataDemo() {
                   <div><h3>Missing values by column</h3><p className="demo-muted">The sample includes intentional gaps to demonstrate quality checks.</p>
                     {missingByColumn.map((item) => <div className="demo-bar-row" key={item.column}><span>{item.column.replaceAll("_", " ")}</span><div><i style={{ width: (item.count / rows.length * 100) + "%" }} /></div><b>{item.count}</b></div>)}
                   </div>
-                  <div className="demo-quality-card"><span className="demo-kicker">DATA QUALITY SNAPSHOT</span><strong>{fmt(missingCount(rows))}</strong><p>missing cells across {columns.length} columns</p><strong>{duplicatesCount(rows)}</strong><p>duplicate records detected</p><strong>2</strong><p>intentional numeric outlier fields in the sample</p></div>
+                  <div className="demo-quality-card"><span className="demo-kicker">DATA QUALITY SNAPSHOT</span><strong>{fmt(missingCount(rows))}</strong><p>missing cells across {columns.length} columns</p><strong>{duplicatesCount(rows)}</strong><p>duplicate records detected</p><strong>2</strong><p>intentional numeric outlier values in the sample</p></div>
                 </div>
               )}
               {activeTab === "Visualize" && (
