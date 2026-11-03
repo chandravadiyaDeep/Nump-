@@ -58,7 +58,7 @@ export default function LandingPage() {
             <div className="landing-preview-window"><div className="landing-preview-top"><div><i></i><i></i><i></i></div><span>NUMPA / Dataset overview</span><b>DEMO</b></div>
               <div className="landing-preview-body"><div className="landing-preview-sidebar"><span className="is-current">▦</span><span>⌁</span><span>▥</span><span>◉</span></div><div className="landing-preview-main">
                 <div className="landing-preview-title"><span><small>DATASET OVERVIEW</small><strong>Customer data</strong></span><span className="landing-preview-chip">Sample</span></div>
-                <div className="landing-preview-stats"><div><small>Rows</small><strong>5,000</strong></div><div><small>Columns</small><strong>12</strong></div><div><small>Missing</small><strong>2.4%</strong></div></div>
+                <div className="landing-preview-stats"><div><small>Rows</small><strong>100</strong></div><div><small>Columns</small><strong>12</strong></div><div><small>Dataset</small><strong>Sample</strong></div></div>
                 <div className="landing-preview-chart"><div><strong>Data quality overview</strong><small>Illustrative interface preview</small></div><div className="landing-preview-bars"><i style={{height:"46%"}}></i><i style={{height:"76%"}}></i><i style={{height:"58%"}}></i><i style={{height:"92%"}}></i><i style={{height:"66%"}}></i><i style={{height:"82%"}}></i><i style={{height:"52%"}}></i><i style={{height:"70%"}}></i></div></div>
                 <div className="landing-preview-bottom"><span><i></i> Structure inspected</span><span><i></i> Quality checks available</span></div>
               </div></div>
