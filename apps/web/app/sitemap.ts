@@ -28,9 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const resourceTopics = ["datasets", "cheat-sheets", "learning-roadmaps", "useful-tools"];
   const blogArticles = ["data-quality-before-machine-learning", "understanding-missing-values"];
 
-  return [...fixedRoutes, ...learnTopics.map((slug) => `/learn/${slug}`), ...resourceTopics.map((slug) => `/resources/${slug}`), ...blogArticles.map((slug) => `/blog/${slug}`)].map((route) => ({
+  const routes: MetadataRoute.Sitemap = [...fixedRoutes, ...learnTopics.map((slug) => `/learn/${slug}`), ...resourceTopics.map((slug) => `/resources/${slug}`), ...blogArticles.map((slug) => `/blog/${slug}`)].map((route) => ({
     url: `${baseUrl}${route}`,
-    changeFrequency: route === "" ? "weekly" : "monthly",
+    changeFrequency: route === "" ? "weekly" as const : "monthly" as const,
     priority: route === "" ? 1 : route.startsWith("/services") ? 0.9 : 0.7,
   }));
+
+  return routes;
 }
