@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/community/contributions",
     "/about",
     "/contact",
+    "/privacy",
+    "/terms",
   ];
 
   const learnTopics = ["artificial-intelligence", "machine-learning", "data-science", "python"];
