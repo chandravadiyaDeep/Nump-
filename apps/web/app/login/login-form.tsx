@@ -24,7 +24,7 @@ export default function LoginForm() {
         const { data, error: authError } = await supabase.auth.signUp({
           email,
           password,
-          options: { emailRedirectTo: `${window.location.origin}/auth/callback?next=/` },
+          options: { emailRedirectTo: `${window.location.origin}/auth/callback?next=/app` },
         });
         if (authError) throw authError;
         setMessage(data.session
@@ -33,7 +33,7 @@ export default function LoginForm() {
       } else {
         const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
         if (authError) throw authError;
-        window.location.assign("/");
+        window.location.assign("/app");
       }
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Authentication failed. Please try again.");
