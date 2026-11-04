@@ -25,6 +25,7 @@ function metric(value: unknown): string {
 function buildReport(input: {
   file: File | null; overview: ApiObject | null; cleaning: ApiObject | null;
   readiness: ApiObject | null; comparison: ApiObject | null; mlComparison: ApiObject | null;
+  transformationAudit: ApiObject | null; featureAudit: ApiObject | null;
   task: string; target: string;
 }) {
   const overview = input.overview ?? {};
@@ -51,6 +52,8 @@ function buildReport(input: {
     readiness_assessment: input.readiness,
     cleaning_readiness_comparison: input.comparison,
     model_comparison: input.mlComparison,
+    transformation_audit: input.transformationAudit,
+    feature_engineering_audit: input.featureAudit,
   };
 }
 
@@ -70,6 +73,8 @@ export function ReportExportStudio(props: {
     ["Readiness assessment", report.readiness_assessment],
     ["Cleaning comparison", report.cleaning_readiness_comparison],
     ["Model comparison", report.model_comparison],
+    ["Transformation audit", report.transformation_audit],
+    ["Feature engineering audit", report.feature_engineering_audit],
   ].filter(([, value]) => value !== null && value !== undefined);
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>NUMPA Dataset Report</title><style>
   body{font:15px/1.6 Arial,sans-serif;color:#20202a;max-width:900px;margin:40px auto;padding:0 22px}
@@ -84,7 +89,7 @@ export function ReportExportStudio(props: {
     <div className="panel-body">
       {!ready ? <div className="empty-state"><h3>Inspect a dataset first</h3><p>Reports become available after a dataset has been inspected.</p></div> : <>
         <div className="dataset-identity"><div><span>Source</span><strong>{props.file?.name}</strong></div><div><span>Rows</span><strong>{metric(report.dataset.row_count)}</strong></div><div><span>Columns</span><strong>{metric(report.dataset.column_count)}</strong></div></div>
-        <p className="hint">Included: dataset metadata, column names, cleaning audit, readiness assessment and model-comparison results when available. Excluded: raw rows, preview samples and source file contents.</p>
+        <p className="hint">Included: dataset metadata, cleaning/readiness results, model comparison and transformation/feature audit summaries when available. Excluded: raw rows, preview samples and source file contents.</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
           <button className="primary" type="button" onClick={() => downloadText(json, `${stem}-numpa-report.json`, "application/json")}>Download JSON report</button>
           <button className="secondary" type="button" onClick={() => downloadText(html, `${stem}-numpa-report.html`, "text/html")}>Download printable HTML</button>
