@@ -141,6 +141,9 @@ export default function HomePage() {
   async function inspectDataset() {
     if (!validateSelectedFile() || !ensureApiConfigured() || !file) return;
     setBusy("inspect");
+    // A fresh inspection invalidates audit metadata from the previous inspection.
+    setTransformationAudit(null);
+    setFeatureAudit(null);
     setError("");
     setNotice("");
     try {
