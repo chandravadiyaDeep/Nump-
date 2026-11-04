@@ -10,6 +10,8 @@
 - ML readiness assessment when available.
 - Cleaning before/after readiness comparison when available.
 - Model comparison results when available.
+- Transformation operation audit summaries after a successful preview.
+- Feature-engineering operation audit summaries after a successful preview.
 - Generation timestamp and report schema version.
 
 ## Export formats
@@ -29,5 +31,6 @@ Direct server-generated PDF is not part of this increment. The printable HTML wo
 ## Limitations
 
 - Only results currently held in the active browser session are included.
+- Transformation and feature audit summaries contain operation metadata only; preview rows are excluded.
 - Transformation and feature-operation audit summaries are not yet lifted into shared page state and therefore are not included in this release.
 - No persistent report history, share links, scheduled reports, PDF service, or additional export formats.
