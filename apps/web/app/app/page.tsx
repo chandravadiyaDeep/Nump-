@@ -217,8 +217,8 @@ export default function HomePage() {
     finally { setBusy(""); }
   }
 
-  function changeMlTask(value: string) { setTask(value); setReadiness(null); setMlComparison(null); setComparison(null); setConfirmingMlComparison(false); }
-  function changeMlTarget(value: string) { setTarget(value); setReadiness(null); setMlComparison(null); setComparison(null); setConfirmingMlComparison(false); }
+  function changeMlTask(value: string) { setTask(value); setReadiness(null); setMlComparison(null); setComparison(null); setFeatureAudit(null); setConfirmingMlComparison(false); }
+  function changeMlTarget(value: string) { setTarget(value); setReadiness(null); setMlComparison(null); setComparison(null); setFeatureAudit(null); setConfirmingMlComparison(false); }
   function changeMlDatasetVersion(value: "source" | "cleaned") { setMlDatasetVersion(value); setReadiness(null); setMlComparison(null); setConfirmingMlComparison(false); setError(""); setNotice(""); }
   function changeCleaningOption(operation: "fillMissing" | "dropDuplicates" | "normalizeText", selected: boolean) {
     if (operation === "fillMissing") setFillMissing(selected);
