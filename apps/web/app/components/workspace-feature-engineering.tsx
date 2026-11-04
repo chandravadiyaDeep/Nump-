@@ -11,8 +11,8 @@ type FeatureOperation =
 
 const API_BASE = (process.env.NEXT_PUBLIC_NUMPA_API_URL || "").trim().replace(/\/$/, "");
 
-export function DataFeatureEngineeringStudio({ file, columns, task, target }: {
-  file: File | null; columns: string[]; task: string; target: string;
+export function DataFeatureEngineeringStudio({ file, columns, task, target, onAudit }: {
+  file: File | null; columns: string[]; task: string; target: string; onAudit: (audit: Record<string, unknown> | null) => void;
 }) {
   const [kind, setKind] = useState<FeatureOperation["type"]>("date_parts");
   const [column, setColumn] = useState("");
@@ -40,7 +40,7 @@ export function DataFeatureEngineeringStudio({ file, columns, task, target }: {
       operation = { type: kind, left_column: left, right_column: right, operator, new_column: newColumn.trim() };
     }
     setOperations((current) => [...current, operation]);
-    setPreview(null); setError(""); setNotice("");
+    setPreview(null); onAudit(null); setError(""); setNotice("");
     setNewColumn("");
   }
 
@@ -66,7 +66,10 @@ export function DataFeatureEngineeringStudio({ file, columns, task, target }: {
         throw new Error(detail);
       }
       if (action === "preview") {
-        setPreview(await response.json() as Record<string, unknown>);
+        const result = await response.json() as Record<string, unknown>;
+        setPreview(result);
+        // Share only the audit metadata; preview sample rows remain local to this component.
+        onAudit(result.report && typeof result.report === "object" ? result.report as Record<string, unknown> : null);
         setNotice("Feature preview is ready. Review target protection and the audit before export.");
       } else {
         const blob = await response.blob();
@@ -106,7 +109,7 @@ export function DataFeatureEngineeringStudio({ file, columns, task, target }: {
       {kind === "date_parts" && <fieldset><legend>Date parts to extract</legend>{["year", "month", "day", "dayofweek"].map((part) => <label key={part} className="check-row"><input type="checkbox" checked={parts.includes(part)} onChange={(event) => setParts((current) => event.target.checked ? [...current, part] : current.filter((item) => item !== part))} /><span>{part}</span></label>)}</fieldset>}
       {kind === "missing_indicator" && <><label htmlFor="missing-feature-name">New feature name (optional)</label><input id="missing-feature-name" value={newColumn} onChange={(event) => setNewColumn(event.target.value)} placeholder={column ? `${column}_is_missing` : "column_is_missing"} /></>}
       <button className="secondary" type="button" onClick={addOperation} disabled={!!busy || operations.length >= 20}>Add feature operation</button>
-      {operations.length > 0 && <div className="detail-list"><h3>Feature plan · {operations.length}/20</h3>{operations.map((item, index) => <div className="detail-row" key={index}><span>{index + 1}. {item.type.replaceAll("_", " ")} · {"column" in item ? item.column : `${item.left_column} ${item.operator} ${item.right_column}`}</span><button className="secondary" type="button" onClick={() => { setOperations((current) => current.filter((_, i) => i !== index)); setPreview(null); }} disabled={!!busy}>Remove</button></div>)}</div>}
+      {operations.length > 0 && <div className="detail-list"><h3>Feature plan · {operations.length}/20</h3>{operations.map((item, index) => <div className="detail-row" key={index}><span>{index + 1}. {item.type.replaceAll("_", " ")} · {"column" in item ? item.column : `${item.left_column} ${item.operator} ${item.right_column}`}</span><button className="secondary" type="button" onClick={() => { setOperations((current) => current.filter((_, i) => i !== index)); setPreview(null); onAudit(null); }} disabled={!!busy}>Remove</button></div>)}</div>}
       <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 14 }}><button className="primary" type="button" onClick={() => request("preview")} disabled={!operations.length || !!busy}>Preview features</button><button className="primary" type="button" onClick={() => request("execute")} disabled={!preview || !!busy}>Approve & export CSV</button></div>
       {preview && <div className="results"><h3>Feature preview audit</h3><pre style={{ overflowX: "auto", whiteSpace: "pre-wrap" }}>{JSON.stringify(preview.report, null, 2)}</pre><div className="table-wrap"><table className="profile-table"><thead><tr>{(Array.isArray(preview.columns) ? preview.columns : []).map((item) => <th key={String(item)}>{String(item)}</th>)}</tr></thead><tbody>{(Array.isArray(preview.preview) ? preview.preview : []).map((row, index) => <tr key={index}>{(Array.isArray(preview.columns) ? preview.columns : []).map((name) => <td key={String(name)}>{String(row && typeof row === "object" ? (row as Record<string, unknown>)[String(name)] ?? "" : "")}</td>)}</tr>)}</tbody></table></div><p className="hint">These are stateless row-wise features. Learned preprocessing must be fitted only on training data after splitting.</p></div>}
     </div>}

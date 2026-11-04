@@ -19,7 +19,7 @@ async function apiError(response: Response): Promise<string> {
   return `Transformation request failed (${response.status}).`;
 }
 
-export function DataTransformationStudio({ file, overview }: { file: File | null; overview: ApiObject | null }) {
+export function DataTransformationStudio({ file, overview, onAudit }: { file: File | null; overview: ApiObject | null; onAudit: (audit: ApiObject | null) => void }) {
   const columns = useMemo(() => {
     const raw = overview?.columns;
     if (!Array.isArray(raw)) return [];
@@ -54,7 +54,7 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
     if (type === "rename_column" && !operation.new_name) { setError("Enter a new column name."); return; }
     if (type === "filter_rows" && !["is_null", "not_null"].includes(operator) && !value.trim()) { setError("Enter a filter value."); return; }
     setOperations((current) => [...current, operation]);
-    setPreview(null); setError(""); setMessage("");
+    setPreview(null); onAudit(null); setError(""); setMessage("");
     if (type === "rename_column" || type === "filter_rows") setValue("");
   }
 
@@ -130,7 +130,10 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
       const response = await fetch(`${API_BASE}/api/v1/transformations/${kind}`, { method: "POST", body: form });
       if (!response.ok) throw new Error(await apiError(response));
       if (kind === "preview") {
-        setPreview(await response.json() as ApiObject);
+        const result = await response.json() as ApiObject;
+        setPreview(result);
+        // Share the audit only; preview sample rows stay local to this component.
+        onAudit(result.report && typeof result.report === "object" ? result.report as ApiObject : null);
         setMessage("Preview generated from the unchanged source file. Review it before execution.");
       } else {
         const blob = await response.blob();
@@ -177,11 +180,11 @@ export function DataTransformationStudio({ file, overview }: { file: File | null
         </div>
         <button className="secondary" type="button" onClick={addOperation} disabled={!column || operations.length >= 25 || !!busy}>Add operation</button>
         <p className="hint">Maximum 25 operations. Operations run in order. Invalid casts, missing columns, collisions and empty outputs are rejected.</p>
-        {operations.length > 0 && <div className="detail-list"><h3>Pipeline · {operations.length}/25</h3>{operations.map((item, index) => <div className="detail-row" key={index}><span>{index + 1}. {item.type.replaceAll("_", " ")} · {item.column}{item.new_name ? ` → ${item.new_name}` : ""}{item.operator ? ` · ${item.operator} ${item.value ?? ""}` : ""}</span><button className="secondary" type="button" onClick={() => { setOperations((current) => current.filter((_, i) => i !== index)); setPreview(null); }} disabled={!!busy}>Remove</button></div>)}</div>}
+        {operations.length > 0 && <div className="detail-list"><h3>Pipeline · {operations.length}/25</h3>{operations.map((item, index) => <div className="detail-row" key={index}><span>{index + 1}. {item.type.replaceAll("_", " ")} · {item.column}{item.new_name ? ` → ${item.new_name}` : ""}{item.operator ? ` · ${item.operator} ${item.value ?? ""}` : ""}</span><button className="secondary" type="button" onClick={() => { setOperations((current) => current.filter((_, i) => i !== index)); setPreview(null); onAudit(null); }} disabled={!!busy}>Remove</button></div>)}</div>}
         <div className="button-row" style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 16 }}>
           <button className="primary" type="button" onClick={() => request("preview")} disabled={!operations.length || !!busy}>{busy === "preview" ? "Preparing preview…" : "Preview transformations"}</button>
           <button className="primary" type="button" onClick={() => request("execute")} disabled={!preview || !!busy}>{busy === "execute" ? "Executing…" : "Approve & export CSV"}</button>
-          <button className="secondary" type="button" onClick={() => { setOperations([]); setPreview(null); setError(""); setMessage(""); }} disabled={!operations.length || !!busy}>Clear pipeline</button>
+          <button className="secondary" type="button" onClick={() => { setOperations([]); setPreview(null); onAudit(null); setError(""); setMessage(""); }} disabled={!operations.length || !!busy}>Clear pipeline</button>
         </div>
         {preview && <div className="results" aria-live="polite">
           <div className="detail-list"><h3>Preview report</h3>
