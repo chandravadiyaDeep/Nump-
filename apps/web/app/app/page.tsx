@@ -57,6 +57,9 @@ export default function HomePage() {
   const [cleaning, setCleaning] = useState<ApiObject | null>(null);
   const [comparison, setComparison] = useState<ReadinessComparison>(null);
   const [mlComparison, setMlComparison] = useState<ApiObject | null>(null);
+  // Keep only preview audit metadata in shared state; never store preview rows in reports.
+  const [transformationAudit, setTransformationAudit] = useState<ApiObject | null>(null);
+  const [featureAudit, setFeatureAudit] = useState<ApiObject | null>(null);
   const [mlDatasetVersion, setMlDatasetVersion] = useState<"source" | "cleaned">("source");
   const [confirmingMlComparison, setConfirmingMlComparison] = useState(false);
   const [cleanedCsv, setCleanedCsv] = useState<CleaningOutput>(null);
@@ -77,6 +80,7 @@ export default function HomePage() {
     const nextFile = event.target.files?.[0] ?? null;
     event.target.value = "";
     setFile(nextFile);
+    setTransformationAudit(null); setFeatureAudit(null);
     setMlDatasetVersion("source"); setMlComparison(null); setConfirmingMlComparison(false);
     setOverview(null);
     setReadiness(null);
@@ -103,6 +107,7 @@ export default function HomePage() {
       const validationError = validateUpload(sampleFile.name, sampleFile.size);
       if (validationError) throw new Error(validationError);
       setFile(sampleFile);
+      setTransformationAudit(null); setFeatureAudit(null);
       setMlDatasetVersion("source");
       setMlComparison(null);
       setConfirmingMlComparison(false);
@@ -346,7 +351,7 @@ export default function HomePage() {
             confirming={confirmingExecution} onBeginConfirmation={() => { setConfirmingExecution(true); setError(""); }}
             onCancelConfirmation={() => setConfirmingExecution(false)}
           />
-          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} /><DataFeatureEngineeringStudio file={file} columns={featureColumns} task={task} target={target} /><ReportExportStudio file={file} overview={overview} cleaning={cleaning} readiness={readiness} comparison={comparison} mlComparison={mlComparison} task={task} target={target} /></div>
+          <div className="shell cleaning-workspace"><DataTransformationStudio file={file} overview={overview} onAudit={setTransformationAudit} /><DataFeatureEngineeringStudio file={file} columns={featureColumns} task={task} target={target} onAudit={setFeatureAudit} /><ReportExportStudio file={file} overview={overview} cleaning={cleaning} readiness={readiness} comparison={comparison} mlComparison={mlComparison} transformationAudit={transformationAudit} featureAudit={featureAudit} task={task} target={target} /></div>
         </>
       }
       visualization={<DataVisualizationWorkspace file={file} overview={overview} cleaning={cleaning} cleanedCsv={cleanedCsv} />}
