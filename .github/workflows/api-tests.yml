@@ -2,9 +2,9 @@ name: NUMPA API tests
 
 on:
   push:
-    branches: [main, "mvp/**", "feature/**", "fix/**"]
+    branches: [main, "mvp/**", "feature/**", "fix/**", "redesign/**"]
   pull_request:
-    branches: [main, "mvp/**", "feature/**"]
+    branches: [main, "mvp/**", "feature/**", "redesign/**"]
 
 jobs:
   test-api:
