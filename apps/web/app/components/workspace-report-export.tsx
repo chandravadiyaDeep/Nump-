@@ -60,6 +60,8 @@ function buildReport(input: {
 export function ReportExportStudio(props: {
   file: File | null; overview: ApiObject | null; cleaning: ApiObject | null;
   readiness: ApiObject | null; comparison: ApiObject | null; mlComparison: ApiObject | null;
+  // Optional audit metadata is shared for report export; preview rows are never passed here.
+  transformationAudit: ApiObject | null; featureAudit: ApiObject | null;
   task: string; target: string;
 }) {
   const report = buildReport(props);
@@ -95,7 +97,7 @@ export function ReportExportStudio(props: {
           <button className="secondary" type="button" onClick={() => downloadText(html, `${stem}-numpa-report.html`, "text/html")}>Download printable HTML</button>
         </div>
         <div className="detail-list" style={{ marginTop: 16 }}><h3>Report contents</h3>{sections.map(([name]) => <div className="detail-row" key={String(name)}><span>{String(name)}</span><strong>Included when available</strong></div>)}</div>
-        <p className="hint">PDF export is not generated directly in this release. Open the HTML report and use your browser's Print → Save as PDF.</p>
+        <p className="hint">PDF export is not generated directly in this release. Open the HTML report and use your browser&apos;s Print → Save as PDF.</p>
       </>}
     </div>
   </section>;
