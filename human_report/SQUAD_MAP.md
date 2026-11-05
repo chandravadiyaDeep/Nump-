@@ -1,46 +1,161 @@
 # NUMPA Squad Map
 
-**Status: PROPOSED — awaiting product-owner confirmation.**
+**Stage:** 1 — Finalize squad organization  
+**Status:** ORGANIZATION DESIGN COMPLETE — awaiting explicit product-owner sign-off  
+**Version:** 1.0  
+**Date:** 2026-11-05
 
-The organization below is the starting proposal for Stage 1. It is not yet an approved organizational structure, and no squad should begin implementation work from this document.
+This document defines the recommended starting organization for NUMPA's unified Data & AI platform. The structure is intentionally organized around coherent professional workflows rather than creating one squad for every sidebar workspace.
 
-## Shared platform squad
+## 1. Organization at a glance
 
-### Core Platform & Developer Experience
-Cross-cutting capabilities used by all product squads:
+- **1 shared platform squad**
+- **7 product squads**
+- **8 squads total**
+- ChatGPT acts as the central controller and cross-squad architecture coordinator.
+- Claude and Google AI Studio act as specialist LLM contributors for assigned squads.
+- Codex is the repository-aware implementation executor when implementation is authorized.
+- The product owner retains final approval authority.
+
+The seven product squads own product-domain outcomes. The shared platform squad owns capabilities that must be consistent across all domains.
+
+## 2. Shared platform squad
+
+### P0 — Core Platform & Developer Experience
+
+**Mission:** Provide secure, reliable, reusable foundations so product squads can deliver features without independently rebuilding infrastructure.
+
+**Platform capability areas (not detailed squad boundaries yet):**
 - Identity and access integration
-- Shared project and artifact context foundations
-- Execution infrastructure and job standards
-- API, event, and schema conventions
-- Security, observability, testing infrastructure, CI/CD, and developer experience
+- Shared project, dataset, and artifact foundations
+- Execution infrastructure and job lifecycle conventions
+- API, event, and schema standards
+- Security and secrets-handling standards
+- Observability, logging, metrics, and tracing foundations
+- Shared testing, CI/CD, developer tooling, and engineering standards
 
-## Product squads
+This squad is a horizontal enabler. Its detailed ownership and interfaces will be defined in Stage 2 and Stage 3.
 
-| # | Proposed squad | Initial domain ownership |
-|---|---|---|
-| 1 | Data Foundation & Connectivity | Data Connect |
-| 2 | Data Intelligence | Data Analysis and Data Visualization |
-| 3 | Data Transformation & Quality | Data Cleaning, validation, transformation, and pipelines |
-| 4 | Data Science & ML | Data Science, ML Readiness, and ML Lab |
-| 5 | AI Engineering | AI Studio and Forecasting & Advanced AI |
-| 6 | ML Platform & Operations | MLOps and model lifecycle operations |
-| 7 | Workflow Automation & Governance | Automation Studio, Reports & Governance |
+## 3. Product squads
 
-## Supporting destinations
-Analysis History, Settings, and Account are supporting product destinations, not additional domain squads at this stage.
+### S1 — Data Foundation & Connectivity
+**Mission:** Make data from supported sources safely accessible to NUMPA projects.
 
-## Organization principles to validate
-1. Squads should own coherent end-to-end product domains, not only frontend or backend layers.
-2. Squads should own their domain workflows, domain logic, APIs, tests, documentation, and operational quality.
-3. Shared platform capabilities should be built once and exposed through stable contracts.
-4. Cross-squad dependencies should be explicit and tracked.
-5. Avoid multiple agents editing the same files or making conflicting changes; use isolated branches/worktrees and integration review.
-6. Split a squad only when domain complexity, workload, or ownership conflicts justify it.
+**Primary workspace:** Data Connect.
 
-## Decisions still required
-- Confirm whether seven product squads plus one shared platform squad is the right starting organization.
-- Confirm whether the proposed domain groupings are appropriate.
-- Confirm the LLM allocation and human-review model.
-- Confirm central architecture governance and approval boundaries.
+**Domain focus:** File ingestion, database connectivity, cloud storage, APIs, source credentials, schema discovery, import configuration, and connection health.
 
-The next revision should record the product owner's explicit approval or changes.
+### S2 — Data Intelligence
+**Mission:** Help users understand, explore, and communicate what their data contains.
+
+**Primary workspaces:** Data Analysis and Data Visualization.
+
+**Domain focus:** Dataset profiling, exploratory data analysis, descriptive statistics, SQL-oriented exploration, charting, dashboards, interactive analysis, and analytical reporting views.
+
+**Why these work together:** Visualization is frequently the communication and exploration layer of analysis. Keeping them together supports a continuous inspect → explore → explain workflow.
+
+### S3 — Data Transformation & Quality
+**Mission:** Turn source datasets into trustworthy, reproducible, well-documented data products.
+
+**Primary workspace:** Data Cleaning.
+
+**Domain focus:** Data quality checks, missing values, duplicates, outliers, type correction, encoding, scaling, transformations, validation rules, reusable pipelines, preview/execute behavior, and transformation history.
+
+### S4 — Data Science & ML
+**Mission:** Help users prepare data for machine learning, assess suitability, develop experiments, and evaluate candidate models.
+
+**Primary workspaces:** Data Science, ML Readiness, and ML Lab.
+
+**Domain focus:** Feature engineering, experiment design, task-aware readiness assessment, leakage prevention, training workflows, algorithm comparison, validation strategies, metrics, tuning, and model evaluation.
+
+**Why these work together:** Readiness, feature engineering, experimentation, and model evaluation form one connected applied-ML lifecycle. The squad can be split later if workload or specialist complexity justifies it.
+
+### S5 — AI Engineering
+**Mission:** Enable users to build, evaluate, and operate AI-powered applications and advanced analytical workflows within NUMPA.
+
+**Primary workspaces:** AI Studio and Forecasting & Advanced AI.
+
+**Domain focus:** LLM applications, prompt and model workflows, RAG, agents, evaluation, time-series forecasting, NLP, computer vision, anomaly detection, and advanced AI workflow composition.
+
+**Why these work together initially:** These capabilities share advanced model integration, evaluation, and workflow orchestration concerns. Reassess the grouping after workflow research.
+
+### S6 — ML Platform & Operations
+**Mission:** Move models from experiments into controlled, observable, maintainable operational use.
+
+**Primary workspace:** MLOps.
+
+**Domain focus:** Model packaging, registry, deployment lifecycle, versioning, serving integration, monitoring, drift/performance checks, rollback, and operational governance for models.
+
+### S7 — Workflow Automation & Governance
+**Mission:** Let users automate repeatable work and maintain trustworthy records of what happened, when, why, and under whose authority.
+
+**Primary workspaces:** Automation Studio and Reports & Governance.
+
+**Domain focus:** Schedules, triggers, workflow orchestration, integrations, run history, lineage views, audit trails, report generation, sharing, access governance, and compliance-oriented evidence.
+
+**Why these work together:** Automation creates and runs workflows; governance and reporting make their execution traceable, reviewable, and shareable.
+
+## 4. Supporting product destinations
+
+These are shared product capabilities or navigation destinations, not separate squads in the initial organization:
+- Analysis History
+- Settings
+- Account and authentication screens
+- Notifications and help surfaces
+
+Their detailed ownership will be assigned in Stage 2. A destination may be implemented by a domain squad while relying on platform-owned services.
+
+## 5. LLM and engineering-tool operating allocation
+
+This is the recommended initial allocation for research and design work. It does not grant any tool autonomous authority to approve architecture or change production.
+
+| Contributor | Recommended responsibility |
+|---|---|
+| ChatGPT | Main controller; cross-squad coordinator; architecture synthesis; shared-platform coordination; review of all squad outputs; implementation assistance |
+| Claude | Specialist contributor for S2 Data Intelligence and S3 Data Transformation & Quality |
+| Google AI Studio | Specialist contributor for S4 Data Science & ML and S5 AI Engineering |
+| Codex | Repository inspection and implementation execution against approved, explicit specifications; use isolated branches/worktrees |
+| Product owner | Priorities, scope, final decisions, approval of architecture and consequential changes |
+
+S1, S6, and S7 can be coordinated directly by ChatGPT initially, with specialist LLM support added when research depth or workload requires it. Tool assignments can be changed after a small evaluation of output quality, context capacity, cost, and task fit.
+
+## 6. Organization-wide design principles
+
+1. **Workflow ownership:** A squad owns a coherent domain outcome, not merely frontend, backend, or database tasks.
+2. **End-to-end accountability:** A squad is expected to understand its user workflow, domain logic, APIs, tests, documentation, and operational quality. Exact boundaries are Stage 2 work.
+3. **Shared foundations:** Common identity, project context, execution, security, and observability capabilities should be provided consistently rather than reimplemented by every squad.
+4. **Contract-first collaboration:** Cross-squad dependencies must be expressed through documented contracts. Contract details are Stage 3 work.
+5. **No silent cross-ownership:** Squads should not directly modify another squad's internals or data ownership without an agreed contract and review process.
+6. **Isolated parallel work:** LLM contributors should use separate task scopes and branches/worktrees; overlapping file edits require coordination.
+7. **Central review:** ChatGPT coordinates cross-squad consistency; the product owner approves major product and architecture decisions.
+8. **Evidence before technology selection:** Squad names do not lock libraries, frameworks, algorithms, databases, or infrastructure choices.
+9. **Evolution over premature complexity:** Start with these eight squads; split or merge only when research and delivery evidence justify it.
+
+## 7. Why not create 12 squads?
+
+A one-squad-per-workspace structure would create too many coordination boundaries before NUMPA has validated its workflows. Several workspaces have strong lifecycle dependencies and naturally belong together. The proposed seven product squads keep ownership understandable while leaving room to split domains later.
+
+## 8. Stage 1 completion checklist
+
+- [x] Define the shared platform squad.
+- [x] Group all 12 workspaces under seven product squads.
+- [x] Identify supporting destinations outside the product-squad count.
+- [x] Explain the rationale for major workspace groupings.
+- [x] Propose an initial multi-LLM/tool allocation.
+- [x] Record organization-wide principles.
+- [ ] Obtain explicit product-owner sign-off.
+
+## 9. Handoff to Stage 2
+
+Stage 1 organization design is complete. Stage 2 must now define each squad's:
+- Mission and measurable outcomes
+- In-scope and out-of-scope responsibilities
+- User personas and workflows
+- Domain concepts and owned artifacts
+- Frontend, backend, data, and operational responsibilities
+- Dependencies on other squads
+- Decision authority and escalation path
+- Required skills and LLM/tool assignment
+- Deliverables, quality gates, and success metrics
+
+Do not start implementation from this map. Stage 2 and Stage 3 must establish boundaries and contracts first.
