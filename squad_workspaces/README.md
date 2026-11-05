@@ -3,11 +3,14 @@
 This is the operational control centre for squad-level work. Every squad has the same canonical Markdown structure so any authorized LLM or human contributor can resume work without relying on a previous model's chat memory.
 
 ## Start here — mandatory reading order
+0. [Vision and Research Standard](VISION_AND_RESEARCH_STANDARD.md) — strategic ambition, evidence hierarchy, competitor research, logic quality, and squad-specific research agenda.
 1. [Global current state](CURRENT_STATE.md) — exact project status and next action.
 2. [Operating protocol](OPERATING_PROTOCOL.md) — how every contributor must work and hand off.
 3. [Squad index](SQUAD_INDEX.md) — squad ownership and workspace links.
 4. Open the selected squad's `README.md`.
-5. Read that squad's `VISION.md`, `EXECUTION_PLAN.md`, `IMPLEMENTATION_CHECKLIST.md`, `SESSION_HANDOFF.md`, `CONVERSATION_LOG.md`, and `LOGIC_AND_RESEARCH.md` as relevant.
+5. **First complete `VISION.md` and `LOGIC_AND_RESEARCH.md` for the selected squad.** Execution plans, detailed checklists, and implementation tasks come only after both are researched and accepted by the product owner.
+6. Then read/update `EXECUTION_PLAN.md`, `IMPLEMENTATION_CHECKLIST.md`, `SESSION_HANDOFF.md`, and `CONVERSATION_LOG.md` as relevant.
+7. Read linked authoritative material under `human_report/`, `resources/`, and `docs/`.
 6. Read linked authoritative material under `human_report/`, `resources/`, and `docs/`.
 
 ## Standard files in every squad
