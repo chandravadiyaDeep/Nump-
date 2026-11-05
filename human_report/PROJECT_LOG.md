@@ -2,32 +2,56 @@
 
 Chronological record of the unified NUMPA planning effort.
 
-## 2026-11-05 — Planning process agreed
+## 2026-11-05 — Stage 0: Human reporting foundation
 
 ### Objective
-Organize NUMPA into specialist squads and design a coherent unified data and AI platform before implementation.
+Establish a durable Markdown reporting system before squad creation or activation.
 
-### Product-owner direction
-- Follow the agreed nine-stage planning sequence: squad organization; squad boundaries; inter-squad contracts; professional workflow research; backend technology research; unified backend design; architecture review and approval; dependency roadmap; implementation task creation.
-- Establish this `human_report/` Markdown documentation system before creating/activating squads.
-- Use multiple LLM tools for squad work. ChatGPT is the main controller and also supports implementation. Claude and Google AI Studio may be assigned one or two squads each, based on the work.
-- Keep reports detailed enough for the product owner to trace progress, decisions, and rationale.
+### Completed
+- Created `human_report/` on branch `docs/human-report-foundation`.
+- Added the documentation index, project log, squad map, decision register, open questions/risks, and research index.
+- Kept the work isolated from the default branch and production infrastructure.
 
-### Working model
-- ChatGPT: central coordinator, architecture facilitator, cross-squad reviewer, and implementation assistant.
-- Claude / Google AI Studio: specialist research and implementation contributors when assigned.
-- Codex: repository-aware engineering and implementation execution where appropriate.
-- Product owner: final approval authority for product scope, architecture, and consequential changes.
+## 2026-11-05 — Stage 1: Squad organization design completed
 
-### Initial squad organization
-The previously proposed seven product squads plus one shared platform squad are the starting proposal, not yet a final approved map. See [Squad Map](SQUAD_MAP.md).
+### Objective
+Define a practical starting organization for the 12 NUMPA workspaces.
+
+### Final recommended organization
+**1 shared platform squad + 7 product squads (8 total):**
+- P0 Core Platform & Developer Experience
+- S1 Data Foundation & Connectivity — Data Connect
+- S2 Data Intelligence — Data Analysis and Data Visualization
+- S3 Data Transformation & Quality — Data Cleaning
+- S4 Data Science & ML — Data Science, ML Readiness, ML Lab
+- S5 AI Engineering — AI Studio, Forecasting & Advanced AI
+- S6 ML Platform & Operations — MLOps
+- S7 Workflow Automation & Governance — Automation Studio, Reports & Governance
+
+Supporting destinations (Analysis History, Settings, Account) are not separate squads at this stage.
+
+### LLM/tool allocation proposal
+- ChatGPT: main controller, architecture coordinator, cross-squad reviewer, and implementation helper.
+- Claude: proposed specialist contributor for S2 and S3.
+- Google AI Studio: proposed specialist contributor for S4 and S5.
+- ChatGPT coordinates S1, S6, and S7 initially.
+- Codex: repository-aware implementation executor only against approved specifications.
+- Product owner: final approval authority.
+
+These assignments are proposed operating allocations and can be adjusted based on task fit and output quality.
+
+### Rationale
+The structure groups related professional workflows and reduces early coordination overhead compared with creating one squad per workspace. It preserves the ability to split a squad later when research or delivery evidence shows that a domain is too broad.
 
 ### Guardrails
-- No implementation of the new unified architecture during planning stages.
-- No unapproved production deployments, infrastructure changes, database migrations, or breaking API changes.
-- Existing production systems and contracts must be protected.
-- Research conclusions must distinguish verified facts from assumptions and recommendations.
+- Stage 1 is organizational design, not implementation authorization.
+- Squad boundaries remain Stage 2 work.
+- Inter-squad contracts remain Stage 3 work.
+- No technology stack is selected by the squad map.
+- No production infrastructure, database, deployment, or API contract changes are authorized.
 
 ### Current status
-**Stage 0 — documentation foundation established.**
-Next: finalize the squad organization (Stage 1). Squad boundaries are intentionally deferred until the squad map is approved.
+**Stage 1 organization design complete; explicit product-owner sign-off pending.**
+
+### Next step
+After the product owner approves or edits the squad map, begin Stage 2: create detailed squad charters and define ownership boundaries.
