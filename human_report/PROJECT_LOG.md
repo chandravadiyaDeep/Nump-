@@ -30,15 +30,8 @@ Define a practical starting organization for the 12 NUMPA workspaces.
 
 Supporting destinations (Analysis History, Settings, Account) are not separate squads at this stage.
 
-### LLM/tool allocation proposal
-- ChatGPT: main controller, architecture coordinator, cross-squad reviewer, and implementation helper.
-- Claude: proposed specialist contributor for S2 and S3.
-- Google AI Studio: proposed specialist contributor for S4 and S5.
-- ChatGPT coordinates S1, S6, and S7 initially.
-- Codex: repository-aware implementation executor only against approved specifications.
-- Product owner: final approval authority.
-
-These assignments are proposed operating allocations and can be adjusted based on task fit and output quality.
+### LLM collaboration principle
+Multiple LLMs and coding tools are interchangeable contributors. Any may work directly at repository level on any squad or project layer, based on task fit and access. No tool has permanent domain ownership; all follow the same canonical documentation, contracts, security rules, and review process. The product owner retains final decision authority.
 
 ### Rationale
 The structure groups related professional workflows and reduces early coordination overhead compared with creating one squad per workspace. It preserves the ability to split a squad later when research or delivery evidence shows that a domain is too broad.
@@ -73,3 +66,29 @@ The earlier proposal assigning Claude to S2/S3, Google AI Studio to S4/S5, and C
 
 ### Documentation impact
 Updated the Squad Map, Decision Register, and Open Questions to remove fixed LLM-to-squad assignments and record the provider-independent collaboration principle. This is a planning/documentation change only; no application code or production infrastructure was changed.
+
+
+## 2026-11-05 — Stage 2: Squad boundaries and charters drafted
+
+### Objective
+Define explicit ownership boundaries for the shared platform squad and all seven product squads before designing inter-squad contracts.
+
+### Completed
+- Created `human_report/squads/` with an index and eight individual squad charters.
+- Defined each squad's mission, owned capabilities, exclusions, frontend/backend/data responsibilities, domain concepts, dependencies, decision rights, deliverables, quality gates, success measures, and boundary tests.
+- Established the shared rule that product squads own domain behavior while P0 owns reusable platform primitives.
+- Clarified that LLMs are interchangeable repository-level contributors and are not assigned to squads.
+
+### Important boundary decisions proposed
+- S2 is read/inspect/explain; S3 owns canonical dataset transformations and new dataset versions.
+- S3 owns general-purpose transformations; S4 owns ML-task-specific feature engineering and leakage controls.
+- S4 owns experiments and evaluated model candidates; S6 owns production registration, deployment, serving, monitoring, and rollback.
+- S5 owns AI applications and advanced-AI workflows; P0 supplies shared infrastructure and provider secrets mechanisms.
+- S7 orchestrates published operations and presents cross-domain lineage/reports; it does not reimplement domain logic or own other squads' authoritative records.
+- P0 owns shared identity, project/resource identity, job/artifact/event/security/observability primitives; domain semantics remain with product squads.
+
+### Status
+**Stage 2 boundary design drafted; all charters remain PROPOSED — UNDER REVIEW.** The Stage 1 organization map is still awaiting explicit product-owner sign-off. These documents do not authorize implementation or production changes.
+
+### Next step
+Review the boundaries, resolve any ownership overlaps, then define Stage 3 inter-squad API, event, schema, artifact, and lifecycle contracts.
