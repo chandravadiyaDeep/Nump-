@@ -38,3 +38,19 @@ Consumes P0 shared secrets/security/execution primitives and domain data/artifac
 
 ## Vision change log
 - 2026-11-05: Initial vision scaffold created from the proposed squad map. This is not an approved detailed product specification.
+
+
+## Company-level ambition and squad contribution
+
+**NUMPA's proposed company-level ambition:** capture **10% of its defined target market by 2028**.
+
+This is a strategic ambition, not yet an approved measurable KPI. The market category, geography, customer segment, denominator, and measurement basis (revenue, paying customers, active users, or another metric) must be researched and approved before it is used as a forecast or performance target.
+
+This squad contributes to the ambition through its own domain outcomes; it does not independently own a 10% market-share target. Define squad-specific measurable outcomes only after user, workflow, competitor, and market research.
+
+## Vision validation gate
+
+This vision is an initial proposal. Before execution planning, validate target users, jobs-to-be-done, customer value, market scope, differentiation, success measures, dependencies, and non-goals using the [Vision and Research Standard](../VISION_AND_RESEARCH_STANDARD.md) and this squad's [Logic and Research Journal](LOGIC_AND_RESEARCH.md).
+
+## Vision change log
+- 2026-11-05: Added the proposed company-level 2028 ambition and evidence-based squad validation gate.
