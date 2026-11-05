@@ -12,9 +12,9 @@ This document defines the recommended starting organization for NUMPA's unified 
 - **1 shared platform squad**
 - **7 product squads**
 - **8 squads total**
-- ChatGPT acts as the central controller and cross-squad architecture coordinator.
-- Claude and Google AI Studio act as specialist LLM contributors for assigned squads.
-- Codex is the repository-aware implementation executor when implementation is authorized.
+- Multiple LLMs and coding tools may contribute directly at repository level, according to the task and available capabilities.
+- No LLM or tool is permanently assigned to a squad, workspace, or project layer.
+- NUMPA's architecture, contracts, documentation, and workflows must remain independent of any particular LLM or provider.
 - The product owner retains final approval authority.
 
 The seven product squads own product-domain outcomes. The shared platform squad owns capabilities that must be consistent across all domains.
@@ -105,19 +105,29 @@ These are shared product capabilities or navigation destinations, not separate s
 
 Their detailed ownership will be assigned in Stage 2. A destination may be implemented by a domain squad while relying on platform-owned services.
 
-## 5. LLM and engineering-tool operating allocation
+## 5. LLM-independent collaboration model
 
-This is the recommended initial allocation for research and design work. It does not grant any tool autonomous authority to approve architecture or change production.
+NUMPA will use multiple LLMs and coding tools as interchangeable contributors. This is an operating principle, not a fixed allocation of ownership.
 
-| Contributor | Recommended responsibility |
+- Any approved LLM/tool may work directly with the repository at the task level, subject to repository access, capability, and the project's safety rules.
+- No LLM is assigned permanent ownership of a squad, workspace, layer, or subsystem.
+- Contributors may research, design, document, review, test, or implement any domain when given a clear task and the necessary context.
+- Work is allocated by task fit, capability, availability, cost, and output quality—not by fixed domain ownership.
+- All contributors follow the same approved architecture, human-report records, coding standards, API contracts, security requirements, and branch/PR workflow.
+- Contributors must coordinate overlapping edits and use isolated branches/worktrees where appropriate.
+- The project must not depend on proprietary capabilities or assumptions of one LLM provider. Provider-specific integrations, if ever added to NUMPA itself, must sit behind replaceable interfaces.
+- Product-owner approval remains required for architecture decisions and consequential changes; tool access does not grant decision authority.
+
+ChatGPT may help coordinate and synthesize work in this conversation, but that conversational role does not create exclusive repository or domain ownership. Codex is one possible repository-level contributor, not the sole implementation executor.
+
+| Contributor/tool | Operating position |
 |---|---|
-| ChatGPT | Main controller; cross-squad coordinator; architecture synthesis; shared-platform coordination; review of all squad outputs; implementation assistance |
-| Claude | Specialist contributor for S2 Data Intelligence and S3 Data Transformation & Quality |
-| Google AI Studio | Specialist contributor for S4 Data Science & ML and S5 AI Engineering |
-| Codex | Repository inspection and implementation execution against approved, explicit specifications; use isolated branches/worktrees |
-| Product owner | Priorities, scope, final decisions, approval of architecture and consequential changes |
-
-S1, S6, and S7 can be coordinated directly by ChatGPT initially, with specialist LLM support added when research depth or workload requires it. Tool assignments can be changed after a small evaluation of output quality, context capacity, cost, and task fit.
+| ChatGPT | May coordinate, research, review, document, and implement tasks |
+| Claude | May coordinate, research, review, document, and implement tasks |
+| Google AI Studio | May coordinate, research, review, document, and implement tasks |
+| Codex | May inspect, research, review, test, and implement repository tasks |
+| Other approved LLMs/tools | May contribute under the same project rules |
+| Product owner | Sets priorities and scope; makes final decisions and approvals |
 
 ## 6. Organization-wide design principles
 
@@ -141,7 +151,7 @@ A one-squad-per-workspace structure would create too many coordination boundarie
 - [x] Group all 12 workspaces under seven product squads.
 - [x] Identify supporting destinations outside the product-squad count.
 - [x] Explain the rationale for major workspace groupings.
-- [x] Propose an initial multi-LLM/tool allocation.
+- [x] Define an LLM-independent, repository-level collaboration model.
 - [x] Record organization-wide principles.
 - [ ] Obtain explicit product-owner sign-off.
 
