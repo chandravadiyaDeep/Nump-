@@ -14,7 +14,7 @@ This directory is the human-readable record of NUMPA's product, squad, architect
 8. Squad work begins with research and specifications. Implementation starts only after the architecture and roadmap are approved.
 
 ## Current phase
-**Stage 0 — Documentation foundation.**
+**Stage 2 — Squad boundaries and charters (proposed; under review).**
 
 The agreed sequence is:
 0. Create and maintain this reporting system.
@@ -34,6 +34,7 @@ The agreed sequence is:
 - [Decision register](DECISION_REGISTER.md) — decisions and their approval status.
 - [Open questions and risks](OPEN_QUESTIONS_AND_RISKS.md) — unresolved questions, assumptions, and risks.
 - [Research index](RESEARCH_INDEX.md) — research topics, sources, and findings.
+- [Squad charters](squads/README.md) — proposed scope, ownership boundaries, interfaces, deliverables, and quality gates for all eight squads.
 
 ## Status vocabulary
 - **PROPOSED** — suggested, not approved.
