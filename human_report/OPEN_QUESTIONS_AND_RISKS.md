@@ -6,11 +6,13 @@
 - Approve or modify the proposed one-platform-plus-seven-product-squad organization in [Squad Map](SQUAD_MAP.md).
 - Confirm whether any workspace should move to a different squad before Stage 2.
 
-### Stage 2 — squad charters
-- What measurable outcomes and success metrics should each squad own?
-- What domain artifacts and data concepts belong to each squad?
-- Which frontend, backend, data, and operational responsibilities belong inside each squad?
-- Which responsibilities are shared platform services rather than squad-owned capabilities?
+### Stage 2 — squad charter review
+- Review and approve or revise the eight proposed squad charters in [human_report/squads](squads/README.md).
+- Confirm whether P0's canonical resource/artifact metadata boundary is sufficiently distinct from product-owned domain metadata.
+- Confirm the handoff between S4's candidate models and S6's production model registry.
+- Confirm the boundary between S5's forecasting workflows and S4's time-series ML experiments.
+- Confirm whether S7's governance/reporting scope is appropriately separated from P0's shared audit-event/security primitives.
+- Confirm whether any squad should be split, merged, or renamed.
 
 ### Stage 3 — contracts and governance
 - Which contracts require central architecture review?
