@@ -137,9 +137,10 @@ ChatGPT may help coordinate and synthesize work in this conversation, but that c
 4. **Contract-first collaboration:** Cross-squad dependencies must be expressed through documented contracts. Contract details are Stage 3 work.
 5. **No silent cross-ownership:** Squads should not directly modify another squad's internals or data ownership without an agreed contract and review process.
 6. **Isolated parallel work:** LLM contributors should use separate task scopes and branches/worktrees; overlapping file edits require coordination.
-7. **Central review:** ChatGPT coordinates cross-squad consistency; the product owner approves major product and architecture decisions.
-8. **Evidence before technology selection:** Squad names do not lock libraries, frameworks, algorithms, databases, or infrastructure choices.
-9. **Evolution over premature complexity:** Start with these eight squads; split or merge only when research and delivery evidence justify it.
+7. **Shared project context:** Every contributor works from the same canonical repository documentation and approved contracts; no tool-specific private architecture becomes authoritative.
+8. **Product-owner governance:** The product owner approves major product and architecture decisions; any LLM may provide review and recommendations.
+9. **Evidence before technology selection:** Squad names do not lock libraries, frameworks, algorithms, databases, or infrastructure choices.
+10. **Evolution over premature complexity:** Start with these eight squads; split or merge only when research and delivery evidence justify it.
 
 ## 7. Why not create 12 squads?
 
