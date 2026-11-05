@@ -4,7 +4,6 @@
 
 ### Stage 1 — product-owner sign-off
 - Approve or modify the proposed one-platform-plus-seven-product-squad organization in [Squad Map](SQUAD_MAP.md).
-- Approve or modify the proposed LLM allocation (Claude: S2/S3; Google AI Studio: S4/S5; ChatGPT: central controller and initial coordination of S1/S6/S7).
 - Confirm whether any workspace should move to a different squad before Stage 2.
 
 ### Stage 2 — squad charters
@@ -33,4 +32,4 @@
 | Premature squad splitting | Too many squads increase coordination and contract overhead | Start with seven product squads; split only when evidence justifies it |
 
 ## Status
-Stage 1 organization design is complete. Product-owner sign-off is still required before the squad map is treated as approved and Stage 2 charters are finalized.
+Stage 1 organization design is complete. The LLM collaboration model has been corrected to be provider-independent and task-based. Product-owner sign-off on the squad organization itself is still required before the squad map is treated as approved and Stage 2 charters are finalized.
