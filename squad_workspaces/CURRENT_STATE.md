@@ -19,8 +19,11 @@
 | 8 | Dependency-aware implementation roadmap | Not started |
 | 9 | Implementation-ready task specifications | Not started |
 
+## Current strategic ambition
+NUMPA's proposed company-level ambition is to capture **10% of its defined target market by 2028**. This is not yet an approved measurable KPI. Market category, geography, customer segment, denominator, and measurement basis must be researched and explicitly approved. No squad independently owns a 10% share target; each squad must define its contribution through domain-specific outcomes.
+
 ## Immediate next action
-Review and resolve the three proposed cross-squad boundary questions recorded in the latest Stage 3 contract review. Then explicitly approve or request revisions to the complete Stage 3 contract architecture. Do not skip ahead to implementation.
+For every squad, complete and review `VISION.md` and `LOGIC_AND_RESEARCH.md` first. Use `squad_workspaces/VISION_AND_RESEARCH_STANDARD.md` as the mandatory method. Only after both documents are evidence-backed and accepted by the product owner should that squad proceed to detailed execution planning, checklists, or implementation task breakdown. Global Stage 1–3 governance approvals and cross-squad contract decisions remain required; this sequence does not authorize implementation.
 
 ## Project-wide guardrails
 - Product owner is the final decision-maker.
@@ -32,6 +35,7 @@ Review and resolve the three proposed cross-squad boundary questions recorded in
 - No deadlines are approved yet. Establish calendar dates only after scope, dependencies, capacity, and product-owner agreement are clear.
 
 ## Current authoritative references
+- [Vision and Research Standard](VISION_AND_RESEARCH_STANDARD.md)
 - [Human report index](../human_report/README.md)
 - [Squad map](../human_report/SQUAD_MAP.md)
 - [Squad charters](../human_report/squads/README.md)
