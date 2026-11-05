@@ -57,3 +57,26 @@ Record only trends that materially affect user value, correctness, security, cos
 - Compatibility/migration plan:
 - Required tests:
 - Decision owner and status:
+
+
+## Research completion standard
+
+Follow the mandatory [NUMPA Vision and Research Standard](../VISION_AND_RESEARCH_STANDARD.md). This journal is not considered complete merely because a list of features or technologies exists. It must contain evidence-backed user workflows, competitor analysis, logic, alternatives, risks, and recommendations.
+
+## Squad-specific research agenda
+
+Research professional ingestion journeys, file/database/cloud/API connectivity, authentication and credential rotation, schema discovery, incremental ingestion, retries, data formats, connector health, and lineage. Prioritize official database/cloud/API docs, IETF auth specifications, Apache Arrow/Parquet specifications, connector repositories, and user reports about failed imports and syncs.
+
+## Required research outputs
+
+- Persona and jobs-to-be-done evidence, including current tools and workarounds.
+- End-to-end professional workflow maps, decision points, exceptions, and failure recovery.
+- Competitor comparison based on observed capabilities and dated sources.
+- Domain logic catalogue with assumptions, preconditions, rules, edge cases, and testable acceptance criteria.
+- Technical alternatives with licensing, maintenance, security, performance, scalability, cost, and integration trade-offs.
+- Differentiated opportunities for NUMPA supported by evidence.
+- Open questions, confidence levels, and a validation plan.
+
+## Research status
+
+**NOT STARTED — agenda scaffold only.** No source review, competitor teardown, algorithm evaluation, or recommendation is claimed complete by this template.
