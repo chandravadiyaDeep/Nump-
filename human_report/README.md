@@ -35,6 +35,7 @@ The agreed sequence is:
 - [Open questions and risks](OPEN_QUESTIONS_AND_RISKS.md) — unresolved questions, assumptions, and risks.
 - [Research index](RESEARCH_INDEX.md) — research topics, sources, and findings.
 - [Squad charters](squads/README.md) — proposed scope, ownership boundaries, interfaces, deliverables, and quality gates for all eight squads.
+- [Inter-squad contracts](contracts/README.md) — proposed contract principles, ownership, handoffs, API/event/artifact/job standards, and change governance.
 
 ## Status vocabulary
 - **PROPOSED** — suggested, not approved.
