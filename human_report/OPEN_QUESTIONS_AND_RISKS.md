@@ -2,35 +2,35 @@
 
 ## Open questions
 
-### Organization
-- Is the proposed seven-product-squad plus one shared-platform-squad map the right initial structure?
-- Should Data Science and ML remain together initially?
-- Should Data Analysis and Visualization remain together?
-- Should AI Studio and Forecasting & Advanced AI remain together?
+### Stage 1 — product-owner sign-off
+- Approve or modify the proposed one-platform-plus-seven-product-squad organization in [Squad Map](SQUAD_MAP.md).
+- Approve or modify the proposed LLM allocation (Claude: S2/S3; Google AI Studio: S4/S5; ChatGPT: central controller and initial coordination of S1/S6/S7).
+- Confirm whether any workspace should move to a different squad before Stage 2.
 
-### Multi-LLM allocation
-- Which one or two squads should be assigned to Claude?
-- Which one or two squads should be assigned to Google AI Studio?
-- Which squads should ChatGPT coordinate or contribute to directly?
-- What review and handoff format should every LLM use?
-- Which tasks should Codex execute against the repository?
+### Stage 2 — squad charters
+- What measurable outcomes and success metrics should each squad own?
+- What domain artifacts and data concepts belong to each squad?
+- Which frontend, backend, data, and operational responsibilities belong inside each squad?
+- Which responsibilities are shared platform services rather than squad-owned capabilities?
 
-### Governance
-- Should squads research independently while a central architecture council approves shared contracts and architectural decisions?
-- What decisions can squad leads make independently?
+### Stage 3 — contracts and governance
+- Which contracts require central architecture review?
+- What decisions may squads make independently?
 - What requires product-owner approval?
+- How should API, event, schema, and artifact contract changes be versioned?
 
 ## Initial risks to manage
 
 | Risk | Why it matters | Mitigation |
 |---|---|---|
-| Overlapping squad ownership | Conflicting implementations and unclear accountability | Define explicit charters and ownership boundaries before implementation |
+| Overlapping squad ownership | Conflicting implementations and unclear accountability | Define explicit charters and ownership boundaries in Stage 2 |
 | LLM output inconsistency | Different tools may produce incompatible designs | Shared templates, source references, decision register, central review |
 | Premature technology selection | Tools may be selected before workflows and constraints are understood | Research workflows first, then benchmark and compare technologies |
 | Monolithic scope expansion | Attempting to build every workspace at once increases delivery risk | Dependency-based phases and thin vertical slices |
-| Data duplication and lineage gaps | Workspaces could operate on inconsistent dataset versions | Design shared dataset/artifact identity and lineage contracts |
-| Production regression | Planning work could accidentally affect live services | Documentation-only branch during this stage; explicit approval for production-impacting changes |
+| Data duplication and lineage gaps | Workspaces could operate on inconsistent dataset versions | Design shared dataset/artifact identity and lineage contracts in Stage 3/6 |
+| Production regression | Planning work could accidentally affect live services | Documentation-only planning branch; explicit approval for production-impacting changes |
 | Unverified claims | Research may repeat marketing claims or outdated library information | Record sources, dates, evidence quality, limitations, and validation status |
+| Premature squad splitting | Too many squads increase coordination and contract overhead | Start with seven product squads; split only when evidence justifies it |
 
 ## Status
-These are planning questions and risks, not approved architecture decisions. Update as evidence is collected.
+Stage 1 organization design is complete. Product-owner sign-off is still required before the squad map is treated as approved and Stage 2 charters are finalized.
