@@ -10,7 +10,7 @@ This register tracks decisions separately from proposals and research recommenda
 | D-004 | Starting squad organization | READY FOR APPROVAL | Recommend one shared platform squad plus seven product squads, grouping all 12 workspaces by related professional workflows. See [Squad Map](SQUAD_MAP.md). | Product owner | 2026-11-05 |
 | D-005 | Fixed LLM/tool allocation | SUPERSEDED | Fixed LLM-to-squad assignments are not part of NUMPA's operating model. See D-003 and the LLM-independent collaboration model in the Squad Map. | Product owner | 2026-11-05 |
 | D-006 | Squad boundaries and charters | UNDER REVIEW | Eight proposed charters have been drafted in [human_report/squads](squads/README.md). Boundaries remain proposals pending product-owner review; no implementation is authorized. | Product owner | 2026-11-05 |
-| D-007 | Inter-squad governance and contracts | NOT STARTED | Define contract ownership, central review, and change control after squad charters. | TBD | TBD |
+| D-007 | Inter-squad governance and contracts | UNDER REVIEW | Technology-neutral contract architecture, producer-consumer handoffs, and API/event/artifact/job standards drafted in human_report/contracts/. Pending product-owner review. | Product owner | 2026-11-05 |
 | D-008 | Unified backend architecture | NOT STARTED | Evaluate only after domain workflow and technology research. | TBD | TBD |
 
 ## Decision record template
