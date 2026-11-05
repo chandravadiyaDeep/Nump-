@@ -28,6 +28,9 @@ The agreed sequence is:
 8. Plan implementation dependencies and phases.
 9. Create implementation-ready tasks.
 
+## Operational workspaces
+- [Squad workspaces](../squad_workspaces/README.md) — live squad vision, execution plans, checklists, session handoffs, conversation summaries, and domain logic/research. This is the cross-LLM continuity layer.
+
 ## Index
 - [Project log](PROJECT_LOG.md) — chronological record of work.
 - [Squad map](SQUAD_MAP.md) — proposed and approved squad organization.
