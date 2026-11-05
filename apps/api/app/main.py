@@ -1,6 +1,7 @@
 """FastAPI entry point for the NUMPA tabular MVP."""
 from __future__ import annotations
 import io
+import json
 import os
 from typing import Annotated
 import pandas as pd
@@ -12,6 +13,7 @@ from .ingestion import DatasetInputError, MAX_UPLOAD_BYTES, load_dataframe
 from .ml_labs import ModelEvaluationError, compare_models
 from .profiling import profile_dataframe
 from .readiness import score_readiness
+from .transformations import TransformationError, apply_transformations
 
 app = FastAPI(title="NUMPA API", description="MVP for dataset inspection, cleaning, readiness and model comparison.", version="0.1.0")
 # Allow the production website by default, while retaining local development origins.
@@ -105,6 +107,60 @@ async def execute_cleaning(
     cleaned.to_csv(buffer, index=False)
     stem = (file.filename or "dataset").rsplit(".", 1)[0]
     return StreamingResponse(iter([buffer.getvalue()]), media_type="text/csv", headers={"Content-Disposition": f'attachment; filename="{stem}-cleaned.csv"'})
+
+
+@app.post("/api/v1/transformations/preview")
+async def preview_transformations(
+    file: Annotated[UploadFile, File(...)],
+    operations_json: Annotated[str, Form()] = "[]",
+) -> dict:
+    """Preview allow-listed transformations without changing or persisting the source."""
+    if len(operations_json.encode("utf-8")) > 64 * 1024:
+        raise HTTPException(status_code=413, detail="Transformation instructions exceed the 64 KB request limit.")
+    try:
+        operations = json.loads(operations_json)
+    except json.JSONDecodeError as exc:
+        raise HTTPException(status_code=400, detail="Transformation instructions must be valid JSON.") from exc
+    frame = _load_upload(file.filename, await _read_upload(file))
+    try:
+        transformed, report = apply_transformations(frame, operations)
+    except TransformationError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    preview = transformed.head(25).astype(object).where(pd.notna(transformed.head(25)), None).to_dict(orient="records")
+    return {
+        "report": report,
+        "preview": preview,
+        "columns": [str(column) for column in transformed.columns],
+        "preview_row_limit": 25,
+        "download_available": True,
+    }
+
+
+@app.post("/api/v1/transformations/execute")
+async def execute_transformations(
+    file: Annotated[UploadFile, File(...)],
+    operations_json: Annotated[str, Form()] = "[]",
+) -> StreamingResponse:
+    """Execute an explicitly supplied transformation list and return a separate CSV."""
+    if len(operations_json.encode("utf-8")) > 64 * 1024:
+        raise HTTPException(status_code=413, detail="Transformation instructions exceed the 64 KB request limit.")
+    try:
+        operations = json.loads(operations_json)
+    except json.JSONDecodeError as exc:
+        raise HTTPException(status_code=400, detail="Transformation instructions must be valid JSON.") from exc
+    frame = _load_upload(file.filename, await _read_upload(file))
+    try:
+        transformed, _report = apply_transformations(frame, operations)
+    except TransformationError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    buffer = io.StringIO()
+    transformed.to_csv(buffer, index=False)
+    stem = (file.filename or "dataset").rsplit(".", 1)[0]
+    return StreamingResponse(
+        iter([buffer.getvalue()]),
+        media_type="text/csv",
+        headers={"Content-Disposition": f'attachment; filename="{stem}-transformed.csv"'},
+    )
 
 
 @app.post("/api/v1/ml-readiness/score")
