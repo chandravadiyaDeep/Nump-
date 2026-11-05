@@ -144,3 +144,31 @@ Create a consistent operational workspace for every squad so work can continue a
 
 ### Next action
 Continue from `squad_workspaces/CURRENT_STATE.md`: resolve the open Stage 3 boundary questions and obtain explicit approval before starting Stage 4 workflow research.
+
+
+## 2026-11-05 — Vision-first, research-before-planning strategy established
+
+### Product-owner direction
+For every squad, the first substantive work is to complete and validate `VISION.md` and `LOGIC_AND_RESEARCH.md`. Detailed execution plans, implementation checklists, and development task breakdowns follow only after these two documents are reviewed and accepted.
+
+### Company-level ambition
+The product owner stated the proposed ambition: NUMPA aims to capture 10% of its defined target market by 2028. This is recorded as a proposed strategic ambition, not an approved measurable KPI. The market definition, geography, customer segment, denominator, and measurement basis must be researched and approved. Squad-level targets must measure each squad's contribution rather than assigning every squad an independent 10% share target.
+
+### Completed documentation updates
+- Created `squad_workspaces/VISION_AND_RESEARCH_STANDARD.md` with the research method, source hierarchy, source directory, competitor reverse-engineering protocol, logic quality standard, evidence record, and review gates.
+- Added the proposed 2028 ambition and validation gate to all eight squad vision documents.
+- Added a tailored research agenda, source map, required outputs, and honest NOT STARTED status to all eight squad logic/research journals.
+- Updated the squad workspace reading order and global current-state record to enforce vision + logic/research first.
+- Kept the 10% market ambition explicitly provisional until the denominator and measurement method are defined.
+
+### Research methods used as public reference models
+- Amazon Working Backwards / PR-FAQ.
+- Google Design Sprint.
+- Atlassian continuous product discovery.
+- Iterative engineering and validation practices.
+
+### Status
+**Vision/research framework created; squad-specific research itself is NOT STARTED.** The new templates are not evidence that competitor analysis, user research, or technical validation has already been performed. No implementation or production change was authorized.
+
+### Next action
+Start with P0 or a product squad and complete its vision and evidence-backed logic/research package. Keep all findings, source dates, uncertainty, and recommendations traceable.
