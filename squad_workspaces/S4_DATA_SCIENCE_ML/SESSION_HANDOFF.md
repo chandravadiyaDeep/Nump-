@@ -1,6 +1,5 @@
 # S4 — Data Science & ML — Live Session Handoff
 
-<badge-placeholder></badge-placeholder>
 **Status:** NOT STARTED — workspace scaffold only  
 **Last verified:** 2026-11-05  
 **Current phase:** Pre-implementation planning
