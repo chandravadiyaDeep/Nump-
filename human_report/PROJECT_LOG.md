@@ -55,3 +55,21 @@ The structure groups related professional workflows and reduces early coordinati
 
 ### Next step
 After the product owner approves or edits the squad map, begin Stage 2: create detailed squad charters and define ownership boundaries.
+
+
+## 2026-11-05 — LLM collaboration model corrected
+
+### Product-owner direction
+The earlier proposal assigning Claude to S2/S3, Google AI Studio to S4/S5, and Codex as the repository implementation executor is not the intended operating model.
+
+### Updated model
+- Every LLM/tool may work directly at repository level when assigned a suitable task and granted the necessary access.
+- No LLM has permanent ownership of a squad, workspace, or project layer.
+- Work allocation is task-based and may change between contributors.
+- All contributors follow the same canonical repository documentation, approved architecture, contracts, coding standards, security requirements, and review process.
+- NUMPA must remain independent of any one LLM or provider; provider-specific dependencies must be replaceable and must not define the core product architecture.
+- ChatGPT can coordinate this planning conversation, but it does not have exclusive domain or repository ownership. Codex is not the sole implementation executor.
+- The product owner retains final decision and approval authority.
+
+### Documentation impact
+Updated the Squad Map, Decision Register, and Open Questions to remove fixed LLM-to-squad assignments and record the provider-independent collaboration principle. This is a planning/documentation change only; no application code or production infrastructure was changed.
