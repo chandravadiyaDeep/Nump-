@@ -6,11 +6,12 @@ This register tracks decisions separately from proposals and research recommenda
 |---|---|---|---|---|---|
 | D-001 | Planning sequence | APPROVED | Complete squad organization, boundaries, contracts, workflow research, technology research, backend architecture, architecture approval, dependency roadmap, then implementation tasks. | Product owner | 2026-11-05 |
 | D-002 | Human reporting system | APPROVED | Establish a `human_report/` directory with Markdown records before squad creation/activation. | Product owner | 2026-11-05 |
-| D-003 | Multi-LLM working approach | APPROVED IN PRINCIPLE | ChatGPT is the main controller and implementation helper; Claude and Google AI Studio can be assigned one or two squads each. Exact allocation remains open. | Product owner | 2026-11-05 |
-| D-004 | Initial squad map | PROPOSED | Seven product squads plus one shared platform squad, pending final confirmation. | Product owner | 2026-11-05 |
-| D-005 | Squad boundaries | NOT STARTED | Define only after the squad map is finalized. | TBD | TBD |
-| D-006 | Inter-squad governance | NOT STARTED | Define contract ownership, central review, and change control after squad charters. | TBD | TBD |
-| D-007 | Unified backend architecture | NOT STARTED | Evaluate only after domain workflow and technology research. | TBD | TBD |
+| D-003 | Multi-LLM working approach | APPROVED IN PRINCIPLE | ChatGPT is the main controller and implementation helper; Claude and Google AI Studio can be assigned one or two squads each. Exact allocation remains subject to review. | Product owner | 2026-11-05 |
+| D-004 | Starting squad organization | READY FOR APPROVAL | Recommend one shared platform squad plus seven product squads, grouping all 12 workspaces by related professional workflows. See [Squad Map](SQUAD_MAP.md). | Product owner | 2026-11-05 |
+| D-005 | LLM/tool allocation | PROPOSED | ChatGPT coordinates all squads; Claude is proposed for S2/S3; Google AI Studio for S4/S5; Codex executes approved repository tasks. | Product owner | 2026-11-05 |
+| D-006 | Squad boundaries | NOT STARTED | Define only after Stage 1 organization is explicitly approved. | TBD | TBD |
+| D-007 | Inter-squad governance and contracts | NOT STARTED | Define contract ownership, central review, and change control after squad charters. | TBD | TBD |
+| D-008 | Unified backend architecture | NOT STARTED | Evaluate only after domain workflow and technology research. | TBD | TBD |
 
 ## Decision record template
 
